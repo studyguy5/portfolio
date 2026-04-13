@@ -1,0 +1,242 @@
+
+.mainBanner{
+    /* height:calc(100vh - 98px); */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    min-height: calc(100dvh - 96px);
+    width:98%;
+    max-width:1440px;
+    /* margin: 0 auto; */
+}
+
+.headlineDiv{
+    display:flex;
+    /* margin-top:90px; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainBanner h2{
+    margin: 0px;
+    color:white;
+    font-size:clamp(12px, -4px + 3vw, 40px)
+}
+
+.mainBanner h1{
+    margin:0px;
+    color:white;
+    font-size: clamp(16px, -8px + 5vw + 5vh, 128px)
+}
+
+.buttonAria{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    width:363px;
+    gap:10px;
+}
+
+.buttonAria button{
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+}
+
+.check_My_Work{
+    padding: 13px 21.7px;
+}
+
+.Contact_ME{
+    padding: 13px 24.5px;
+}
+
+.sliderWrapper{
+    display:flex;
+    position:absolute;
+    max-width:1440px;
+    overflow-x: hidden;
+    width:95%;
+    bottom:45px;
+    left:0px;
+    z-index: 10 !important;
+    transform: rotateZ(-3deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    backdrop-filter: blur(3px);
+}
+
+@media(max-height:1140px){
+    /* .mainBanner h1{
+        margin: 65px 0;
+    }
+    .mainBanner h2{
+        margin: 23px 0;
+    } */
+    /* .headlineDiv{
+        margin-top: 70px;
+    } */
+    /* .buttonAria{
+        position:relative;
+        top:30px;
+    } */
+    
+}
+
+@media(max-height:1080px){
+    /* .mainBanner h1{
+        margin: 45px 0;
+    }
+    .mainBanner h2{
+        margin: 13px 0;
+    } */
+    /* .headlineDiv{
+        margin-top: 50px;
+    } */
+    /* .buttonAria{
+        position:relative;
+        top:40px;
+    } */
+}
+
+@media(max-height:960px){
+    /* .mainBanner h1{
+        margin: 35px 0;
+    }
+    .mainBanner h2{
+        margin: 10px 0;
+    } */
+    /* .headlineDiv{
+        margin-top: 40px;
+    } */
+    /* .buttonAria{
+        position:relative;
+        top:60px;
+    } */
+}
+.slider{
+    display:flex;
+    height:62px;
+    position:relative;
+    max-width:1920px !important;
+    /* padding-right:10px; */
+    /* margin-top:503px; */
+    gap:25px;
+    opacity:1;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform:translateZ(0);
+    animation-fill-mode: both;
+    /* backdrop-filter: blur(3px); */
+}
+
+.slider p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    font-size: 32px;
+    color:rgba(61, 207, 182, 1);
+    gap:25px;
+    width:395px;
+    /* max-width:350px; */
+}
+
+.slider:first-child{
+    animation: slideToLeft 30s infinite linear 1s;
+    will-change: transform;
+}
+
+.slider:last-child{
+    animation: slideFromRight 30s infinite linear 1s;
+    will-change: transform;
+}
+
+
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+} 
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(0%);
+}
+
+100% {
+    transform: translateX(-100%);
+}
+}
+
+
+
+.verticalDiv{
+    display:flex;
+    justify-content: space-between;
+    position:absolute;
+    height:480px;
+    max-width:1440px;
+    width:100%;
+    bottom:0px;
+    padding: 0px 96px 0px 96px;
+    box-sizing: border-box;
+    z-index: 2;
+    
+}
+
+.vleft{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    justify-content: space-between;
+    height:312px;
+    width:32px;
+    gap:2.4px;
+    margin-top:168px;
+    z-index: 2;
+    /* background-color: rgba(255, 255, 255, 0.12); */
+}
+
+.vleft hr{
+    height:250px;
+    border-width:1px;
+    width:1px;
+    margin: 0 auto;
+}
+
+.vright{
+    display:flex;
+    flex-direction: column-reverse;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    height:480px;
+    width:32px;
+    z-index: 2;
+    /* background-color: rgba(255, 255, 255, 0.12); */
+}
+
+.vright hr{
+    height:300px;
+    border-width:1px;
+    margin: 0 auto;
+}
+
+.vright p{
+    text-orientation: sideways;
+    writing-mode:sideways-lr;
+
+    /* font-size: 32px; */
+}
+
+

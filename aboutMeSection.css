@@ -1,0 +1,137 @@
+
+.aboutMeSection{
+    display:flex;
+    justify-content: space-between;
+    margin:144px 95.65px 144px 112px;
+    max-width:1232px;
+    height:800px;
+    box-sizing: border-box;
+    width:97%;
+    border: 1px solid rgba(61, 207, 182, 1);
+    /* background-color: rgb(230, 235, 240, 0.1); */
+}
+
+.myPhoto{
+    width:42%;
+    height:fit-content;
+    /* background-color: aliceblue; */
+}
+
+.myPhoto img{
+    width:100%;
+    height:auto;
+    /* object-fit: cover; */
+}
+
+.aboutMeTextAria{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    width:50%;
+    /* height:fit-content; */
+}
+
+.firstLine{
+    font-size: 24px;
+    color:rgba(61, 207, 182, 1);
+}
+
+.whoIamBox{
+    border-radius: 30px;
+    width:100%;
+    max-width:852px;
+    height:652px;
+    background-color: aliceblue;
+    margin-bottom:22px;
+}
+
+.paragraphHeadline{
+    margin: 32px 0px 40px 32px;
+    font-size: 64px;
+    font-weight: bold;
+    color:rgba(61, 207, 182, 1);
+}
+
+.paragraphIntro{
+    margin: 0px 32px 0px 32px;
+    font-size: 28px;
+}
+
+.myLocation{
+    display:flex;
+    margin: 32px 32px 0px 17px;
+    gap:24px;
+    align-items: center;
+    /* width:100%; */
+    max-width:690px;
+}
+
+.myMindset{
+    display:flex;
+    margin: 16px 32px 0px 17px;
+    gap:24px;
+    align-items: center;
+    /* width:100%; */
+    max-width:690px;
+}
+
+.myProblemSolvingSkills{
+    display:flex;
+    margin: 16px 32px 32px 17px;
+    gap:24px;
+    align-items: center;
+    /* width:100%; */
+    max-width:690px;
+}
+
+.myLocation img, .myMindset img, .myProblemSolvingSkills img{
+    /* margin: 0px 0px 0px 32px;
+    font-size: 32px; */
+    width:32px;
+    height:32px;
+    /* margin: 32px 16px 32px 32px; */
+}
+
+@media(max-width:1280px){
+ .paragraphIntro{
+    font-size: 25px;;
+ }   
+}
+
+@media(max-width:1020px){
+    .paragraphIntro{
+        font-size: 22px;
+    }
+    .paragraphHeadline{
+        font-size: 50px;
+    }
+}
+
+@media(max-width:900px){
+    .paragraphIntro{
+        font-size: 20px;
+    }
+    .paragraphHeadline{
+        font-size: 40px;
+    }
+}
+
+@media(max-width:820px){
+    .aboutMeSection{
+        display:block;
+        height:max-content;
+    }
+    .myPhoto img{
+        /* width:100%; */
+        height:100%;
+        object-fit: cover;
+    }
+    .myPhoto{
+        width:100%;
+        /* height:50%; */
+    }
+    .aboutMeTextAria{
+        width:100%;
+        /* height:50%; */
+    }
+}

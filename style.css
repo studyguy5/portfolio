@@ -1,0 +1,122 @@
+
+body{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    align-items: center;
+    margin:0px;
+    padding:0px;
+    background-image: url(./img/porfolio_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height:100vh; */
+    box-sizing: border-box;
+    width:100%;
+}
+
+.headfullsize{
+    height:98px;
+    width:100%;
+    max-width:100%;
+}
+
+.headcontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:98px;
+    width:100%;
+    margin: 0 auto;
+    max-width:1440px;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    background-color: rgb(204, 211, 211, 0.2);
+}
+
+.About{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color:white;
+}
+
+.skills{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color:white;
+}
+
+.projects{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color:white;
+}
+
+.About img{
+    display:none;
+    width:8px;
+    margin-top:2px;
+}
+
+.skills img{
+    display:none;
+    width:8px;
+    margin-top:2px;
+}
+
+.projects img{
+    display:none;
+    width:8px;
+    margin-top:2px;
+}
+
+.About:hover img{
+    display:flex;
+    margin-bottom: -10px;
+}
+.skills:hover img{
+    display:flex;
+    margin-bottom: -10px;
+}
+.projects:hover img{
+    display:flex;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+
+.headNavbar img:nth-child(2){
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+    display:block;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.headNavbar img:nth-child(2):hover{
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:1;
+    transition: opacity 0.3s ease-in-out
+}
+
+
+.headNavbar{
+    display:flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+}
+
+.headNavbar a{
+    text-decoration: none;
+}
+
