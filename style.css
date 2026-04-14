@@ -9,7 +9,7 @@ body{
     background-image: url(./img/porfolio_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height:100vh; */
+    /* overflow-x: unset; */
     box-sizing: border-box;
     width:100%;
 }

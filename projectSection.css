@@ -1,0 +1,204 @@
+.portfolioFullsize{
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    max-width:100%;
+}
+
+.portfolioContent{
+    margin: 0 auto;
+    width:100%;
+    max-width:1270px;
+    height:600px; 
+}
+
+.PortfolioTextdiv{
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+    margin-left:10px;
+    margin-right:10px;
+    max-width: 1230px;
+    max-height:565px;
+    gap:48px;
+}
+
+.portfolioText hr{
+    border-color:rgba(61, 207, 182, 1);
+}
+
+.portfolioText{
+    position:relative;
+    max-width:880px;
+    width:100%;
+    max-height:565px;
+}
+
+.mainTopic{
+    color:rgba(61, 207, 182, 1);
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.portfolioMainDescription{
+    max-width:1200px;
+    width:100%;
+    height:565px;
+    padding-left:10px;
+}
+
+.description{
+    color:white;
+}
+
+.projectJoin{
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    height:109px;
+}
+
+
+.portfolioText:has(.projectJoin:hover) ~ .bilderDiv .projectJoin_showMiniVersion{
+    opacity: 1;
+}
+
+.portfolioText:has(.projectElPollo:hover) ~ .bilderDiv .projectElpollo_showMiniVersion{
+    opacity: 1;
+}
+.portfolioText:has(.projectBubble:hover) ~ .bilderDiv .projectBubble_showMiniVersion{
+    opacity: 1;
+}
+
+
+
+.projectJoin:hover .leftparagraphJoin:after{
+    opacity: 1;
+}
+
+.projectElPollo:hover .leftparagraphElpollo:after{
+    opacity: 1;
+}
+
+.projectBubble:hover .leftparagraphBubble:after{
+    opacity: 1;
+}
+
+.projectElPollo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    height:109px;
+}
+
+.projectBubble{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    height:109px;
+}
+
+.leftparagraph{
+    font-size: 24px;
+    height:28px;
+}
+
+.rightparagraph text{
+    margin:0px 4px;
+    color:rgba(61, 207, 182, 1);
+}
+
+
+
+.leftparagraphJoin:after{
+    content: url(./img/arrow_outward.png);
+    display: inline-block;
+    height:26px;
+    align-items: center;
+    color:white;
+    opacity: 0;
+    margin-left: 10px;
+}
+
+.leftparagraphElpollo:after{
+    content: url(./img/arrow_outward.png);
+    display: inline-block;
+    height:26px;
+    align-items: center;
+    color:white;
+    opacity: 0;
+    margin-left: 10px;
+}
+
+.leftparagraphBubble:after{
+    content: url(./img/arrow_outward.png);
+    display: inline-block;
+    height:26px;
+    align-items: center;
+    color:white;
+    opacity: 0;
+    margin-left: 10px;
+}
+
+.bilderDiv{
+    position:relative;
+    max-width:252px;
+    width:100%;
+    bottom:50px;
+    margin-right:46px;
+    max-height:565px;
+}
+.projectJoin_showMiniVersion{
+    position:absolute;
+    display:flex;
+    width:30%;
+    min-width:316px;
+    top:150px;
+    right:-50px;
+    opacity: 0;
+    
+}
+
+.projectElpollo_showMiniVersion{
+    position:absolute;
+    display:flex;
+    width:30%;
+    min-width:316px;
+    bottom:65px;
+    right:-50px;
+    opacity: 0;
+    
+}
+
+.projectBubble_showMiniVersion{
+    position:absolute;
+    display:flex;
+    width:30%;
+    min-width:316px;
+    bottom:-80px;
+    right:-50px;
+    opacity: 0;
+    
+}
+
+.projectMaxView{
+    max-width:1248px;
+    min-height:656px;
+    box-sizing: border-box;
+    position:absolute;
+    padding: 20px 80px;
+    top:-70px;
+    left:-800px;
+    border-radius: 30px;
+    opacity:1;
+    border:1px solid rgba(61, 207, 182, 1);
+    background-color: gray;
+    justify-self:center;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out;
+}

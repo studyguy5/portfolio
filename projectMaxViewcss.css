@@ -1,0 +1,46 @@
+
+.projectContent{
+    display:flex;
+    max-width:1088px;
+    gap:88px;
+}
+
+
+.closeSection{
+    width:100%;
+    max-width:1245px;
+    text-align: end;
+    margin-top:56px;
+    margin-bottom: 39px;
+}
+
+.projectInfo{
+    display:flex;
+    position:relative;
+    bottom:30px;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    min-width:480px;
+    width:100%;
+}
+
+.projectQuestion{
+    font-size: 24px;
+    color:rgba(61, 207, 182, 1);
+    margin-bottom: 20px;
+}
+
+.projectInfo h3{
+    font-size: 53px;
+    margin:0px 0px 24px 0px;
+}
+
+.projectName{
+    height:70px;
+    font-size: 64px;
+}
+
+.projectDescription{
+    height:30px;
+    margin-bottom: 32px;;
+}

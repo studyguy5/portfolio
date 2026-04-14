@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="heroSection.css">
     <link rel="stylesheet" href="aboutMeSection.css">
     <link rel="stylesheet" href="techSkillSection.css">
+    <link rel="stylesheet" href="projectSection.css">
+    <link rel="stylesheet" href="projectMaxViewcss.css">
 </head>
 
 <body>
@@ -95,13 +97,14 @@
             <p class="headline">Technologies</p>
             <div class="skillText">
                 <p class="skillTextHeadline">Skill Set</p>
-                <p class="skillTextParagraph">A short introduction of your skills. Highlight your 
-                    experience of  using different front-end technologies 
-                    and emphasise your openness to learning and adapting to new technologies. 
-                    Show how important it is for you to keep up with 
+                <p class="skillTextParagraph">A short introduction of your skills. Highlight your
+                    experience of using different front-end technologies
+                    and emphasise your openness to learning and adapting to new technologies.
+                    Show how important it is for you to keep up with
                     the rapid changes in web development.</p>
-                    <p class="secondHeadline">You need <span>another skill?</span></p>
-                    <p class="lastParagraph">Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+                <p class="secondHeadline">You need <span>another skill?</span></p>
+                <p class="lastParagraph">Feel free to contact me. I look forward to expanding on my previous knowledge.
+                </p>
             </div>
         </div>
         <div class="skillImages">
@@ -118,7 +121,44 @@
             <img src="./img/growth_mindset.png" alt="growth_Mindest">
         </div>
     </section>
+    <section class="portfolioFullsize">
+        <div class="portfolioContent">
+
+            <div class="PortfolioTextdiv">
+                <div class="portfolioText">
+                    <p class="headline">Portfolio</p>
+                    <p class="mainTopic">Featured Project</p>
+                    <p class="description">Explore a selection of my work here - Interact with<br> projects to
+                        seemyskills inaction.</p>
+                    <hr>
+                    <div onclick="renderProjects(0)" class="projectJoin">
+                        <p class="leftparagraphJoin">Join</p>
+                        <p class="rightparagraph">HTML <text>|</text> CSS <text>|</text> JavaScript</p>
+                    </div>
+                    <hr>
+                    <div class="projectElPollo">
+                        <p class="leftparagraphElpollo">El Pollo</p>
+                        <p class="rightparagraph">HTML <text>|</text> CSS <text>|</text> JavaScript <text>|</text> OOP</p>
+                    </div>
+                    <hr>
+                    <div class="projectBubble">
+                        <p class="leftparagraphBubble">Bubble</p>
+                        <p class="rightparagraph">Angular <text>|</text> CSS <text>|</text> Material Design <text>|</text> Supabase</p>
+                    </div>
+                    <hr>
+                </div>
+                <div class="bilderDiv">
+                    <div class="projectElpollo_showMiniVersion"><img src="./img/elpollo_preview.png" alt=""></div>
+                    <div class="projectBubble_showMiniVersion"><img src="./img/bubble_preview.png" alt=""></div>
+                    <div class="projectJoin_showMiniVersion"><img src="./img/join_preview.png" alt=""></div>
+                </div>
+                <div class="projectMaxView" id="projectMaxView"></div>
+            </div>
+
+        </div>
+    </section>
 </body>
 <script src="main.js"></script>
+<script src="projectView.js"></script>
 
 </html>
