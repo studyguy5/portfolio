@@ -6,7 +6,8 @@
     justify-content: center;
     align-items: center;
     position:relative;
-    min-height: calc(100dvh - 96px);
+    height: calc(100dvh - 96px);
+    max-height: 2160px;
     width:98%;
     max-width:1440px;
     /* margin: 0 auto; */

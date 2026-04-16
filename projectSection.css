@@ -201,4 +201,7 @@
     justify-self:center;
     align-items: center;
     transition: opacity 0.2s ease-in-out;
+    background-image: url('./img/porfolio_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

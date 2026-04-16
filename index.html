@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="techSkillSection.css">
     <link rel="stylesheet" href="projectSection.css">
     <link rel="stylesheet" href="projectMaxViewcss.css">
+    <link rel="stylesheet" href="myColleaguesSection.css">
 </head>
 
 <body>
@@ -136,14 +137,17 @@
                         <p class="rightparagraph">HTML <text>|</text> CSS <text>|</text> JavaScript</p>
                     </div>
                     <hr>
-                    <div class="projectElPollo">
+                    <div onclick="renderProjects(1)" class="projectElPollo">
                         <p class="leftparagraphElpollo">El Pollo</p>
-                        <p class="rightparagraph">HTML <text>|</text> CSS <text>|</text> JavaScript <text>|</text> OOP</p>
+                        <p class="rightparagraph">HTML <text>|</text> CSS <text>|</text> JavaScript <text>|</text> OOP
+                        </p>
                     </div>
                     <hr>
-                    <div class="projectBubble">
+                    <div onclick="renderProjects(2)" class="projectBubble">
                         <p class="leftparagraphBubble">Bubble</p>
-                        <p class="rightparagraph">Angular <text>|</text> CSS <text>|</text> Material Design <text>|</text> Supabase</p>
+                        <p class="rightparagraph">Angular <text>|</text> CSS <text>|</text> Material Design
+                            <text>|</text> Supabase
+                        </p>
                     </div>
                     <hr>
                 </div>
@@ -155,6 +159,48 @@
                 <div class="projectMaxView" id="projectMaxView"></div>
             </div>
 
+        </div>
+    </section>
+    <div class="colleaguesSectionFullsize">
+        <div class="colleagues">
+            <p class="headline">What my Colleagues say about me</p>
+        </div>
+            <div class="colleaguesCards">
+                <div  class="singleColleaguesCardLeft card prev" id="singleColleaguesCardLeft">
+                    <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and 
+                    proactive approach were crucial to the success of our project. <bold style="color : red">Left</bold>
+                    </div>
+                    <div class="name">
+                        <hr><p>Lukas, Teampartner</p>
+                    </div> 
+                </div>
+                <div class="singleColleaguesCardMiddle card active" id="singleColleaguesCardMiddle">
+                    <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and 
+                    proactive approach were crucial to the success of our project. <bold style="color : red">Middle</bold>
+                    </div>
+                    <div class="name">
+                        <hr><p>Lukas, Teampartner</p>
+                    </div> 
+                </div>
+                <div  class="singleColleaguesCardRight card next" id="singleColleaguesCardRight">
+                    <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and 
+                    proactive approach were crucial to the success of our project. <bold style="color : red">Right</bold>
+                    </div>
+                    <div class="name">
+                        <hr><p>Lukas, Teampartner</p>
+                    </div> 
+                </div>
+            </div>
+            <div class="skipAria">
+                <img  onclick="skipColleagues('left')" src="./img/arrow_Left.png">
+                <img class="dot_türkis" src="./img/dot_türkis.png">
+                <img class="dot_white" src="./img/dot_white.png">
+                <img class="dot_white" src="./img/dot_white.png">
+                <img onclick="skipColleagues('right')" src="./img/arrow_Right.png">
+            </div>
         </div>
     </section>
 </body>
