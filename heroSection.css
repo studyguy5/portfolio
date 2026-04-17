@@ -231,6 +231,7 @@
     height:300px;
     border-width:1px;
     margin: 0 auto;
+    width:0px;
 }
 
 .vright p{

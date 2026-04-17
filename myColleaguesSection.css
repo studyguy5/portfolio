@@ -26,7 +26,7 @@
     /* top:0px;
     left:-291px; */
     /* transform:translateX(-50%); */
-    transition:  1.5s ease, opacity 1.5s ease;
+    transition:  1.5s ease;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top:20px;
@@ -45,7 +45,7 @@
     display: flex;
     position:relative;
     /* transform:translateX(-50%); */
-    transition: 1.5s ease, opacity 1.5s ease;
+    transition: 1.5s ease;
     flex-direction: column;
     justify-content: space-evenly;
     min-width: 632px;
@@ -63,7 +63,7 @@
     position:relative;
     top:0px;
     right:420px;
-    transition: 1.5s ease, opacity 1.5s ease;
+    transition: 1.5s ease;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top:20px;
@@ -121,6 +121,38 @@
     box-sizing: border-box;
     /* transform:rotateY(36deg); */
 }
+
+.card.slideOut{
+    height:342px;
+    transform: translateX(-210%);
+    transform:  1.5s ease;
+    margin-top:20px;
+    box-sizing: border-box;
+}
+
+/* .card.slideOutToRight{
+    height:342px;
+    transform: translateX(180%);
+    transform:  1.5s ease;
+    margin-top:20px;
+    box-sizing: border-box;
+} */
+
+.card.slideInStart{
+    height:342px;
+    transform: translateX(210%);
+    transform:  1.5s ease;
+    margin-top:20px;
+    box-sizing: border-box;
+}
+
+/* .card.slideInFromLeft{
+    height:342px;
+    transform: translateX(-210%);
+    transform:  1.5s ease;
+    margin-top:20px;
+    box-sizing: border-box;
+} */
 
 .skipAria {
     display: flex;

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="projectSection.css">
     <link rel="stylesheet" href="projectMaxViewcss.css">
     <link rel="stylesheet" href="myColleaguesSection.css">
+    <link rel="stylesheet" href="contactMe_Sectoin.css">
+    <link rel="stylesheet" href="footerSection.css">
 </head>
 
 <body>
@@ -165,43 +167,98 @@
         <div class="colleagues">
             <p class="headline">What my Colleagues say about me</p>
         </div>
-            <div class="colleaguesCards">
-                <div  class="singleColleaguesCardLeft card prev" id="singleColleaguesCardLeft">
-                    <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and 
+        <div class="colleaguesCards">
+            <div class="singleColleaguesCardLeft card prev" id="singleColleaguesCardLeft">
+                <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and
                     proactive approach were crucial to the success of our project. <bold style="color : red">Left</bold>
-                    </div>
-                    <div class="name">
-                        <hr><p>Lukas, Teampartner</p>
-                    </div> 
                 </div>
-                <div class="singleColleaguesCardMiddle card active" id="singleColleaguesCardMiddle">
-                    <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and 
-                    proactive approach were crucial to the success of our project. <bold style="color : red">Middle</bold>
-                    </div>
-                    <div class="name">
-                        <hr><p>Lukas, Teampartner</p>
-                    </div> 
-                </div>
-                <div  class="singleColleaguesCardRight card next" id="singleColleaguesCardRight">
-                    <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and 
-                    proactive approach were crucial to the success of our project. <bold style="color : red">Right</bold>
-                    </div>
-                    <div class="name">
-                        <hr><p>Lukas, Teampartner</p>
-                    </div> 
+                <div class="name">
+                    <hr>
+                    <p>Lukas, Teampartner</p>
                 </div>
             </div>
-            <div class="skipAria">
-                <img  onclick="skipColleagues('left')" src="./img/arrow_Left.png">
-                <img class="dot_türkis" src="./img/dot_türkis.png">
-                <img class="dot_white" src="./img/dot_white.png">
-                <img class="dot_white" src="./img/dot_white.png">
-                <img onclick="skipColleagues('right')" src="./img/arrow_Right.png">
+            <div class="singleColleaguesCardMiddle card active" id="singleColleaguesCardMiddle">
+                <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and
+                    proactive approach were crucial to the success of our project. <bold style="color : red">Middle
+                    </bold>
+                </div>
+                <div class="name">
+                    <hr>
+                    <p>Lukas, Teampartner</p>
+                </div>
+            </div>
+            <div class="singleColleaguesCardRight card next" id="singleColleaguesCardRight">
+                <div class="mainText">
+                    Lukas has proven to be a reliable group partner. His technical skills and
+                    proactive approach were crucial to the success of our project. <bold style="color : red">Right
+                    </bold>
+                </div>
+                <div class="name">
+                    <hr>
+                    <p>Lukas, Teampartner</p>
+                </div>
             </div>
         </div>
+        <div class="skipAria">
+            <img onclick="skipColleagues('left')" src="./img/arrow_Left.png">
+            <img class="dot_türkis" src="./img/dot_türkis.png">
+            <img class="dot_white" src="./img/dot_white.png">
+            <img class="dot_white" src="./img/dot_white.png">
+            <img onclick="skipColleagues('right')" src="./img/arrow_Right.png">
+        </div>
+    </div>
+    </section>
+    <section class="contact_Me_Section">
+        <div class="contactDescriptionAria">
+            <p class="Contact_headline">Contact Me</p>
+            <p class="Contact_mainTopic">Let's Work<br> Together</p>
+            <p class="Contact_description">Got a Problem to solve?</p>
+            <p class="paragraph">Encourage people to contact you and describe what role you are interested in. Show that
+                you will add
+                value to their projects through your work.
+                <br>
+                <br>
+                Need a Frontend developer? <bold>Let’s talk!</bold>
+            </p>
+        </div>
+        <div class="contact_FormAria">
+            <hr>
+            <div class="nameFieldWrapper">
+                <p class="nameField" id="nameField">What's your name?</p>
+                <input type="text" class="nameInput" placeholder="Your name goes here" id="nameInput">
+            </div>
+            <hr>
+            <div class="emailFieldWrapper">
+                <p class="emailField" id="emailField">What's your email?</p>
+                <input type="email" class="emailInput" placeholder="Your email goes here" id="emailInput"></p>
+            </div>
+            <hr>
+            <div class="helpContainer" id="helpContainer">
+                <p class="helpField" id="helpField">How can I help you?</p>
+                <input type="text" class="helpInput" placeholder="Your message goes here" id="helpInput">
+            </div>
+            <hr class="lastHR">
+            <div class="checkboxDiv" id="checkboxDiv">
+                <input type="checkbox" class="agreeBox" id="agreeBox">&nbsp;<p> I've read the <a
+                        href="www.google.at">privacy policy</a> and agree to the processing of my data as outlined.</p>
+            </div>
+            <button onclick="validateContactForm()" class="sendButton" id="sendButton">Say Hello ;)</button>
+        </div>
+    </section>
+    <section class="footerSection" id="footerSection">
+            <div class="logoNameDiv">
+                <img src="./img/logo.png">
+                <p class="logoName">Leonhard Siegele</p>
+                <p class="location">Austria</p>
+            </div>
+            <p class="footerText">© Leonhard Siegele 2026</p>
+            <div class="links">
+                <a href="" class="link1"><img src="./img/dot.png">Github</a>
+                <a href="" class="link2"><img src="./img/dot.png">Email</a>
+                <a href="" class="link3"><img src="./img/dot.png">Legal Notice</a>
+            </div>
     </section>
 </body>
 <script src="main.js"></script>

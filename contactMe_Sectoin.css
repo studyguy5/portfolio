@@ -1,0 +1,206 @@
+
+.contact_Me_Section{
+    display:flex;
+    margin-top:144px;
+    margin-bottom: 144px;
+    width:1440px;
+    height:600px;
+    background-color: rgb(187, 199, 209, 0.2);
+}
+
+.contactDescriptionAria{
+    text-align: start;
+    width:45%;
+    padding-left:96px;
+    height:337px;
+}
+
+.contact_FormAria{
+    width:55%;
+    height:100%;
+    margin-right:96px;
+}
+
+hr{
+    width:100%;
+    height:0px;
+    border-color: rgba(61, 207, 182, 1);
+}
+
+.nameFieldWrapper{
+    height:99px;
+    width:100%;
+}
+
+.nameField{
+    margin: 32px 0px 16px 0px;
+    font-size: 24px;
+    color:rgba(61, 207, 182, 1);
+}
+
+.nameInput{
+    border:unset;
+    background-color: transparent;
+    padding:5px 30px 5px 0px;
+    margin: 0px 0px 32px 0px;
+    width:210px;
+    font-size: 18px;
+}
+
+
+.emailFieldWrapper{
+    height:99px;
+    width:100%;
+}
+
+.emailField{
+    margin: 32px 0px 16px 0px;
+    font-size: 24px;
+    color:rgba(61, 207, 182, 1);
+}
+
+.emailInput{
+    border:unset;
+    background-color: transparent;
+    padding:5px 30px 5px 0px;
+    margin: 0px 0px 32px 0px;
+    width:210px;
+    font-size: 18px;
+}
+
+.helpField{
+    margin: 32px 0px 16px 0px;
+    font-size: 24px;
+    color:rgba(61, 207, 182, 1);
+}
+
+.helpWrapper{
+    height:99px;
+    width:100%;
+}
+
+.helpInput{
+    border:unset;
+    background-color: transparent;
+    padding:5px 30px 5px 0px;
+    margin: 0px 0px 32px 0px;
+    min-width:200px;
+    font-size: 18px;
+}
+
+.lastHR{
+    margin-bottom: 40px;
+}
+
+.agreeBox{
+    width:24px;
+    height:24px;
+}
+
+input[type = "checkbox"]{
+    appearance: none;
+    content:url(./img/checkbox_unchecked.png);
+    /* border:1px solid rgba(61, 207, 182, 1); */
+    background-color: transparent;
+    color:white;
+    /* background-color:transparent */
+}
+
+input[type = "checkbox"]:hover{
+    cursor: pointer;
+    content:url(./img/checkbox_unchecked_hover.png);
+}
+
+input[type="checkbox"]:checked {
+    /* content: ""; */
+    content: url(./img/checkbox_checked.png);
+    width:24px;
+    height:24px;
+}
+
+input[type="checkbox"]:checked:hover {
+    cursor: pointer;
+    content: url(./img/checkbox_checked_hover.png);
+}
+
+.checkboxDiv{
+    display:flex;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.sendButton{
+    border-radius: 25px;
+    padding: 14.5px 33.2px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+} */
+
+.helpInput:focus{
+    outline: none;
+    margin: 0px 0px 32px 0px;
+}
+
+.helpInput::placeholder{
+    font-size: 18px;
+}
+
+.nameInput:focus{
+    outline: none;
+    margin: 0px 0px 32px 0px;
+}
+.nameInput::placeholder{
+    font-size: 18px;
+}
+
+.emailInput:focus{
+    outline: none;
+    margin: 0px 0px 32px 0px;
+}
+
+.emailInput::placeholder{
+    font-size: 18px;
+}
+
+.Contact_headline{
+    text-align: start;
+    color: rgba(61, 207, 182, 1);
+    font-size: 32px;
+    margin: 0px 0px 20px 0px;
+}
+
+.Contact_mainTopic{
+    text-align: start;
+    color: rgba(61, 207, 182, 1);
+    font-size: 64px;
+    height:128px;
+    margin:0px 0px 40px 0px;
+}
+
+.Contact_description{
+    text-align: start;
+    color: rgba(61, 207, 182, 1);
+    font-size: 24px;
+    margin:0px 0px 16px 0px;
+}
+
+.paragraph{
+    font-size: 16px;
+    color:white;
+}
+
+.paragraph bold{
+    color: rgba(61, 207, 182, 1);
+}
