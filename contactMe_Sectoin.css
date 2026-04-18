@@ -42,9 +42,21 @@ hr{
     border:unset;
     background-color: transparent;
     padding:5px 30px 5px 0px;
-    margin: 0px 0px 32px 0px;
-    width:210px;
+    margin: 0px 0px 0px 0px;
+    width:230px;
     font-size: 18px;
+}
+
+.errorDivName{
+    height:30px;
+}
+
+.errorDivEmail{
+    height:30px;
+}
+
+.errorDivMessage{
+    height:30px;
 }
 
 
@@ -63,8 +75,8 @@ hr{
     border:unset;
     background-color: transparent;
     padding:5px 30px 5px 0px;
-    margin: 0px 0px 32px 0px;
-    width:210px;
+    margin: 0px 0px 0px 0px;
+    width:230px;
     font-size: 18px;
 }
 
@@ -83,8 +95,8 @@ hr{
     border:unset;
     background-color: transparent;
     padding:5px 30px 5px 0px;
-    margin: 0px 0px 32px 0px;
-    min-width:200px;
+    margin: 0px 0px 0px 0px;
+    min-width:230px;
     font-size: 18px;
 }
 
@@ -103,7 +115,7 @@ input[type = "checkbox"]{
     /* border:1px solid rgba(61, 207, 182, 1); */
     background-color: transparent;
     color:white;
-    /* background-color:transparent */
+    /* margin-bottom: -6px; */
 }
 
 input[type = "checkbox"]:hover{
@@ -126,7 +138,24 @@ input[type="checkbox"]:checked:hover {
 .checkboxDiv{
     display:flex;
     align-items: center;
-    margin-bottom: 41px;
+    margin-bottom: 5px;
+}
+
+
+.agreeBoxError{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid rgba(236, 123, 123, 0.8);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+/* .checkboxDiv p{
+    margin-bottom: 10px;
+} */
+
+.errorDivCheckbox{
+    height:30px;
 }
 
 .sendButton{
@@ -150,7 +179,6 @@ input[type="checkbox"]:checked:hover {
 
 .helpInput:focus{
     outline: none;
-    margin: 0px 0px 32px 0px;
 }
 
 .helpInput::placeholder{
@@ -159,7 +187,6 @@ input[type="checkbox"]:checked:hover {
 
 .nameInput:focus{
     outline: none;
-    margin: 0px 0px 32px 0px;
 }
 .nameInput::placeholder{
     font-size: 18px;
@@ -167,7 +194,6 @@ input[type="checkbox"]:checked:hover {
 
 .emailInput:focus{
     outline: none;
-    margin: 0px 0px 32px 0px;
 }
 
 .emailInput::placeholder{

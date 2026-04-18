@@ -1,122 +1,169 @@
-
-body{
-    display:flex;
+body {
+    display: flex;
     flex-direction: column;
-    position:relative;
+    position: relative;
     align-items: center;
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
     background-image: url(./img/porfolio_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* overflow-x: unset; */
     box-sizing: border-box;
-    width:100%;
+    width: 100%;
 }
 
-.headfullsize{
-    height:98px;
-    width:100%;
-    max-width:100%;
+.headfullsize {
+    height: 98px;
+    width: 100%;
+    max-width: 100%;
 }
 
-.headcontent{
+.headLogo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 27px;
+    gap: 8px;
+}
+
+.headLogo:hover img{
+    cursor: pointer;
+    content: url(./img/final_unfilled.png);
+}
+
+.headLogo:hover h3{
+    cursor: pointer;
+    -webkit-text-stroke: 0.3px white;
+    -webkit-text-fill-color: black;
+    /* text-stroke: 1px white; */
+}
+
+.headLogo img {
+    height: 95px;
+    width: 65px;
+}
+
+.headcontent {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:98px;
-    width:100%;
+    height: 98px;
+    width: 100%;
     margin: 0 auto;
-    max-width:1440px;
+    max-width: 1440px;
     padding: 0px 24px;
     box-sizing: border-box;
-    background-color: rgb(204, 211, 211, 0.2);
+    /* background-color: rgb(204, 211, 211, 0.2); */
 }
 
-.About{
-    display:flex;
+.About {
+    display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    color:white;
+    color: white;
 }
 
-.skills{
-    display:flex;
+.skills {
+    display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    color:white;
+    color: white;
 }
 
-.projects{
-    display:flex;
+.projects {
+    display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    color:white;
+    color: white;
 }
 
-.About img{
-    display:none;
-    width:8px;
-    margin-top:2px;
+.About img {
+    display: none;
+    width: 8px;
+    margin-top: 2px;
 }
 
-.skills img{
-    display:none;
-    width:8px;
-    margin-top:2px;
+.skills img {
+    display: none;
+    width: 8px;
+    margin-top: 2px;
 }
 
-.projects img{
-    display:none;
-    width:8px;
-    margin-top:2px;
+.projects img {
+    display: none;
+    width: 8px;
+    margin-top: 2px;
 }
 
-.About:hover img{
-    display:flex;
+.About:hover img {
+    display: flex;
     margin-bottom: -10px;
 }
-.skills:hover img{
-    display:flex;
+
+.skills:hover img {
+    display: flex;
     margin-bottom: -10px;
 }
-.projects:hover img{
-    display:flex;
+
+.projects:hover img {
+    display: flex;
     margin-bottom: -10px;
     cursor: pointer;
 }
 
 
-.headNavbar img:nth-child(2){
-    position:absolute;
-    top:0px;
-    left:0px;
-    opacity:0;
-    display:block;
+.headNavbar img:nth-child(2) {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    display: block;
     transition: opacity 0.2s ease-in-out;
 }
 
-.headNavbar img:nth-child(2):hover{
-    position:absolute;
-    top:0px;
-    left:0px;
-    opacity:1;
+.headNavbar img:nth-child(2):hover {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
     transition: opacity 0.3s ease-in-out
 }
 
 
-.headNavbar{
-    display:flex;
-    position:relative;
+.headNavbar {
+    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    gap:24px;
+    gap: 24px;
 }
 
-.headNavbar a{
+.headNavbar a {
     text-decoration: none;
 }
 
+
+.secondFrame{
+    position:absolute;
+    width:8px;
+    height:13px;
+    top:14px;
+    left:12px;
+    opacity: 1;
+    animation: change 1s ease-in-out infinite;
+}
+
+@keyframes change {
+    0%{
+        top:14px;
+    }
+    100%{
+        top:22px;
+    }
+}

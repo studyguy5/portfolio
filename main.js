@@ -24,6 +24,16 @@ document.addEventListener('click', () => {
     }
 })
 
+let done = false;
+function moveOnce(){
+    let once = document.querySelector(".schraffierter_bg");
+    if(!done){
+        once.classList.remove("schraffierter_bg");
+        once.classList.add("schraffierter_bgOnce");
+        done = true;
+    }
+}
+
 function skipColleagues(direction) {
     let colleagueLeft = document.getElementsByClassName("singleColleaguesCardLeft");
     let colleagueRight = document.getElementsByClassName("singleColleaguesCardRight");
@@ -146,46 +156,161 @@ function validateContactForm() {
     let name = document.getElementById("nameInput");
     let email = document.getElementById("emailInput");
     let message = document.getElementById("helpInput");
+    let checkboxError = document.getElementById("errorDivCheckbox");
     if (name.value == "" && email.value == "" && message.value == "") {
-        name.style.color = "rgba(236, 123, 123, 0.8)";
-        name.value = "Please enter your name";
-        email.style.color = "rgba(236, 123, 123, 0.8)";
-        email.value = "Please enter your email";
-        message.style.color = "rgba(236, 123, 123, 0.8)";
-        message.value = "Please enter your message";
+        showErrorComplete();
     }
     if (name.value == "" || email.value == "" || message.value == "") {
-    
-        if(name.value == ""){
-            name.style.color = "rgba(236, 123, 123, 0.8)";
-            name.value = "Please enter your name";
-        }
-        if(email.value == ""){
-            email.style.color = "rgba(236, 123, 123, 0.8)";
-            email.value = "Please enter your email";
-        }
-        if(message.value == ""){
-            message.style.color = "rgba(236, 123, 123, 0.8)";
-            message.value = "Please enter your message";
-        }
-        if(name.value == "" && email.value == ""){
-            name.style.color = "rgba(236, 123, 123, 0.8)";
-            name.value = "Please enter your name";
-            email.style.color = "rgba(236, 123, 123, 0.8)";
-            email.value = "Please enter your email";
-        }
-        if(name.value == "" && message.value == ""){
-            name.style.color = "rgba(236, 123, 123, 0.8)";
-            name.value = "Please enter your name";
-            message.style.color = "rgba(236, 123, 123, 0.8)";
-            message.value = "Please enter your message";
-        }
-        if(email.value == "" && message.value == ""){
-            email.style.color = "rgba(236, 123, 123, 0.8)";
-            email.value = "Please enter your email";
-            message.style.color = "rgba(236, 123, 123, 0.8)";
-            message.value = "Please enter your message";
-        }
+        showSpecificError(name, email, message);
     }
-    return true;
+    if (!validateCheckBox()) return;
+        // showCheckboxError();
+
+    if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
+        submitInfo();
+    }
+}
+
+function showCheckboxError() {
+    let checkbox = document.getElementById("agreeBox");
+    checkbox.classList.add('agreeBoxError')
+    let checkboxError = document.getElementById("errorDivCheckbox");
+    checkboxError.style.color = "rgba(236, 123, 123, 0.8)";
+    checkboxError.innerHTML = "Please accept the terms and conditions";
+
+}
+
+
+function showErrorComplete() {
+    let nameError = document.getElementById("errorDivName");
+    let emailError = document.getElementById("errorDivEmail");
+    let messageError = document.getElementById("errorDivMessage");
+    nameError.style.color = "rgba(236, 123, 123, 0.8)";
+    nameError.innerHTML = "Please enter your name";
+    emailError.style.color = "rgba(236, 123, 123, 0.8)";
+    emailError.innerHTML = "Please enter your email";
+    messageError.style.color = "rgba(236, 123, 123, 0.8)";
+    messageError.innerHTML = "Please enter your message";
+}
+
+function showSpecificError(name, email, message) {
+    let nameError = document.getElementById("errorDivName");
+    let emailError = document.getElementById("errorDivEmail");
+    let messageError = document.getElementById("errorDivMessage");
+    if (name.value == "") {
+        nameError.style.color = "rgba(236, 123, 123, 0.8)";
+        nameError.innerHTML = "Please enter your name";
+    }
+    if (email.value == "") {
+        emailError.style.color = "rgba(236, 123, 123, 0.8)";
+        emailError.innerHTML = "Please enter your email";
+    }
+    if (message.value == "") {
+        messageError.style.color = "rgba(236, 123, 123, 0.8)";
+        messageError.innerHTML = "Please enter your message";
+    }
+    if (name.value == "" && email.value == "") {
+        nameError.style.color = "rgba(236, 123, 123, 0.8)";
+        nameError.innerHTML = "Please enter your name";
+        emailError.style.color = "rgba(236, 123, 123, 0.8)";
+        emailError.innerHTML = "Please enter your email";
+    }
+    if (name.value == "" && message.value == "") {
+        nameError.style.color = "rgba(236, 123, 123, 0.8)";
+        nameError.innerHTML = "Please enter your name";
+        messageError.style.color = "rgba(236, 123, 123, 0.8)";
+        messageError.innerHTML = "Please enter your message";
+    }
+    if (email.value == "" && message.value == "") {
+        emailError.style.color = "rgba(236, 123, 123, 0.8)";
+        emailError.innerHTML = "Please enter your email";
+        messageError.style.color = "rgba(236, 123, 123, 0.8)";
+        messageError.innerHTML = "Please enter your message";
+    }
+}
+
+
+
+function validateNameField() {
+    let name = document.getElementById("nameInput");
+    let nameError = document.getElementById("errorDivName");
+    if (!validateName(name) && name.value != "") {
+        nameError.style.color = "rgba(236, 123, 123, 0.8)";
+        nameError.innerHTML = "Please enter a correct name";
+    } else if (name.value == "") {
+        nameError.innerHTML = "Please enter your name";
+    } else if (validateName(name) && name.value != "") {
+        nameError.innerHTML = "";
+    }
+}
+
+function validateEmailField() {
+    let email = document.getElementById("emailInput");
+    let emailError = document.getElementById("errorDivEmail");
+    if (!validateEmail(email) && email.value != "") {
+        emailError.style.color = "rgba(236, 123, 123, 0.8)";
+        emailError.innerHTML = "Please enter a correct email";
+    } else if (email.value == "") {
+        emailError.innerHTML = "Please enter your email";
+    } else if (validateEmail(email) && email.value != "") {
+        emailError.innerHTML = "";
+    }
+}
+
+function validateMessageField() {
+    let message = document.getElementById("helpInput");
+    let messageError = document.getElementById("errorDivMessage");
+    if (!validateMessage(message) && message.value != "") {
+        messageError.style.color = "rgba(236, 123, 123, 0.8)";
+        messageError.innerHTML = "Please enter a correct message";
+    } else if (message.value == "") {
+        messageError.innerHTML = "Please enter your message";
+    } else if (validateMessage(message) && message.value != "") {
+        messageError.innerHTML = "";
+    }
+}
+
+// function validatePrivacyandConditions() {
+//     if (validateCheckBox()) {
+//         clearCheckboxError();
+//     } else {
+//         showCheckboxError();
+//     }
+// }
+
+function clearCheckboxError(){
+    let checkbox = document.getElementById("agreeBox");
+    checkbox.classList.remove('agreeBoxError')
+    let checkboxError = document.getElementById("errorDivCheckbox");
+    checkboxError.innerHTML = "";
+}
+
+function validateCheckBox() {
+    let checkbox = document.getElementById("agreeBox");
+    if (checkbox.checked == false) {
+        showCheckboxError();
+        return false;
+    } else {
+        clearCheckboxError();
+        return true;
+    }
+}
+
+
+
+function validateName(name) {
+    const titleRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
+    return titleRegex.test(name.value.trim());
+
+}
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]{3,}\.[^\s@]{2,}$/;
+    return regex.test(email.value.trim());
+}
+
+function validateMessage(message) {
+    const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
+    return messageRegex.test(message.value.trim());
+
 }

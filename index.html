@@ -28,7 +28,8 @@
                 <a class="projects" href="">Projects<img src="./img/dot.png"></a>
             </nav>
             <div class="headLogo">
-                <h3>Logo</h3>
+                <img src="./img/final_filled.png">
+                <h3>Leonhard<br> Siegele</h3>
             </div>
         </div>
     </header>
@@ -43,7 +44,8 @@
         </div>
         <div class="verticalDiv">
             <div class="vleft">
-                <img src="./img/arrow_down.png">
+                <img class="firstFrame" src="./img/arrow_border_türkis.png">
+                <img class="secondFrame" src="./img/white_arrowDown_itself.png">
                 <hr>
             </div>
             <div class="vright">
@@ -71,7 +73,10 @@
         </div>
     </section>
     <section class="aboutMeSection">
-        <div class="myPhoto"><img src="./img/bspImg_bw.png"></div>
+        <div  class="myPhoto">
+            <img onmouseenter="moveOnce()" src="./img/bspImg_bw.png">
+            <img class="schraffierter_bg" src="./img/schraffierter_bg.png">
+        </div>
         <div class="aboutMeTextAria">
             <p class="firstLine">Who I am</p>
             <div class="whoIamBox">
@@ -111,17 +116,18 @@
             </div>
         </div>
         <div class="skillImages">
-            <img src="./img/html_Skill.png" alt="HTML">
-            <img src="./img/css_Skill.png" alt="CSS">
-            <img src="./img/js_Skill.png" alt="JS">
-            <img src="./img/material_design_Skill.png" alt="Material Design">
-            <img src="./img/typeScript_SKill.png" alt="typeScript">
-            <img src="./img/angular_Skill.png" alt="Angular">
-            <img src="./img/supabase_Skill.png" alt="Supabase">
-            <img src="./img/git_Skill.png" alt="Git">
-            <img src="./img/rest-Api_Skill.png" alt="Rest API">
-            <img src="./img/scrum_Skill.png" alt="Scrum">
-            <img src="./img/growth_mindset.png" alt="growth_Mindest">
+            <div class="skillPackage"><img src="./img/HTML_SkillLogo.png" alt="HTML" class="skillLogo"><p class="skillDescription">HTML</p></div>
+            <div class="skillPackage"><img src="./img/CSS_SkillLogo.png" alt="CSS" class="skillLogo"><p class="skillDescription">CSS</p></div>
+            <div class="skillPackage"><img src="./img/JS_SkillLogo.png" alt="JS" class="skillLogo"><p class="skillDescription">Javascript</p></div>
+            <div class="skillPackage"><img src="./img/MaterialDesign_SkillLogo.png" alt="MaterialDesign" class="skillLogo"><p class="skillDescription">Material Design</p></div>
+            <div class="skillPackage"><img src="./img/Typescript_SkillLogo.png" alt="Typescript" class="skillLogo"><p class="skillDescription">Typescript</p></div>
+            <div class="skillPackage"><img src="./img/angular_SkillLogo.png" alt="Angular" class="skillLogo"><p class="skillDescription">Angular</p></div>
+            <div class="skillPackage"><img src="./img/supabase_SkillLogo.png" alt="supabase" class="skillLogo"><p class="skillDescription">Supabase</p></div>
+            <div class="skillPackage"><img src="./img/git_SkillLogo.png" alt="Git" class="skillLogo"><p class="skillDescription">Git</p></div>
+            <div class="skillPackage"><img src="./img/restAPI_SkillLogo.png" alt="RestAPI" class="skillLogo"><p class="skillDescription">RestAPI</p></div>
+            <div class="skillPackage"><img src="./img/scrum_SkillLogo.png" alt="Scrum" class="skillLogo"><p class="skillDescription">Scrum</p></div>
+            <div class="skillPackage"><img src="./img/growth_Mindset_SkillLogo.png" alt="Growth Mindset" class="skillLogo"><p class="skillDescription">Growth Mindset</p></div>
+            
         </div>
     </section>
     <section class="portfolioFullsize">
@@ -170,34 +176,35 @@
         <div class="colleaguesCards">
             <div class="singleColleaguesCardLeft card prev" id="singleColleaguesCardLeft">
                 <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and
-                    proactive approach were crucial to the success of our project. <bold style="color : red">Left</bold>
+                    Leonhard was a reliable team partner on the project. He wrote solid code and 
+                    was open to feedback. His communication made working together straightforward.
+                     <bold style="color : red">Left</bold>
                 </div>
                 <div class="name">
                     <hr>
-                    <p>Lukas, Teampartner</p>
+                    <p>Arnesto, Teampartner</p>
                 </div>
             </div>
             <div class="singleColleaguesCardMiddle card active" id="singleColleaguesCardMiddle">
                 <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and
-                    proactive approach were crucial to the success of our project. <bold style="color : red">Middle
+                    Working with Leonhard was uncomplicated. He completed his tasks diligently 
+                    and was always willing to help when questions came up. A good addition to our team. <bold style="color : red">Middle
                     </bold>
                 </div>
                 <div class="name">
                     <hr>
-                    <p>Lukas, Teampartner</p>
+                    <p>Fredo, Teampartner</p>
                 </div>
             </div>
             <div class="singleColleaguesCardRight card next" id="singleColleaguesCardRight">
                 <div class="mainText">
-                    Lukas has proven to be a reliable group partner. His technical skills and
-                    proactive approach were crucial to the success of our project. <bold style="color : red">Right
+                    Leonhard did his part well in the project. He was dependable and actively 
+                    participated in discussions. Overall, he kept a good work environment.. <bold style="color : red">Right
                     </bold>
                 </div>
                 <div class="name">
                     <hr>
-                    <p>Lukas, Teampartner</p>
+                    <p>Detlef, Teampartner</p>
                 </div>
             </div>
         </div>
@@ -227,23 +234,27 @@
             <hr>
             <div class="nameFieldWrapper">
                 <p class="nameField" id="nameField">What's your name?</p>
-                <input type="text" class="nameInput" placeholder="Your name goes here" id="nameInput">
+                <input type="text" class="nameInput" onchange="validateNameField()"  placeholder="Your name goes here" id="nameInput">
+                <div class="errorDivName" id="errorDivName"></div>
             </div>
             <hr>
             <div class="emailFieldWrapper">
                 <p class="emailField" id="emailField">What's your email?</p>
-                <input type="email" class="emailInput" placeholder="Your email goes here" id="emailInput"></p>
+                <input type="email" class="emailInput" onchange="validateEmailField()" placeholder="Your email goes here" id="emailInput">
+                <div class="errorDivEmail" id="errorDivEmail"></div>
             </div>
             <hr>
             <div class="helpContainer" id="helpContainer">
                 <p class="helpField" id="helpField">How can I help you?</p>
-                <input type="text" class="helpInput" placeholder="Your message goes here" id="helpInput">
+                <input type="text" class="helpInput" onchange="validateMessageField()" placeholder="Your message goes here" id="helpInput">
+                <div class="errorDivMessage" id="errorDivMessage"></div>
             </div>
             <hr class="lastHR">
             <div class="checkboxDiv" id="checkboxDiv">
-                <input type="checkbox" class="agreeBox" id="agreeBox">&nbsp;<p> I've read the <a
+                <input type="checkbox" class="agreeBox" onchange="validateCheckBox()" id="agreeBox">&nbsp;<p> I've read the <a
                         href="www.google.at">privacy policy</a> and agree to the processing of my data as outlined.</p>
-            </div>
+                    </div>
+                    <div class="errorDivCheckbox" id="errorDivCheckbox"></div>
             <button onclick="validateContactForm()" class="sendButton" id="sendButton">Say Hello ;)</button>
         </div>
     </section>

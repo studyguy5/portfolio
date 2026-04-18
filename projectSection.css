@@ -59,8 +59,26 @@
     align-items: center;
     color:white;
     height:109px;
+    padding: 0px 10px 0px 10px;
 }
 
+.projectElPollo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    height:109px;
+    padding: 0px 10px 0px 10px;
+}
+
+.projectBubble{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    height:109px;
+    padding: 0px 10px 0px 10px;
+}
 
 .portfolioText:has(.projectJoin:hover) ~ .bilderDiv .projectJoin_showMiniVersion{
     opacity: 1;
@@ -73,6 +91,20 @@
     opacity: 1;
 }
 
+.projectJoin:hover{
+    background-color: rgba(61, 207, 182, 0.3);
+    transition:0.2s ease-in-out;
+}
+
+.projectElPollo:hover{
+    background-color: rgba(61, 207, 182, 0.3);
+    transition:0.2s ease-in-out;
+}
+
+.projectBubble:hover{
+    background-color: rgba(61, 207, 182, 0.3);
+    transition:0.2s ease-in-out;
+}
 
 
 .projectJoin:hover .leftparagraphJoin:after{
@@ -87,21 +119,6 @@
     opacity: 1;
 }
 
-.projectElPollo{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    color:white;
-    height:109px;
-}
-
-.projectBubble{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    color:white;
-    height:109px;
-}
 
 .leftparagraph{
     font-size: 24px;

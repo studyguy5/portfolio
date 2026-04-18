@@ -15,6 +15,12 @@
     margin-bottom: 39px;
 }
 
+.closeSection img:hover{
+    content:url(./img/closeButton_hover.png);
+    /* width:32px;
+    height:32px; */
+}
+
 .projectInfo{
     display:flex;
     position:relative;
@@ -57,10 +63,33 @@
     margin-bottom: 40px;
 }
 
-.projectImage a{
+.projectImageDiv button{
     margin-top:48.22px;
     display:flex;
-    justify-content:end;
+    background-color: transparent;
+    justify-self:end;
+    align-items: center;
+    border:unset;
+    cursor: pointer;
+    gap:4px;
+    color:rgba(61, 207, 182, 1);
+    font-size: 16px;
+}
+
+.projectImageDiv button:hover{
+    color:white;
+}
+
+.projectImageDiv button img{
+    width:24px;
+    height:24px;
+    color:rgba(61, 207, 182, 1);
+}
+
+.projectImageDiv button:hover img{
+    margin:0px -10px 0px 10px;
+    content:url(./img/arrow_horizontal_türkis_bold.png);
+    transition:0.2s ease-in-out;
 }
 
 .projectStack p{

@@ -16,18 +16,22 @@ let projectArray = [
     },
     {
         'projectName': 'El pollo Loco',
-        'projectDescription': 'The project description goes here',
-        'projectImage': './img/bspImg_bw.png',
+        'projectDescription': 'Jump, run and throw game based on object-oriented approach. Help Pepe' + 
+        'to find coins and tabasco salsa to fight against the crazy hen.',
+        'projectImage': './img/Elpollo_bigFrame.png',
         'projectLink': 'https://bsp-join.web.app/',
         'projectGithub': 'https://github.com/bsp-join/bsp-join',
-        'projectStack': ['React', 'Firebase']
+        'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
+            {icon : "./img/miniJS.png", stack : 'JavaScript'}]
     }, {
-        'projectName': 'Bubble',
-        'projectDescription': 'The project description goes here',
-        'projectImage': './img/bspImg_bw.png',
+        'projectName': 'DABubble',
+        'projectDescription': 'This App is a Slack Clone App. It revolutionizes team communication' + 
+        ' and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+        'projectImage': './img/bubble_bigFrame.png',
         'projectLink': 'https://bsp-join.web.app/',
         'projectGithub': 'https://github.com/bsp-join/bsp-join',
-        'projectStack': ['React', 'Firebase']
+        'projectStack': [{icon : "./img/mini_Angular.png", stack : 'Angular'}, {icon : "./img/mini_typeScript.png", stack : 'TypeScript'}, 
+            {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
     }]
 
 function renderProjects(index) {
@@ -56,9 +60,9 @@ function renderProjects(index) {
                 <a href="${projectArray[index].projectGithub}">Live Test<img src="./img/arrow_türkis.png"></a>
             </div>
         </div>
-        <div class="projectImage">
+        <div class="projectImageDiv">
         <div class="projectImage"><img src="${projectArray[index].projectImage}"></div>
-        <a href="./img/close_Icon.png">Next Project></a>
+        <button onclick="renderProjects(${index + 1})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
         </div>
     </div>
     `
