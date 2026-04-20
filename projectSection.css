@@ -222,3 +222,46 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media(max-width:820px){
+    .portfolioContent{
+        width:88%;
+    }
+
+    .projectJoin{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .leftparagraphJoin{
+        margin-bottom:0px;
+    }
+    .leftparagraphElpollo{
+        margin-bottom:0px;
+    }
+    .leftparagraphBubble{
+        margin-bottom:0px;
+    }
+
+    .bilderDiv{
+        display:none;
+    }
+    .rightparagraph{
+        margin-top:0px;
+    }
+
+    .projectElPollo{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+    .projectBubble{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+}

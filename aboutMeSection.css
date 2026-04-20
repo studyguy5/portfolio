@@ -81,7 +81,7 @@
 
 .paragraphIntro {
     margin: 0px 32px 0px 32px;
-    font-size: 28px;
+    font-size: 23px;
 }
 
 .myLocation {
@@ -123,25 +123,38 @@
 
 @media(max-width:1280px) {
     .paragraphIntro {
-        font-size: 25px;
-        ;
+        font-size: 19px;
+        
     }
 }
 
 @media(max-width:1020px) {
     .paragraphIntro {
-        font-size: 22px;
+        font-size: 17px;
     }
 
     .paragraphHeadline {
         font-size: 50px;
+        margin: 22px 0px 20px 32px;
+    }
+
+    .myLocation{
+        margin:22px 32px 0px 17px;
+    }
+
+    .myMindset{
+        margin:10px 32px 0px 17px;
+    }
+
+    .myProblemSolvingSkills{
+        margin: 10px 32px 10px 17px;
     }
 }
 
 @media(max-width:900px) {
-    .paragraphIntro {
+    /* .paragraphIntro {
         font-size: 20px;
-    }
+    } */
 
     .paragraphHeadline {
         font-size: 40px;
@@ -155,18 +168,19 @@
     }
 
     .myPhoto img {
-        /* width:100%; */
-        height: 100%;
+        /* width:88%; */
+        /* height: 100%; */
         object-fit: cover;
     }
 
     .myPhoto {
-        width: 100%;
+        width: 88%;
+        margin:0 auto;
         /* height:50%; */
     }
 
     .aboutMeTextAria {
-        width: 100%;
-        /* height:50%; */
+        width: 88%;
+        margin:0 auto;
     }
 }

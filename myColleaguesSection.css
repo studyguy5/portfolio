@@ -93,7 +93,8 @@
 
 .card{
     position:absolute;
-    left:410px;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 .card.active{
@@ -106,7 +107,7 @@
 
 .card.prev{
     height:342px;
-    transform: translateX(-104%);
+    transform: translateX(-155%);
     transform:  1.5s ease;
     margin-top:20px;
     box-sizing: border-box;
@@ -115,7 +116,7 @@
 
 .card.next{
     height:342px;
-    transform: translateX(104%);
+    transform: translateX(56%);
     transform:  1.5s ease;
     margin-top:20px;
     box-sizing: border-box;
@@ -124,23 +125,16 @@
 
 .card.slideOut{
     height:342px;
-    transform: translateX(-210%);
+    transform: translateX(-280%);
     transform:  1.5s ease;
     margin-top:20px;
     box-sizing: border-box;
 }
 
-/* .card.slideOutToRight{
-    height:342px;
-    transform: translateX(180%);
-    transform:  1.5s ease;
-    margin-top:20px;
-    box-sizing: border-box;
-} */
 
 .card.slideInStart{
     height:342px;
-    transform: translateX(210%);
+    transform: translateX(155%);
     transform:  1.5s ease;
     margin-top:20px;
     box-sizing: border-box;

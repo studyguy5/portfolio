@@ -1,13 +1,22 @@
 
-document.addEventListener('click', () => {
+let lan = document.getElementsByClassName("language")[0]
+let hover = document.getElementsByClassName("language_Hover")[0]
+
+lan.addEventListener('click', changeLanguage);
+hover.addEventListener('click', changeLanguage); 
+
+function changeLanguage(){
     let basic = document.getElementsByClassName("language")[0]
     if (basic.src.includes('english.png')) {
         basic.style.transition = "0.2s";
         basic.style.opacity = "0";
         basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+        // basic.setAttribute('onclick',"switchLanguage('de')")
+        switchLanguage('de');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
+        switchLanguage('de');
         setTimeout(() => {
             hover.src = "./img/german_hover.png";
         }, 80);
@@ -16,13 +25,16 @@ document.addEventListener('click', () => {
         basic.style.opacity = "0";
         basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+        // basic.setAttribute('onclick',"switchLanguage('en')")
+        switchLanguage('en');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
+        switchLanguage('en');
         setTimeout(() => {
             hover.src = "./img/english_hover.png";
         }, 80);
     }
-})
+}
 
 let done = false;
 function moveOnce(){
@@ -31,6 +43,45 @@ function moveOnce(){
         once.classList.remove("schraffierter_bg");
         once.classList.add("schraffierter_bgOnce");
         done = true;
+    }
+}
+
+function switchLanguage(langCode) {
+    // GTranslate Widget manuell triggern
+    if (window.gtranslateSettings) {
+        const event = new Event('change');
+        const selector = `[data-gt-lang="${langCode}"]`;
+        const element = document.querySelector(selector);
+        if (element) element.click();
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", renderFrame());
+function renderFrame(){
+    let frame = document.querySelector(".vcenter");
+    frame.innerHTML="";
+    frame.innerHTML=/*html*/`
+    <div class="easterEggDiv">
+        You found the Easter Egg!
+        I don't have LinkedIn, or in other words<br>
+        my LinkedIn profile is empty. So let's connect in a traditional way:
+    </div>
+    `
+}
+
+document.querySelector(".linkedIn").addEventListener('mouseenter', showFrame);
+document.querySelector(".linkedIn").addEventListener('mouseleave', hideFrame);
+
+function showFrame(event) {
+    if (event.type === 'mouseenter') {
+        document.querySelector(".easterEggDiv").style.display = "flex";
+    }
+}
+
+function hideFrame(event) {
+    if (event.type === 'mouseleave') {
+        document.querySelector(".easterEggDiv").style.display = "none";
     }
 }
 
@@ -313,4 +364,8 @@ function validateMessage(message) {
     const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
     return messageRegex.test(message.value.trim());
 
+}
+
+function stopPropagation(event) {
+    event.stopPropagation();
 }

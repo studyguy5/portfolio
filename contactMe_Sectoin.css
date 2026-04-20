@@ -3,7 +3,7 @@
     display:flex;
     margin-top:144px;
     margin-bottom: 144px;
-    width:1440px;
+    max-width:1248px;
     height:600px;
     background-color: rgb(187, 199, 209, 0.2);
 }
@@ -11,14 +11,15 @@
 .contactDescriptionAria{
     text-align: start;
     width:45%;
-    padding-left:96px;
+    padding-left:10px;
+    padding-right:10px;
     height:337px;
 }
 
 .contact_FormAria{
     width:55%;
     height:100%;
-    margin-right:96px;
+    margin-right:10px;
 }
 
 hr{
@@ -229,4 +230,10 @@ input[type="checkbox"]:checked:hover {
 
 .paragraph bold{
     color: rgba(61, 207, 182, 1);
+}
+
+@media(max-width:820px){
+    .contact_Me_Section{
+        display:block;
+    }
 }
