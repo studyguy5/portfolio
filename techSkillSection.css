@@ -15,9 +15,18 @@
     border-radius: 30px;
     border:1px solid rgba(61, 207, 182, 1);
     width:522px;
-    height:500px;
+    height:520px;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(44, 236, 201, 0.3) 0%, #192525 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
+}
+
+.skillText button{
+    margin-left:30px;
+    padding: 13px 24.5px;
+    border-radius: 25px;
+    background-color: transparent;
+    color:white;
+    border:1px solid rgba(255, 255, 255, 1);
 }
 
 
@@ -55,7 +64,7 @@
 .skillTextHeadline{
     font-size: 64px;
     color: rgba(61, 207, 182, 1);
-    margin: 32px 32px 40px 32px;
+    margin: 32px 32px 35px 32px;
     font-weight: 500;
     text-align: left;
     letter-spacing: 10px;
@@ -65,7 +74,7 @@
     height:180px;
     overflow-y: scroll;
     color:white;
-    margin: 0px 32px 32px 32px;
+    margin: 0px 32px 28px 32px;
     text-align: left;
     font-size: 18px;
     scrollbar-width: thin;
@@ -105,9 +114,9 @@
     .techSkillsSection{
         gap:20px;
     }
-    .skillImages img{
+    /* .skillImages img{
     margin-right:25px;
-}
+} */
 }
 
 @media(max-width:920px){
@@ -129,7 +138,7 @@
 @media(max-width:870px){
     .skillImages{
         row-gap: 15px;
-        column-gap: 15px;
+        column-gap: 20px;
         max-height:428px;
         width:72%;
     }
@@ -145,7 +154,25 @@
         width:88%;
     }
     .skillImages{
-        margin:20px auto;
+        margin:40px auto;
         width:88%;
+    }
+}
+
+@media(max-width:450px){
+    .skillTextHeadline{
+        font-size: 40px;
+        margin: 32px 4px 35px 32px;
+    }
+    .secondHeadline{
+        font-size: 24px;
+    }
+    .skillImages{
+        margin:30px auto;
+        width:85%;
+    }
+    .skillLogo{
+        width:50px;
+        height:50px;
     }
 }

@@ -180,3 +180,13 @@
     width: 65%;
     height: 1px;
 }
+
+@media(max-width:400px){
+    .card.active{
+        padding:48px 20px;
+    }
+    .singleColleaguesCardLeft, .singleColleaguesCardMiddle, .singleColleaguesCardRight {
+        min-width: 295px;
+        max-width: 295px;
+    }
+}

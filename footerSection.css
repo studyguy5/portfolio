@@ -1,12 +1,26 @@
 
 .footerSection{
     display:flex;
-    background-color: rgb(177, 144, 94, 0.4);
+    /* background-color: rgb(177, 144, 94, 0.4); */
     justify-content: space-between;
     align-items: end;
-    min-width:1248px;
+    max-width:1248px;
+    width:98%;
+    box-sizing: border-box;
     height:126px;
     margin-bottom:64px;
+}
+
+.logoNameDiv img{
+    width:44px;
+    height:54px;
+    margin-right:8px;
+    /* margin-bottom: -12px; */
+}
+
+.logo{
+    display:flex;
+    align-items: center;
 }
 
 .links{
@@ -57,6 +71,13 @@
     color:white;
 }
 
+.footerTextMobile{
+    display:none;
+    margin: 0px 0px 36px 0px;
+    font-size: 18px;
+    color: rgba(61, 207, 182, 1);
+}
+
 .logoNameDiv p{
     margin: 8px 0px 0px 0px;
     font-size: 16px;
@@ -66,4 +87,13 @@
     margin: 0px 0px 36px 0px;
     font-size: 18px;
     color:rgba(61, 207, 182, 1);
+}
+
+@media(max-width:820px){
+    .footerText{
+        display:none;
+    }
+    .footerTextMobile{
+        display:block;
+    }
 }

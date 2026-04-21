@@ -184,3 +184,41 @@
         margin:0 auto;
     }
 }
+
+ @media(max-width:560px){
+    .aboutMeSection{
+        margin: 144px auto;
+    }
+ }
+
+ @media(max-width:465px){
+
+    .whoIamBox{
+        /* overflow-y: scroll; */
+        /* scrollbar-width: thin; */
+        height:fit-content;
+    }
+    .paragraphHeadline{
+        font-size: 22px;
+        margin: 22px 0px 10px 16px;
+    }
+
+    .myLocation {
+        gap:10px;
+        margin: 12px 12px 0px 10px;
+    }
+
+    .myMindset {
+        gap:10px;
+        margin: 6px 12px 0px 10px;
+    }
+    .myProblemSolvingSkills {
+        gap:10px;
+        margin: 6px 12px 10px 10px;
+    }
+
+    .paragraphIntro {
+        font-size: 16px;
+        margin: 0px 22px 0px 22px;
+    }
+ }
