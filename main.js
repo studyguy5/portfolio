@@ -109,9 +109,8 @@ function switchLanguage(langCode) {
 
 document.addEventListener("DOMContentLoaded", renderFrame());
 function renderFrame(){
-    let frame = document.querySelector(".vcenter");
-    frame.innerHTML="";
-    frame.innerHTML=/*html*/`
+    let frame = document.querySelector(".githubATag");
+    frame.innerHTML+=/*html*/`
     <div class="easterEggDiv">
         You found the Easter Egg!
         I don't have LinkedIn, or in other words<br>

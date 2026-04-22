@@ -43,8 +43,8 @@ function renderProjects(index) {
     console.log(result)
     let i = (index + 1).toString();
     let iPlusZero = i.padStart(2, '0');
-    project.style.transition = "0.5s";
-    project.style.left = '0px'
+    project.style.transition = "1s";
+    project.style.left = '50%';
     project.innerHTML = ''
     project.innerHTML += /*html*/ `
     <div class="closeSection"><img onclick="closeProject()" src="./img/close_Icon.png"></div>

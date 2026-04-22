@@ -1,221 +1,225 @@
-.portfolioFullsize{
-    display:flex;
+.portfolioFullsize {
+    display: flex;
     justify-content: flex-start;
-    width:100%;
-    max-width:100%;
+    width: 100%;
+    max-width: 100%;
 }
 
-.portfolioContent{
+.portfolioContent {
     margin: 0 auto;
-    width:100%;
-    max-width:1270px;
-    height:600px; 
+    width: 100%;
+    max-width: 1270px;
+    height: 600px;
 }
 
-.PortfolioTextdiv{
-    display:flex;
+.PortfolioTextdiv {
+    display: flex;
     justify-content: space-between;
-    position:relative;
-    margin-left:10px;
-    margin-right:10px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
     max-width: 1230px;
-    max-height:565px;
-    gap:48px;
+    max-height: 565px;
+    gap: 48px;
 }
 
-.portfolioText hr{
-    border-color:rgba(61, 207, 182, 1);
+.portfolioText hr {
+    border-color: rgba(61, 207, 182, 1);
 }
 
-.portfolioText{
-    position:relative;
-    max-width:880px;
-    width:100%;
-    max-height:565px;
+.portfolioText {
+    position: relative;
+    max-width: 880px;
+    width: 100%;
+    max-height: 565px;
 }
 
-.mainTopic{
-    color:rgba(61, 207, 182, 1);
+.mainTopic {
+    color: rgba(61, 207, 182, 1);
     font-size: 32px;
     font-weight: 700;
     margin: 0px;
 }
 
-.portfolioMainDescription{
-    max-width:1200px;
-    width:100%;
-    height:565px;
-    padding-left:10px;
+.portfolioMainDescription {
+    max-width: 1200px;
+    width: 100%;
+    height: 565px;
+    padding-left: 10px;
 }
 
-.description{
-    color:white;
+.description {
+    color: white;
 }
 
-.projectJoin{
-    display:flex;
-    position:relative;
+.projectJoin {
+    display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    color:white;
-    height:109px;
+    color: white;
+    height: 109px;
     padding: 0px 10px 0px 10px;
 }
 
-.projectElPollo{
-    display:flex;
+.projectElPollo {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    color:white;
-    height:109px;
+    color: white;
+    height: 109px;
     padding: 0px 10px 0px 10px;
 }
 
-.projectBubble{
-    display:flex;
+.projectBubble {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    color:white;
-    height:109px;
+    color: white;
+    height: 109px;
     padding: 0px 10px 0px 10px;
 }
 
-.portfolioText:has(.projectJoin:hover) ~ .bilderDiv .projectJoin_showMiniVersion{
+.portfolioText:has(.projectJoin:hover)~.bilderDiv .projectJoin_showMiniVersion {
     opacity: 1;
 }
 
-.portfolioText:has(.projectElPollo:hover) ~ .bilderDiv .projectElpollo_showMiniVersion{
-    opacity: 1;
-}
-.portfolioText:has(.projectBubble:hover) ~ .bilderDiv .projectBubble_showMiniVersion{
+.portfolioText:has(.projectElPollo:hover)~.bilderDiv .projectElpollo_showMiniVersion {
     opacity: 1;
 }
 
-.projectJoin:hover{
+.portfolioText:has(.projectBubble:hover)~.bilderDiv .projectBubble_showMiniVersion {
+    opacity: 1;
+}
+
+.projectJoin:hover {
     background-color: rgba(61, 207, 182, 0.3);
-    transition:0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
-.projectElPollo:hover{
+.projectElPollo:hover {
     background-color: rgba(61, 207, 182, 0.3);
-    transition:0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
-.projectBubble:hover{
+.projectBubble:hover {
     background-color: rgba(61, 207, 182, 0.3);
-    transition:0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 
-.projectJoin:hover .leftparagraphJoin:after{
+.projectJoin:hover .leftparagraphJoin:after {
     opacity: 1;
 }
 
-.projectElPollo:hover .leftparagraphElpollo:after{
+.projectElPollo:hover .leftparagraphElpollo:after {
     opacity: 1;
 }
 
-.projectBubble:hover .leftparagraphBubble:after{
+.projectBubble:hover .leftparagraphBubble:after {
     opacity: 1;
 }
 
 
-.leftparagraph{
+.leftparagraph {
     font-size: 24px;
-    height:28px;
+    height: 28px;
 }
 
-.rightparagraph text{
-    margin:0px 4px;
-    color:rgba(61, 207, 182, 1);
+.rightparagraph text {
+    margin: 0px 4px;
+    color: rgba(61, 207, 182, 1);
 }
 
 
 
-.leftparagraphJoin:after{
+.leftparagraphJoin:after {
     content: url(./img/arrow_outward.png);
     display: inline-block;
-    height:26px;
+    height: 26px;
     align-items: center;
-    color:white;
+    color: white;
     opacity: 0;
     margin-left: 10px;
 }
 
-.leftparagraphElpollo:after{
+.leftparagraphElpollo:after {
     content: url(./img/arrow_outward.png);
     display: inline-block;
-    height:26px;
+    height: 26px;
     align-items: center;
-    color:white;
+    color: white;
     opacity: 0;
     margin-left: 10px;
 }
 
-.leftparagraphBubble:after{
+.leftparagraphBubble:after {
     content: url(./img/arrow_outward.png);
     display: inline-block;
-    height:26px;
+    height: 26px;
     align-items: center;
-    color:white;
+    color: white;
     opacity: 0;
     margin-left: 10px;
 }
 
-.bilderDiv{
-    position:relative;
-    max-width:252px;
-    width:100%;
-    bottom:50px;
-    margin-right:46px;
-    max-height:565px;
-}
-.projectJoin_showMiniVersion{
-    position:absolute;
-    display:flex;
-    width:30%;
-    min-width:316px;
-    top:150px;
-    right:-50px;
-    opacity: 0;
-    
+.bilderDiv {
+    position: relative;
+    max-width: 252px;
+    width: 100%;
+    bottom: 50px;
+    margin-right: 46px;
+    max-height: 565px;
 }
 
-.projectElpollo_showMiniVersion{
-    position:absolute;
-    display:flex;
-    width:30%;
-    min-width:316px;
-    bottom:65px;
-    right:-50px;
+.projectJoin_showMiniVersion {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    min-width: 316px;
+    top: 150px;
+    right: -50px;
     opacity: 0;
-    
+
 }
 
-.projectBubble_showMiniVersion{
-    position:absolute;
-    display:flex;
-    width:30%;
-    min-width:316px;
-    bottom:-80px;
-    right:-50px;
+.projectElpollo_showMiniVersion {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    min-width: 316px;
+    bottom: 65px;
+    right: -50px;
     opacity: 0;
-    
+
 }
 
-.projectMaxView{
-    max-width:1248px;
-    min-height:656px;
+.projectBubble_showMiniVersion {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    min-width: 316px;
+    bottom: -80px;
+    right: -50px;
+    opacity: 0;
+
+}
+
+.projectMaxView {
+    max-width: 1248px;
+    min-height: 652px;
     box-sizing: border-box;
-    position:absolute;
+    position: fixed;
+    z-index: 5;
     padding: 20px 80px;
-    top:-70px;
-    left:-800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 30px;
-    opacity:1;
-    border:1px solid rgba(61, 207, 182, 1);
+    opacity: 1;
+    border: 1px solid rgba(61, 207, 182, 1);
     background-color: gray;
-    justify-self:center;
+    justify-self: center;
     align-items: center;
     transition: opacity 0.2s ease-in-out;
     background-image: url('./img/porfolio_bg.png');
@@ -223,45 +227,59 @@
     background-size: cover;
 }
 
-@media(max-width:820px){
-    .portfolioContent{
-        width:88%;
+@media(max-width:820px) {
+    .projectMaxView {
+        position: fixed;
+        height: clamp(500px, calc(100vh - 60px), calc(100vw - 40px));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    .projectJoin{
-        display:flex;
+    .portfolioContent {
+        width: 88%;
+        height: 1043px;
+    }
+
+    .projectJoin {
+        display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: start;
     }
 
-    .leftparagraphJoin{
-        margin-bottom:0px;
-    }
-    .leftparagraphElpollo{
-        margin-bottom:0px;
-    }
-    .leftparagraphBubble{
-        margin-bottom:0px;
+    .leftparagraphJoin {
+        margin-bottom: 0px;
     }
 
-    .bilderDiv{
-        display:none;
-    }
-    .rightparagraph{
-        margin-top:0px;
+    .leftparagraphElpollo {
+        margin-bottom: 0px;
     }
 
-    .projectElPollo{
-        display:flex;
+    .leftparagraphBubble {
+        margin-bottom: 0px;
+    }
+
+    .bilderDiv {
+        display: none;
+    }
+
+    .rightparagraph {
+        margin-top: 0px;
+    }
+
+    .projectElPollo {
+        display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: start;
     }
-    .projectBubble{
-        display:flex;
+
+    .projectBubble {
+        display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: start;
     }
 }
+

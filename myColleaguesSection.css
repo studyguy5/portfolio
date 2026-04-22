@@ -9,10 +9,23 @@
     text-align: center;
 }
 
+.colleagues{
+    position:relative;
+}
+
+.quoteImg{
+    position:absolute;
+    top:40px;
+    left:32%;
+    transform:translateX(-50%);
+    width: 64px;
+    height: 64px;
+    z-index: 4;
+}
+
 .colleaguesCards {
     display:flex;
     max-width: 1440px;
-    /* min-width: 500px; */
     gap:30px;
     height: 372px;
     position:relative;
@@ -179,6 +192,13 @@
 .name hr {
     width: 65%;
     height: 1px;
+}
+
+@media(max-width:820px){
+    .colleaguesSectionFullsize{
+        margin-top:100px;
+    }
+
 }
 
 @media(max-width:400px){

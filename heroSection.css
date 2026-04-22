@@ -174,7 +174,7 @@
     width: 97%;
     bottom: 45px;
     left: 0px;
-    z-index: 10 !important;
+    z-index: 10;
     transform: rotateZ(-3deg);
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -184,9 +184,18 @@
 .githubLogo:hover{
     content:url(./img/Github.png);
 }
+.linkedIn{
+    position:relative;
+}
 
 .linkedIn:hover{
     content:url(./img/linkedIn_white.png);
+}
+
+.linkedIn:hover ~ .githubATag .easterEggDiv{
+    display:flex;
+    color:black;
+
 }
 
 @media(max-height:1140px) {
@@ -329,10 +338,18 @@
     margin: 0 auto;
 }
 
+/* .vcenter{
+    position:relative;
+} */
+
+.githubATag{
+    position:relative;
+}
+
 .vright {
     display: flex;
     flex-direction: column-reverse;
-    position: relative;
+    /* position: relative; */
     justify-content: end;
     align-items: center;
     height: 480px;
@@ -343,8 +360,11 @@
 }
 
 .vright img{
-    display:flex;
+    /* display:flex; */
     justify-content: center;
+}
+.githubATag{
+    display:flex;
 }
 
 .vright hr {
@@ -369,9 +389,9 @@
 
 .easterEggDiv{
     position:absolute;
-    top:218px;
-    right:132px;
-    width:233px;
+    top:-40px;
+    right:42px;
+    width:215px;
     height:95px;
     padding:10px;
     background-color: azure;
@@ -382,6 +402,12 @@
     border:1px solid green;
     display:none;
     justify-content: center;
+    text-orientation: upright;
+    writing-mode: horizontal-tb;
+}
+
+.mailMobile{
+    display:none;
 }
 
 
@@ -392,16 +418,32 @@
 .mainBanner h1{
     font-size: clamp(16px, 8px + 9vw, 128px);
 }
-.vright a:nth-child(4){
+.vright a:nth-child(5){
     display:none;
 }
+.slider{
+    height:53px;
+    gap:15px;
+}
+.slider p{
+    font-size: 24px;
+    width: 290px;
+}
 
-/* .verticalDiv{
-    height:40%;
-} */
 .vright hr{
     --var:100vh;
     height: calc(var(--var) *18 / 100); 
+}
+/* .vright{
+    flex-wrap: wrap-reverse;
+} */
+
+.mailMobile{
+    display:block;
+}
+
+.headlineDiv{
+    margin-top: -150px;
 }
 }
 

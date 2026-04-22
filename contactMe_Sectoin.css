@@ -245,6 +245,8 @@ input[type="checkbox"]:checked:hover {
     .contact_Me_Section{
         display:block;
         height:1039px;
+        margin-top:100px;
+        margin-bottom:100px;
     }
     .contactDescriptionAria{
         height:356px;

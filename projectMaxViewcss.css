@@ -1,116 +1,271 @@
-
-.projectContent{
-    display:flex;
-    max-width:1088px;
-    gap:88px;
+.projectContent {
+    display: flex;
+    max-width: 1088px;
+    margin-top: 124px;
+    gap: 88px;
 }
 
 
-.closeSection{
+.closeSection {
+    position: absolute;
+    right: 80px;
+    top: 28px;
     cursor: pointer;
-    width:100%;
-    max-width:1245px;
+    /* width:100%; */
+    /* max-width:1245px; */
     text-align: end;
-    margin-top:56px;
-    margin-bottom: 39px;
+    /* margin-top: 56px; */
+    /* margin-bottom: 39px; */
 }
 
-.closeSection img:hover{
-    content:url(./img/closeButton_hover.png);
+.closeSection img:hover {
+    content: url(./img/closeButton_hover.png);
     /* width:32px;
     height:32px; */
 }
 
-.projectInfo{
-    display:flex;
-    position:relative;
-    bottom:70px;
+.projectInfo {
+    display: flex;
+    position: relative;
+    bottom: 70px;
     flex-direction: column;
     /* justify-content: space-between; */
-    min-width:480px;
-    width:100%;
+    /* min-width:480px; */
+    /* width:100%; */
 }
 
-.projectQuestion{
+.projectImage img {
+    width: clamp(12.5rem, 40vw, 32.5rem);
+}
+
+.projectQuestion {
     font-size: 24px;
-    color:rgba(61, 207, 182, 1);
+    color: rgba(61, 207, 182, 1);
     margin-bottom: 20px;
 }
 
-.projectInfo h3{
+.projectInfo h3 {
     font-size: 128px;
-    margin:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
-.projectName{
-    height:58px;
+.projectName {
+    height: 58px;
     margin-bottom: 40px;
     font-size: 64px;
-    color:white;
+    color: white;
 }
 
-.projectDescription{
-    height:60px;
+.projectDescription {
+    height: 78px;
     font-size: 18px;
-    width:80%;
-    margin-bottom: 32px;;
+    width: 80%;
+    margin-bottom: 32px;
 }
 
-.projectStack{
-    display:flex;
+.projectStack {
+    display: flex;
     align-items: center;
-    gap:2.5px;
+    gap: 2.5px;
     margin-bottom: 40px;
 }
 
-.projectImageDiv button{
-    margin-top:48.22px;
-    display:flex;
+.projectImageDiv button {
+    margin-top: 48.22px;
+    display: flex;
     background-color: transparent;
-    justify-self:end;
+    justify-self: end;
     align-items: center;
-    border:unset;
+    border: unset;
     cursor: pointer;
-    gap:4px;
-    color:rgba(61, 207, 182, 1);
+    gap: 4px;
+    color: rgba(61, 207, 182, 1);
     font-size: 16px;
 }
 
-.projectImageDiv button:hover{
-    color:white;
+.projectImageDiv button:hover {
+    color: white;
 }
 
-.projectImageDiv button img{
-    width:24px;
-    height:24px;
-    color:rgba(61, 207, 182, 1);
+.projectImageDiv button img {
+    width: 24px;
+    height: 24px;
+    color: rgba(61, 207, 182, 1);
 }
 
-.projectImageDiv button:hover img{
-    margin:0px -10px 0px 10px;
-    content:url(./img/arrow_horizontal_türkis_bold.png);
-    transition:0.2s ease-in-out;
+.projectImageDiv button:hover img {
+    margin: 0px -10px 0px 10px;
+    content: url(./img/arrow_horizontal_türkis_bold.png);
+    transition: 0.2s ease-in-out;
 }
 
-.projectStack p{
+.projectStack p {
     margin: 0px 16px 0px 0px;
-    color:white;
+    color: white;
 }
 
-.projectLinks{
-    display:flex;
-    gap:24px;
+.projectLinks {
+    display: flex;
+    gap: 24px;
 }
 
 
 
-.projectLinks a{
-    display:flex;
+.projectLinks a {
+    display: flex;
     align-items: center;
-    padding:13px 24px;
+    padding: 13px 24px;
     border: 1px solid white;
-    color:white;
+    color: white;
     text-decoration: none;
     border-radius: 25px;
-    gap:4px;
+    gap: 4px;
+}
+
+@media(max-width:1300px) {
+    /* .closeSection{
+        width:80%;
+    } */
+}
+
+@media(max-width:1100px) {
+    .projectImage img {
+        width: clamp(12.5rem, 30vw, 32.5rem);
+    }
+
+}
+
+@media(max-width:950px) {
+    .projectContent {
+        gap: 20px;
+    }
+
+    .projectImage img {
+        width: clamp(12.5rem, 25vw, 32.5rem);
+    }
+
+    /* .projectMaxView {
+        top: 1px;
+    } */
+
+}
+
+@media(max-width:1050px) {
+    /* .projectImage img {
+        width: 420px;
+        }
+        .projectContent{
+        gap: 0px;
+        } */
+}
+
+@media(max-width:820px) {
+    .projectContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top:50px;
+        gap: 40px;
+    }
+    .closeSection {
+        right: 40px;
+    }
+    .projectImageDiv button {
+        display:none;
+    }
+    .projectName{
+        font-size: 56px;
+        margin-bottom: 20px;
+    }
+    .projectStack{
+        margin-bottom: 20px;
+    }
+    .projectDescription{
+        margin-bottom: 15px;
+    }
+    .projectInfo{
+        bottom:35px;
+    }
+    .projectInfo h3 {
+        font-size: 64px;
+    }
+    .projectImage img {
+        width: clamp(12.5rem, 40vw, 32.5rem);
+        height:auto;
+    }
+    .projectMaxView{
+        padding:10px 40px;
+    }
+
+}
+
+@media(max-width:645px) {
+    .projectImage img {
+        width: clamp(12.5rem, 40vw, 32.5rem);
+    }
+
+    .projectMaxView {
+        padding: 10px 40px;
+    }
+}
+
+@media(max-width:550px) {
+    .projectImage img {
+        width: clamp(12.5rem, 40vw, 32.5rem);
+    }
+
+    .projectMaxView {
+        padding: 10px 20px;
+    }
+}
+@media(max-width:510px){
+    .projectStack{
+        flex-wrap: wrap;
+    }
+    .projectDescription{
+        height:96px;
+    }
+
+    .projectQuestion{
+        font-size: 20px;
+    }
+    .projectMaxView {
+        padding: 20px 10px;
+    }
+    .projectLinks a {
+        padding: 13px 18px;
+    }
+    .projectLinks a:first-child{
+        width:105px;
+    }
+    .projectLinks a:last-child{
+        width:80px;
+    }
+    .projectLinks{
+        gap:10px;
+    }
+    .portfolioContent{
+        width:98%;
+    }
+    .PortfolioTextdiv{
+        margin-left:0px;
+        margin-right:0px;
+    }
+}
+@media(max-height:700px) {
+    .projectMaxView {
+        padding: 10px 10px;
+        height: calc(100vh - 60px);
+    }
+    .closeSection {
+        top: 10px;
+    }
+    .projectImage img {
+        height: clamp(7.5rem, 10vh, 32.5rem);
+    }
+}
+@media(max-height:670px){
+    .projectMaxView{
+        min-height:630px;
+    }
 }
