@@ -213,7 +213,7 @@
     z-index: 5;
     padding: 20px 80px;
     top: 50%;
-    left: 50%;
+    left: -50%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
     opacity: 1;
@@ -230,9 +230,9 @@
 @media(max-width:820px) {
     .projectMaxView {
         position: fixed;
-        height: clamp(500px, calc(100vh - 60px), calc(100vw - 40px));
+        /* height: clamp(550px, calc(100vh - 30px), calc(100vw - 35px)); */
         top: 50%;
-        left: 50%;
+        left: -50%;
         transform: translate(-50%, -50%);
     }
 

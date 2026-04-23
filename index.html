@@ -28,9 +28,9 @@
             </div>
             <!-- <img src="./img/burgerMenu_symbol.png" alt="burgerMenu" class="burgerMenu"> -->
             <div class="burgerMenuMobile">
-                <p class="link1">About me</p>
-                <p class="link2">Skills</p>
-                <p class="link3">Projects</p>
+                <a onclick="toggleBurgerMenu()" class="link1" href="#aboutMeSection">About me</a>
+                <a onclick="toggleBurgerMenu()" class="link2" href="#techSkillsSection">Skills</a>
+                <a onclick="toggleBurgerMenu()" class="link3" href="#portfolioSection">Projects</a>
                 <img class="languageMobile" src="./img/english.png">
                 <img class="language_HoverMobile" src="./img/english_hover.png">
             </div>
@@ -237,10 +237,10 @@
     <div class="colleaguesSectionFullsize">
         <div class="colleagues">
             <p class="headline">What my Colleagues say about me</p>
-            <img class="quoteImg" src="./img/quotes.png" alt="Quote">
         </div>
         <div class="colleaguesCards">
             <div class="singleColleaguesCardLeft card prev" id="singleColleaguesCardLeft">
+                <img class="quoteImg" src="./img/quotes.png" alt="Quote">
                 <div class="mainText">
                     Leonhard was a reliable team partner on the project. He wrote solid code and
                     was open to feedback. His communication made working together straightforward.
@@ -252,6 +252,7 @@
                 </div>
             </div>
             <div class="singleColleaguesCardMiddle card active" id="singleColleaguesCardMiddle">
+                <img class="quoteImg" src="./img/quotes.png" alt="Quote">
                 <div class="mainText">
                     Working with Leonhard was uncomplicated. He completed his tasks diligently
                     and was always willing to help when questions came up. A good addition to our team. <bold
@@ -264,6 +265,7 @@
                 </div>
             </div>
             <div class="singleColleaguesCardRight card next" id="singleColleaguesCardRight">
+                <img class="quoteImg" src="./img/quotes.png" alt="Quote">
                 <div class="mainText">
                     Leonhard did his part well in the project. He was dependable and actively
                     participated in discussions. Overall, he kept a good work environment.. <bold style="color : red">
@@ -343,7 +345,7 @@
         <div class="links">
             <a href="" class="link1"><img src="./img/dot.png">Github</a>
             <a href="" class="link2"><img src="./img/dot.png">Email</a>
-            <a href="" class="link3"><img src="./img/dot.png">Legal Notice</a>
+            <a href="./legal-notice.html" class="link3"><img src="./img/dot.png">Legal Notice</a>
         </div>
     </section>
     <p class="footerTextMobile">© Leonhard Siegele 2026</p>

@@ -97,19 +97,22 @@ function moveOnce(){
 }
 
 function switchLanguage(langCode) {
-    // GTranslate Widget manuell triggern
-    if (window.gtranslateSettings) {
-        const event = new Event('change');
-        const selector = `[data-gt-lang="${langCode}"]`;
-        const element = document.querySelector(selector);
-        if (element) element.click();
-    }
+    const elements = document.querySelectorAll('[data-lang]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (key && translations[langCode] && translations[langCode][key]) {
+            element.textContent = translations[langCode][key];
+        }
+    });
+    
+    
 }
 
 
 document.addEventListener("DOMContentLoaded", renderFrame());
 function renderFrame(){
     let frame = document.querySelector(".githubATag");
+    if(frame)
     frame.innerHTML+=/*html*/`
     <div class="easterEggDiv">
         You found the Easter Egg!
@@ -119,8 +122,12 @@ function renderFrame(){
     `
 }
 
-document.querySelector(".linkedIn").addEventListener('mouseenter', showFrame);
-document.querySelector(".linkedIn").addEventListener('mouseleave', hideFrame);
+let l1 = document.querySelector(".linkedIn")
+if(l1)
+l1.addEventListener('mouseenter', showFrame);
+let l2 = document.querySelector(".linkedIn")
+if(l2)
+l2.addEventListener('mouseleave', hideFrame);
 
 function showFrame(event) {
     if (event.type === 'mouseenter') {

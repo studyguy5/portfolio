@@ -58,11 +58,12 @@ function renderProjects(index) {
             <div class="projectLinks">
                 <a href="${projectArray[index].projectLink}">Github-Link<img src="./img/arrow_türkis.png"></a>
                 <a href="${projectArray[index].projectGithub}">Live Test<img src="./img/arrow_türkis.png"></a>
-            </div>
+                </div>
+                <button class="nextProjectMobile" onclick="renderProjects(${index + 1 < projectArray.length ? index + 1 : 0})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
         </div>
         <div class="projectImageDiv">
         <div class="projectImage"><img src="${projectArray[index].projectImage}"></div>
-        <button onclick="renderProjects(${index + 1})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
+        <button onclick="renderProjects(${index + 1 < projectArray.length ? index + 1 : 0})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
         </div>
     </div>
     `

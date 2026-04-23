@@ -477,7 +477,7 @@
 }
 
 @media(max-height:600px){
-    .vright a:nth-child(4){
+    .vright a:nth-child(5){
     display:none;
 }
 }

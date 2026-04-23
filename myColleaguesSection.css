@@ -6,7 +6,11 @@
 }
 
 .headline{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 48px auto;
+    justify-content: center;
+    max-width:600px;
 }
 
 .colleagues{
@@ -15,8 +19,10 @@
 
 .quoteImg{
     position:absolute;
-    top:40px;
-    left:32%;
+    display:block;
+    top:-18px;
+    left:0%;
+    opacity:0;
     transform:translateX(-50%);
     width: 64px;
     height: 64px;
@@ -27,10 +33,10 @@
     display:flex;
     max-width: 1440px;
     gap:30px;
-    height: 372px;
+    height: 388px;
     position:relative;
     overflow-x: hidden;
-    /* box-shadow: 0 10px 30px rgba(0,0,0,0.25); */
+    align-items: end;
 }
 
 .singleColleaguesCardLeft {
@@ -74,7 +80,7 @@
 .singleColleaguesCardRight {
     display: flex;
     position:relative;
-    top:0px;
+    /* top:0px; */
     right:420px;
     transition: 1.5s ease;
     flex-direction: column;
@@ -95,6 +101,9 @@
         min-width: 480px;
         max-width: 480px;
     }
+    /* .quoteImg{
+        left: 475px;
+    } */
 }
 
 @media(max-width:1240px){
@@ -102,6 +111,9 @@
         min-width: 380px;
         max-width: 380px;
     }
+    /* .quoteImg{
+        left: 35%;
+    } */
 }
 
 .card{
@@ -116,6 +128,10 @@
     transition: 1.5s ease;
     margin-top:0px;
     box-sizing: border-box;
+}
+.card.active .quoteImg{
+    opacity:1;
+    transition: 4.5s ease;
 }
 
 .card.prev{
