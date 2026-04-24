@@ -28,18 +28,18 @@
             </div>
             <!-- <img src="./img/burgerMenu_symbol.png" alt="burgerMenu" class="burgerMenu"> -->
             <div class="burgerMenuMobile">
-                <a onclick="toggleBurgerMenu()" class="link1" href="#aboutMeSection">About me</a>
-                <a onclick="toggleBurgerMenu()" class="link2" href="#techSkillsSection">Skills</a>
-                <a onclick="toggleBurgerMenu()" class="link3" href="#portfolioSection">Projects</a>
+                <a onclick="toggleBurgerMenu()" data-lang class="link1" href="#aboutMeSection">About me</a>
+                <a onclick="toggleBurgerMenu()" data-lang class="link2" href="#techSkillsSection">Skills</a>
+                <a onclick="toggleBurgerMenu()" data-lang class="link3" href="#portfolioSection">Projects</a>
                 <img class="languageMobile" src="./img/english.png">
                 <img class="language_HoverMobile" src="./img/english_hover.png">
             </div>
             <nav class="headNavbar">
                 <img class="language" src="./img/english.png">
                 <img class="language_Hover" src="./img/english_hover.png">
-                <a href="#aboutMeSection" class="About" href="">About me<img src="./img/dot.png"></a>
-                <a href="#techSkillsSection" class="skills" href="">Skills<img src="./img/dot.png"></a>
-                <a href="#portfolioSection" class="projects" href="">Projects<img src="./img/dot.png"></a>
+                <a href="#aboutMeSection" data-lang class="About" href="">About me<img src="./img/dot.png"></a>
+                <a href="#techSkillsSection" data-lang class="skills" href="">Skills<img src="./img/dot.png"></a>
+                <a href="#portfolioSection" data-lang class="projects" href="">Projects<img src="./img/dot.png"></a>
             </nav>
             <div class="headLogo">
                 <img src="./img/final_filled.png">
@@ -49,14 +49,14 @@
     </header>
     <section class="mainBanner">
         <div class="headlineDiv">
-            <h2>Frontend Developer</h2>
+            <h2 data-lang>Frontend Developer</h2>
             <h1>Leonhard Siegele</h1>
         </div>
         <div class="buttonAria">
-            <a href="#portfolioSection" class="check_My_Work">
+            <a href="#portfolioSection" data-lang class="check_My_Work">
                 <p>Check my Work</p>
             </a>
-            <a href="#contactMeSection" class="Contact_ME">
+            <a href="#contactMeSection" data-lang class="Contact_ME">
                 <p>Contact me</p>
             </a>
         </div>
@@ -76,18 +76,18 @@
             </div>
             <div class="sliderWrapper">
                 <div class="slider">
-                    <p class="keyWord"><img src="./img/dot.png">Frontend Developer</p>
-                    <p class="keyWord"><img src="./img/dot.png">Based in Austria</p>
-                    <p class="keyWord"><img src="./img/dot.png">Available for work</p>
-                    <p class="keyWord"><img src="./img/dot.png">Ready for Remote Work</p>
-                    <p class="keyWord"><img src="./img/dot.png">ready to Learn</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">Frontend Developer</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">based in Austria</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">love coding</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">ready for Remote Work</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">ready to Learn</p>
                 </div>
                 <div class="slider">
-                    <p class="keyWord"><img src="./img/dot.png">Frontend Developer</p>
-                    <p class="keyWord"><img src="./img/dot.png">Based in Austria</p>
-                    <p class="keyWord"><img src="./img/dot.png">Available for work</p>
-                    <p class="keyWord"><img src="./img/dot.png">Ready for Remote Work</p>
-                    <p class="keyWord"><img src="./img/dot.png">ready to Learn</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">Frontend Developer</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">based in Austria</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">love coding</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">ready for Remote Work</p>
+                    <p class="keyWord" data-lang><img src="./img/dot.png">ready to Learn</p>
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@
             <p class="firstLine">Who I am</p>
             <div class="whoIamBox">
                 <p class="paragraphHeadline">About me</p>
-                <p class="paragraphIntro">Hey there, I'm Leonhard! I'm a frontend developer with a passion for
+                <p class="paragraphIntro" data-lang>Hey there, I'm Leonhard! I'm a frontend developer with a passion for
                     good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos.
                     I love Coding reladet stuff, because I can practice my creativity, understanding systems do problem
                     solving.
@@ -142,10 +142,10 @@
                     more efficient and productive.
                     Nobody is good in every Language but we can learn from each other and make the digital life a good
                     place to experience technology.</p>
-                <p class="secondHeadline">You need <span>another skill?</span></p>
-                <p class="lastParagraph">Feel free to contact me. I look forward to expanding on my previous knowledge.
+                <p class="secondHeadline" data-lang>You need <span>another skill?</span></p>
+                <p class="lastParagraph" data-lang>Feel free to contact me. I look forward to expanding on my previous knowledge.
                 </p>
-                <button onclick="openContactForm()" class="contactButton">Let's talk</button>
+                <button onclick="openContactForm()" class="contactButton" data-lang>Let's talk</button>
             </div>
         </div>
         <div class="skillImages">
@@ -184,13 +184,13 @@
                     class="skillLogo">
                 <div class="growthMindsetAddonDiv">
                     <img class="whiteArrowDown" src="./img/bubble_arrow.png">
-                    <p>I have a special<br>interest in learning</p>
+                    <p data-lang>I have a special<br>interest in learning</p>
                     <div class="frameworkDiv">
                         <div id="react"><img src="./img/react_logo.png" alt="React">React</div>
                         <div id="vue"><img src="./img/vue.js_logo.png" alt="Vue.js">Vue.js</div>
                     </div>
                 </div>
-                <p class="skillDescription">Growth Mindset</p>
+                <p class="skillDescription" data-lang>Growth Mindset</p>
             </div>
 
         </div>
