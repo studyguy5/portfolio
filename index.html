@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="footerSection.css">
 </head>
 
-<body>
+<body onload="init()">
 
     <header class="headfullsize">
         <div class="headcontent">
@@ -53,11 +53,11 @@
             <h1>Leonhard Siegele</h1>
         </div>
         <div class="buttonAria">
-            <a href="#portfolioSection" data-lang class="check_My_Work">
-                <p>Check my Work</p>
+            <a href="#portfolioSection"  class="check_My_Work">
+                <p data-lang>Check my Work</p>
             </a>
-            <a href="#contactMeSection" data-lang class="Contact_ME">
-                <p>Contact me</p>
+            <a href="#contactMeSection" class="Contact_ME">
+                <p data-lang>Contact me</p>
             </a>
         </div>
         <div class="verticalDiv">
@@ -105,18 +105,18 @@
                     good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos.
                     I love Coding reladet stuff, because I can practice my creativity, understanding systems do problem
                     solving.
-                    Basicly I find solutions and improve them afterwords, like an architect or engineer</p>
+                    Basicly I find solutions and improve them afterwords, like an architect or engineer.</p>
                 <div class="myLocation"><img src="./img/location.png">
-                    <p>I'm currently based in Austria/Innsbruck, but I'm open for remote work or relocation with almmost
-                        no limit</p>
+                    <p data-lang>I'm currently based in Austria/Innsbruck, but I'm open for remote work or relocation with almmost
+                        no limit.</p>
                 </div>
                 <div class="myMindset"><img src="./img/mindset.png">
-                    <p>Improving my Skills is standart in IT, but I'm seriously addicted to learning new things.
+                    <p data-lang>Improving my Skills is standard in IT, but I'm seriously addicted to learning new things.
                         Especially in the AI Aria, I want to know how LLM's work and the list goes on but this container
-                        here is to small for that</p>
+                        here is to small for that.</p>
                 </div>
                 <div class="myProblemSolvingSkills"><img src="./img/problemSolvingSkills.png">
-                    <p>The exiting part of my job as a Frontend Developer is problem-solving and finding solutions for
+                    <p data-lang>The exiting part of my job as a Frontend Developer is problem-solving and finding solutions for
                         various problems.
                         My approach is mostly look for at least two perspektives to solve a problem and decide which has
                         a good afect/komplexity ratio.
@@ -130,7 +130,7 @@
             <p class="headline">Technologies</p>
             <div class="skillText">
                 <p class="skillTextHeadline">Skill Set</p>
-                <p class="skillTextParagraph">I have created a good fundament <br>of Skills in HTML, CSS and JavaScript
+                <p class="skillTextParagraph" data-lang>I have created a good fundament <br>of Skills in HTML, CSS and JavaScript
                     through my project focused work.
                     I made a Task-Manager, a Canvas Game and a few easy projects where I started. My takeaways are
                     finding different ways to solve a problem and
@@ -203,7 +203,7 @@
                     <p class="headline">Portfolio</p>
                     <p class="mainTopic">Featured Project</p>
                     <p class="description">Explore a selection of my work here - Interact with<br> projects to
-                        seemyskills inaction.</p>
+                        see my skills in action.</p>
                     <hr>
                     <div onclick="renderProjects(0)" class="projectJoin">
                         <p class="leftparagraphJoin">Join</p>
@@ -350,6 +350,7 @@
     </section>
     <p class="footerTextMobile">© Leonhard Siegele 2026</p>
 </body>
+<script src="langpackage.js"></script>
 <script src="main.js"></script>
 <script src="projectView.js"></script>
 

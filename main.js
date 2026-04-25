@@ -1,11 +1,16 @@
 
+function init(){
+    // renderProjects();
+    changeAbsolutePosition();
+}
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
 
 lan.addEventListener('click', changeLanguage);
-hover.addEventListener('click', changeLanguage); 
+hover.addEventListener('click', changeLanguage);
 
-function changeLanguage(){
+function changeLanguage() {
+    console.log("change language normal")
     let basic = document.getElementsByClassName("language")[0]
     if (basic.src.includes('english.png')) {
         basic.style.transition = "0.2s";
@@ -13,7 +18,7 @@ function changeLanguage(){
         basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('de')")
-        switchLanguage('de');
+        // switchLanguage('de');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
         switchLanguage('de');
@@ -26,7 +31,7 @@ function changeLanguage(){
         basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('en')")
-        switchLanguage('en');
+        // switchLanguage('en');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
         switchLanguage('en');
@@ -41,9 +46,10 @@ let langMobile = document.getElementsByClassName("languageMobile")[0]
 let langMobileHover = document.getElementsByClassName("language_HoverMobile")[0]
 
 langMobile.addEventListener('click', changeLanguageMobile);
-langMobileHover.addEventListener('click', changeLanguageMobile); 
+langMobileHover.addEventListener('click', changeLanguageMobile);
 
-function changeLanguageMobile(){
+function changeLanguageMobile() {
+    console.log("change language mobile")
     let basic = document.getElementsByClassName("languageMobile")[0]
     if (basic.src.includes('english.png')) {
         basic.style.transition = "0.2s";
@@ -51,7 +57,7 @@ function changeLanguageMobile(){
         basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('de')")
-        switchLanguage('de');
+        // switchLanguage('de');
         let hover = document.getElementsByClassName("language_HoverMobile")[0]
         hover.src = "";
         switchLanguage('de');
@@ -64,7 +70,7 @@ function changeLanguageMobile(){
         basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('en')")
-        switchLanguage('en');
+        // switchLanguage('en');
         let hover = document.getElementsByClassName("language_HoverMobile")[0]
         hover.src = "";
         switchLanguage('en');
@@ -76,44 +82,65 @@ function changeLanguageMobile(){
 
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);
 function toggleBurgerMenu() {
-let t = document.getElementById("nav-icon1");
-t.classList.toggle('open');
-if(document.querySelector(".open")){
-document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
-document.querySelector(".burgerMenuMobile").style.opacity = "1";
-}else{
-    document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
-    document.querySelector(".burgerMenuMobile").style.opacity = "0";}
+    let t = document.getElementById("nav-icon1");
+    t.classList.toggle('open');
+    if (document.querySelector(".open")) {
+        document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
+        document.querySelector(".burgerMenuMobile").style.opacity = "1";
+    } else {
+        document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
+        document.querySelector(".burgerMenuMobile").style.opacity = "0";
+    }
 }
 
 let done = false;
-function moveOnce(){
+function moveOnce() {
     let once = document.querySelector(".schraffierter_bg");
-    if(!done){
+    if (!done) {
         once.classList.remove("schraffierter_bg");
         once.classList.add("schraffierter_bgOnce");
         done = true;
     }
 }
-
-function switchLanguage(langCode) {
+// let currentLang = 'en';
+function switchLanguage(langcode) {
+    console.log("switch language " + langcode);
     const elements = document.querySelectorAll('[data-lang]');
     elements.forEach(element => {
-        const key = element.getAttribute('data-lang');
-        if (key && translations[langCode] && translations[langCode][key]) {
-            element.textContent = translations[langCode][key];
+        const baseKey = element.innerText.trim();
+        if (baseKey) {
+            element.innerHTML = translations[langcode][baseKey] || element.innerHTML; // Fallback auf den Originaltext, wenn keine Übersetzung vorhanden ist
         }
     });
-    
-    
+
+
+}
+let positionInterval = null;
+function changeAbsolutePosition() {
+    if(positionInterval !== null) clearInterval(positionInterval);
+
+   positionInterval = setInterval(() => {
+        let contactP = document.querySelector(".Contact_ME p");
+        let contactO = document.querySelector(".Contact_ME");
+        if (contactP.innerHTML == "Contact me") {
+            contactO.style.minWidth = "150px";
+            contactP.style.left = "27px";
+            contactP.style.minWidth = "100px";
+        };
+        if (contactP.innerHTML == "Kontaktiere mich") {
+            contactO.style.minWidth = "170px";
+            contactP.style.left = "23px";
+            contactP.style.minWidth = "130px";
+        }
+    }, 100);
 }
 
 
 document.addEventListener("DOMContentLoaded", renderFrame());
-function renderFrame(){
+function renderFrame() {
     let frame = document.querySelector(".githubATag");
-    if(frame)
-    frame.innerHTML+=/*html*/`
+    if (frame)
+        frame.innerHTML +=/*html*/`
     <div class="easterEggDiv">
         You found the Easter Egg!
         I don't have LinkedIn, or in other words<br>
@@ -123,11 +150,11 @@ function renderFrame(){
 }
 
 let l1 = document.querySelector(".linkedIn")
-if(l1)
-l1.addEventListener('mouseenter', showFrame);
+if (l1)
+    l1.addEventListener('mouseenter', showFrame);
 let l2 = document.querySelector(".linkedIn")
-if(l2)
-l2.addEventListener('mouseleave', hideFrame);
+if (l2)
+    l2.addEventListener('mouseleave', hideFrame);
 
 function showFrame(event) {
     if (event.type === 'mouseenter') {
@@ -271,7 +298,7 @@ function validateContactForm() {
         showSpecificError(name, email, message);
     }
     if (!validateCheckBox()) return;
-        // showCheckboxError();
+    // showCheckboxError();
 
     if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
         submitInfo();
@@ -385,7 +412,7 @@ function validateMessageField() {
 //     }
 // }
 
-function clearCheckboxError(){
+function clearCheckboxError() {
     let checkbox = document.getElementById("agreeBox");
     checkbox.classList.remove('agreeBoxError')
     let checkboxError = document.getElementById("errorDivCheckbox");

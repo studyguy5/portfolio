@@ -1,7 +1,7 @@
 
-function init() {
-    renderProjects();
-}
+// function init() {
+    
+// }
 
 let projectArray = [
     {
@@ -36,7 +36,7 @@ let projectArray = [
 
 function renderProjects(index) {
     let project = document.getElementById('projectMaxView')
-    let o = projectArray[index].projectStack;
+    let o = projectArray[index ? index : 0].projectStack;
     let less = Object.entries(o);
     let result = less.map(item => item[1].stack);
     console.log(less)
