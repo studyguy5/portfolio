@@ -13,7 +13,7 @@
     width:45%;
     padding-left:10px;
     padding-right:10px;
-    height:337px;
+    height:460px;
 }
 
 .contact_FormAria{
@@ -221,7 +221,7 @@ input[type="checkbox"]:checked:hover {
     text-align: start;
     color: rgba(61, 207, 182, 1);
     font-size: 64px;
-    height:128px;
+    height:182px;
     margin:0px 0px 40px 0px;
 }
 
@@ -235,6 +235,7 @@ input[type="checkbox"]:checked:hover {
 .paragraph{
     font-size: 16px;
     color:white;
+    width:90%;
 }
 
 .paragraph bold{
@@ -249,7 +250,7 @@ input[type="checkbox"]:checked:hover {
         margin-bottom:100px;
     }
     .contactDescriptionAria{
-        height:356px;
+        height:450px;
         width:278px;
         margin-bottom:64px;
     }

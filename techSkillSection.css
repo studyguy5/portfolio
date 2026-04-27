@@ -20,13 +20,80 @@
 
 }
 
-.skillText button{
+/* .skillText button{
+} */
+
+.contactButton{
     margin-left:30px;
     padding: 13px 24.5px;
     border-radius: 25px;
     background-color: transparent;
     color:white;
     border:1px solid rgba(255, 255, 255, 1);
+    position:relative;
+    min-width:122px;
+    min-height:48px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.contactButton p{
+    position:absolute;
+    font-size: 18px;
+    top:13px;
+    /* width:100%; */
+    margin:0px;
+    /* min-width:125px; */
+}
+
+.contactButton:hover{
+    color:rgba(61, 207, 182, 1);
+    border:1px solid rgba(61, 207, 182, 1);
+}
+
+
+
+.contactButton:hover p {
+    animation: firstAnimation 1s linear forwards, secondAnimation 2s  linear infinite 1s;
+}
+
+@keyframes firstAnimation {
+    
+    0% {
+        left: 10px;
+    }
+    
+    
+    100% {
+        opacity:0.8;
+        left: -120px;
+    }
+}
+
+@keyframes secondAnimation {
+    
+    0% {
+        opacity:0;
+        left: -120px;
+    }
+    
+    10% {
+        opacity:0;
+        width:100%;
+        left: 135px;
+    }
+    35% {
+        opacity:1;
+        width:100%;
+        left: 135px;
+    }
+    
+    100% {
+        opacity:1;
+        width:100%;
+        left: -80px;
+    }
+    
 }
 
 
@@ -112,6 +179,7 @@
 
 .growthMindsetAddonDiv p{
     margin-bottom: 0px;
+    margin-top: 0px;
     font-size: 16px;
     color: rgba(61, 207, 182, 1);
 }
@@ -145,6 +213,7 @@
     text-align: left;
     font-size: 18px;
     scrollbar-width: thin;
+    padding-right:11px;
 }
 
 .secondHeadline{

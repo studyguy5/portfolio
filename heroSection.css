@@ -67,6 +67,10 @@
     /* left: 24px; */
     min-width: 180px;
 }
+.check_My_Work:hover{
+    color:rgba(61, 207, 182, 1);
+    border-color: rgba(61, 207, 182, 1);
+}
 
 .check_My_Work:hover p {
     animation: circleFirst 1s linear forwards, circleLoop 2s linear infinite 1s;
@@ -122,8 +126,10 @@
 .Contact_ME p{
     position: absolute;
     top: 13px;
-    /* left: 40px; */
-    /* min-width: 100px; */
+}
+.Contact_ME:hover{
+    color:rgba(61, 207, 182, 1);
+    border-color: rgba(61, 207, 182, 1);
 }
 
 .Contact_ME:hover p {

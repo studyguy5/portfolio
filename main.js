@@ -1,7 +1,6 @@
 
-function init(){
-    // renderProjects();
-    changeAbsolutePosition();
+function init() {
+    startIntervals();
 }
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
@@ -9,6 +8,7 @@ let hover = document.getElementsByClassName("language_Hover")[0]
 lan.addEventListener('click', changeLanguage);
 hover.addEventListener('click', changeLanguage);
 
+let currentLang = 'en';
 function changeLanguage() {
     console.log("change language normal")
     let basic = document.getElementsByClassName("language")[0]
@@ -17,11 +17,10 @@ function changeLanguage() {
         basic.style.opacity = "0";
         basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        // basic.setAttribute('onclick',"switchLanguage('de')")
-        // switchLanguage('de');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
         switchLanguage('de');
+        currentLang = 'de';
         setTimeout(() => {
             hover.src = "./img/german_hover.png";
         }, 80);
@@ -30,11 +29,10 @@ function changeLanguage() {
         basic.style.opacity = "0";
         basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
         basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        // basic.setAttribute('onclick',"switchLanguage('en')")
-        // switchLanguage('en');
         let hover = document.getElementsByClassName("language_Hover")[0]
         hover.src = "";
         switchLanguage('en');
+        currentLang = 'en';
         setTimeout(() => {
             hover.src = "./img/english_hover.png";
         }, 80);
@@ -93,6 +91,60 @@ function toggleBurgerMenu() {
     }
 }
 
+function checkLegalNotice() {
+    let legal = document.querySelector('.link3Floor');
+    let image = document.querySelector('.link3Floor img');
+    let imageh = document.querySelector('.link3Floor[hover] img');
+    if (legal.innerText != "Legal Notice") {
+        legal.style.minWidth = "100px";
+        image.style.marginLeft = "-13px";
+    }
+}
+let collectIntervalls = null;
+function startIntervals() {
+    if(collectIntervalls != null) {clearInterval(collectIntervalls);}
+    let allIntervals = setInterval(() => {
+        checkLegalNotice();
+        changeWidthOnLetsTalk();
+        changeAbsolutePosition();
+    }, 100);
+}
+let lastPosition = window.scrollY;
+let lastHeight = document.documentElement.scrollHeight;
+window.addEventListener('scroll', function () {
+    let p = 0;
+    let startPoint = 150;
+    const currentPosition = window.scrollY;
+    const currentHeight = document.documentElement.scrollHeight;
+    const heightChanged = currentHeight !== lastHeight;
+    if (lastPosition < currentPosition && !heightChanged) {
+        p = "down"
+        // console.log("down")
+    } else if (lastPosition > currentPosition && !heightChanged) {
+        p = "up"
+        if (currentPosition > startPoint) {
+            document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0.7)";
+            // console.log('current Position', currentPosition);
+            // console.log('start Position', startPoint);
+        } else {
+            document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0)";
+        }
+    }
+    if (p == "up") {
+        document.querySelector('.headfullsize').style.transition = "0.5s";
+        document.querySelector('.headfullsize').style.position = "sticky";
+        // document.querySelector('.headfullsize').style.z-index = 5;
+        document.querySelector('.headfullsize').style.top = "0px";
+    } else {
+        document.querySelector('.headfullsize').style.transition = "0.5s";
+        document.querySelector('.headfullsize').style.position = "unset";
+        document.querySelector('.headfullsize').style.top = "-100px";
+    }
+
+    lastPosition = currentPosition;
+    lastHeight = currentHeight;
+});
+
 let done = false;
 function moveOnce() {
     let once = document.querySelector(".schraffierter_bg");
@@ -102,10 +154,15 @@ function moveOnce() {
         done = true;
     }
 }
-// let currentLang = 'en';
 function switchLanguage(langcode) {
     console.log("switch language " + langcode);
     const elements = document.querySelectorAll('[data-lang]');
+    document.querySelectorAll('input[data-lang], textarea[data-lang]').forEach(input => {
+        const baseKey = input.placeholder.trim();
+        if (baseKey) {
+            input.placeholder = translations[langcode][baseKey] || input.placeholder; // Fallback auf den Originaltext, wenn keine Übersetzung vorhanden ist
+        }
+    });
     elements.forEach(element => {
         const baseKey = element.innerText.trim();
         if (baseKey) {
@@ -115,15 +172,12 @@ function switchLanguage(langcode) {
 
 
 }
-let positionInterval = null;
-function changeAbsolutePosition() {
-    if(positionInterval !== null) clearInterval(positionInterval);
 
-   positionInterval = setInterval(() => {
+function changeAbsolutePosition() {
         let contactP = document.querySelector(".Contact_ME p");
         let contactO = document.querySelector(".Contact_ME");
         if (contactP.innerHTML == "Contact me") {
-            contactO.style.minWidth = "150px";
+            contactO.style.minWidth = "135px";
             contactP.style.left = "27px";
             contactP.style.minWidth = "100px";
         };
@@ -132,7 +186,23 @@ function changeAbsolutePosition() {
             contactP.style.left = "23px";
             contactP.style.minWidth = "130px";
         }
-    }, 100);
+}
+
+
+function changeWidthOnLetsTalk() {
+        let button = document.querySelector(".contactButton");
+        let p = document.querySelector(".contactButton p");
+        if (p.innerHTML == "Let's talk") {
+            button.style.width = "110px";
+            p.style.left = "13px";
+            p.style.minWidth = "100px";
+        };
+        if (p.innerHTML == "Lass uns reden") {
+            button.style.width = "150px";
+            p.style.left = "10px";
+            p.style.minWidth = "130px";
+        }
+    
 }
 
 

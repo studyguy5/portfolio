@@ -21,6 +21,7 @@ body {
     height: 98px;
     width: 100%;
     max-width: 100%;
+    z-index: 8;
 }
 
 .logoMobile {
@@ -62,7 +63,7 @@ body {
     max-width: 1440px;
     padding: 0px 24px;
     box-sizing: border-box;
-    /* background-color: rgb(204, 211, 211, 0.2); */
+    
 }
 
 .About {

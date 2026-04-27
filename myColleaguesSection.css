@@ -33,10 +33,11 @@
     display:flex;
     max-width: 1440px;
     gap:30px;
-    height: 388px;
+    height: 410px;
     position:relative;
     overflow-x: hidden;
-    align-items: end;
+    /* overflow-y: hidden; */
+    align-items: center;
 }
 
 .singleColleaguesCardLeft {
@@ -203,8 +204,12 @@
     /* margin-top:150px; */
     display: flex;
     align-items: center;
+    gap:15px;
 }
 
+.name p{
+    min-width:190px;
+}
 .name hr {
     width: 65%;
     height: 1px;
