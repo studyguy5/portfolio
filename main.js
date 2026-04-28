@@ -41,7 +41,7 @@ function changeLanguage() {
 
 
 let langMobile = document.getElementsByClassName("languageMobile")[0]
-let langMobileHover = document.getElementsByClassName("language_HoverMobile")[0]
+let langMobileHover = document.getElementsByClassName("languageMobile_Hover")[0]
 
 langMobile.addEventListener('click', changeLanguageMobile);
 langMobileHover.addEventListener('click', changeLanguageMobile);
@@ -51,12 +51,12 @@ function changeLanguageMobile() {
     let basic = document.getElementsByClassName("languageMobile")[0]
     if (basic.src.includes('english.png')) {
         basic.style.transition = "0.2s";
-        basic.style.opacity = "0";
+        // basic.style.opacity = "0";
         basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
-        basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+        // basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('de')")
         // switchLanguage('de');
-        let hover = document.getElementsByClassName("language_HoverMobile")[0]
+        let hover = document.getElementsByClassName("languageMobile_Hover")[0]
         hover.src = "";
         switchLanguage('de');
         setTimeout(() => {
@@ -64,12 +64,12 @@ function changeLanguageMobile() {
         }, 80);
     } else {
         basic.style.transition = "0.2s";
-        basic.style.opacity = "0";
+        // basic.style.opacity = "0";
         basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
-        basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+        // basic.style.opacity = "1";       // Fade in (mit 2s Transition)
         // basic.setAttribute('onclick',"switchLanguage('en')")
         // switchLanguage('en');
-        let hover = document.getElementsByClassName("language_HoverMobile")[0]
+        let hover = document.getElementsByClassName("languageMobile_Hover")[0]
         hover.src = "";
         switchLanguage('en');
         setTimeout(() => {
@@ -97,7 +97,7 @@ function checkLegalNotice() {
     let imageh = document.querySelector('.link3Floor[hover] img');
     if (legal.innerText != "Legal Notice") {
         legal.style.minWidth = "100px";
-        image.style.marginLeft = "-13px";
+        image.style.marginLeft = "-16px";
     }
 }
 let collectIntervalls = null;
@@ -178,12 +178,12 @@ function changeAbsolutePosition() {
         let contactO = document.querySelector(".Contact_ME");
         if (contactP.innerHTML == "Contact me") {
             contactO.style.minWidth = "135px";
-            contactP.style.left = "27px";
+            contactP.style.left = "20px";
             contactP.style.minWidth = "100px";
         };
         if (contactP.innerHTML == "Kontaktiere mich") {
             contactO.style.minWidth = "170px";
-            contactP.style.left = "23px";
+            contactP.style.left = "17px";
             contactP.style.minWidth = "130px";
         }
 }
@@ -212,7 +212,7 @@ function renderFrame() {
     if (frame)
         frame.innerHTML +=/*html*/`
     <div class="easterEggDiv">
-        You found the Easter Egg!
+        You found the Easter Egg!<br>
         I don't have LinkedIn, or in other words<br>
         my LinkedIn profile is empty. So let's connect in a traditional way:
     </div>

@@ -28,11 +28,16 @@
             </div>
             <!-- <img src="./img/burgerMenu_symbol.png" alt="burgerMenu" class="burgerMenu"> -->
             <div class="burgerMenuMobile">
-                <a onclick="toggleBurgerMenu()" data-lang class="link1" href="#aboutMeSection">About me</a>
-                <a onclick="toggleBurgerMenu()" data-lang class="link2" href="#techSkillsSection">Skills</a>
-                <a onclick="toggleBurgerMenu()" data-lang class="link3" href="#portfolioSection">Projects</a>
-                <img class="languageMobile" src="./img/english.png">
-                <img class="language_HoverMobile" src="./img/english_hover.png">
+                <a onclick="toggleBurgerMenu()" data-lang class="link1M" href="#aboutMeSection">About me<img
+                        src="./img/dot.png"></a>
+                <a onclick="toggleBurgerMenu()" data-lang class="link2M" href="#techSkillsSection">Skills<img
+                        src="./img/dot.png"></a>
+                <a onclick="toggleBurgerMenu()" data-lang class="link3M" href="#portfolioSection">Projects<img
+                        src="./img/dot.png"></a>
+                <div class="imgWrapper">
+                    <img class="languageMobile" src="./img/english.png">
+                    <img class="languageMobile_Hover" src="./img/english_hover.png">
+                </div>
             </div>
             <nav class="headNavbar">
                 <img class="language" src="./img/english.png">
@@ -119,11 +124,10 @@
                         here is to small for that.</p>
                 </div>
                 <div class="myProblemSolvingSkills"><img src="./img/problemSolvingSkills.png">
-                    <p data-lang>The exiting part of my job as a Frontend Developer is problem-solving and finding
-                        solutions for
-                        various problems.
-                        My approach is mostly look for at least two perspektives to solve a problem and decide which has
-                        a good afect/komplexity ratio.
+                    <p data-lang>My approach to problem solving is to find the makroperspektive and to think further
+                        what role has a specific pice of code in the entire codebase. Simultaneously I have to keep an
+                        eye on loading
+                        performance and datatraffic in every solution in order to keep UX fluid.
                     </p>
                 </div>
             </div>
@@ -131,7 +135,7 @@
     </section>
     <section id="techSkillsSection" class="techSkillsSection">
         <div class="skillset">
-            <p class="headline" data-lang>Technologies</p>
+            <p class="headlineTechnologies" data-lang>Technologies</p>
             <div class="skillText">
                 <p class="skillTextHeadline">Skill Set</p>
                 <p class="skillTextParagraph" data-lang>I have created a good fundament of Skills in HTML, CSS and
@@ -208,7 +212,7 @@
 
             <div class="PortfolioTextdiv">
                 <div class="portfolioText">
-                    <p class="headline">Portfolio</p>
+                    <p class="headlinePortfolio">Portfolio</p>
                     <p class="mainTopic" data-lang>Featured Projects</p>
                     <p class="description" data-lang>Explore a selection of my work here - Interact with<br> projects to
                         see my skills in action.</p>

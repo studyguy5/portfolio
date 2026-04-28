@@ -22,8 +22,8 @@ const translations = {
     "Improving my Skills is standard in IT, but I'm seriously addicted to learning new things. Especially in the AI Aria, I want to know how LLM's work and the list goes on but this container here is to small for that.":
     "Die Verbesserung meiner Fähigkeiten ist in der IT Standard, aber ich bin ernsthaft süchtig danach, neue Dinge zu lernen.",
 
-    "The exiting part of my job as a Frontend Developer is problem-solving and finding solutions for various problems. My approach is mostly look for at least two perspektives to solve a problem and decide which has a good afect/komplexity ratio.":
-    "Der spannende Teil meiner Arbeit als Frontend-Entwickler ist die Problemlösung und das Finden von Lösungen für verschiedene Probleme. Mein Ansatz besteht darin, nach mindestens zwei Perspektiven zu suchen, um ein Problem zu lösen, und zu entscheiden, welche ein gutes Verhältnis von Effektivität zu Komplexität hat.",
+    "My approach to problem solving is to find the makroperspektive and to think further what role has a specific pice of code in the entire codebase. Simultaneously I have to keep an eye on loading performance and datatraffic in every solution in order to keep UX fluid.":
+    "Mein Problemlösungsansatz besteht darin, die Makroperspektive zu erfassen und weiter zu denken – welche Rolle hat ein bestimmtes Code-Stück in der gesamten Codebase? Gleichzeitig achte ich bei jeder Lösung auf Lade-Performance und Datenverkehr, um die UX flüssig zu halten.",
 
     "Technologies": "Technologien",
     "Skill Set": "Skill Set",
@@ -102,8 +102,8 @@ const translations = {
     "Die Verbesserung meiner Fähigkeiten ist in der IT Standard, aber ich bin ernsthaft süchtig danach, neue Dinge zu lernen.":
     "Improving my Skills is standard in IT, but I'm seriously addicted to learning new things. Especially in the AI Aria, I want to know how LLM's work and the list goes on but this container here is to small for that.",
 
-    "Der spannende Teil meiner Arbeit als Frontend-Entwickler ist die Problemlösung und das Finden von Lösungen für verschiedene Probleme. Mein Ansatz besteht darin, nach mindestens zwei Perspektiven zu suchen, um ein Problem zu lösen, und zu entscheiden, welche ein gutes Verhältnis von Effektivität zu Komplexität hat.":
-    "The exiting part of my job as a Frontend Developer is problem-solving and finding solutions for various problems. My approach is mostly look for at least two perspektives to solve a problem and decide which has a good afect/komplexity ratio.",
+    "Mein Problemlösungsansatz besteht darin, die Makroperspektive zu erfassen und weiter zu denken – welche Rolle hat ein bestimmtes Code-Stück in der gesamten Codebase? Gleichzeitig achte ich bei jeder Lösung auf Lade-Performance und Datenverkehr, um die UX flüssig zu halten.":
+    "My approach to problem solving is to find the makroperspektive and to think further what role has a specific pice of code in the entire codebase. Simultaneously I have to keep an eye on loading performance and datatraffic in every solution in order to keep UX fluid.",
 
     "Technologien":"Technologies",
     "Skill Set": "Skill Set",

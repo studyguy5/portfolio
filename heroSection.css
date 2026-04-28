@@ -22,13 +22,15 @@
 .mainBanner h2 {
     margin: 0px;
     color: white;
-    font-size: clamp(12px, 0px + 5vw, 45px)
+    font-size: clamp(12px, 0px + 5vw, 45px);
+    font-family: 'FiraCode', sans-serif;
 }
 
 .mainBanner h1 {
     margin: 0px;
     color: white;
-    font-size: clamp(16px, -8px + 5vw + 5vh, 128px)
+    font-size: clamp(16px, -8px + 5vw + 5vh, 128px);
+    font-family: 'Karla', sans-serif;
 }
 
 .buttonAria {
@@ -63,8 +65,8 @@
 
 .check_My_Work p {
     position: absolute;
-    top: 13px;
-    /* left: 24px; */
+    top: 11px;
+    font-family: 'Karla', sans-serif;
     min-width: 180px;
 }
 .check_My_Work:hover{
@@ -125,7 +127,9 @@
 
 .Contact_ME p{
     position: absolute;
-    top: 13px;
+    top: 11px;
+    width:100%;
+    font-family: 'Karla', sans-serif;
 }
 .Contact_ME:hover{
     color:rgba(61, 207, 182, 1);
@@ -139,7 +143,7 @@
 @keyframes contactFirst {
     
     0% {
-        left: 40px;
+        left: 20px;
     }
     
     
@@ -265,16 +269,16 @@
     color: rgba(61, 207, 182, 1);
     gap: 25px;
     width: 395px;
-    /* max-width:350px; */
+    font-family: 'Karla', sans-serif;
 }
 
 .slider:first-child {
-    animation: slideToLeft 30s infinite linear 1s;
+    animation: slideToLeft 26s infinite linear 1s;
     will-change: transform;
 }
 
 .slider:last-child {
-    animation: slideFromRight 30s infinite linear 1s;
+    animation: slideFromRight 26s infinite linear 1s;
     will-change: transform;
 }
 
@@ -362,7 +366,7 @@
     align-items: center;
     height: 480px;
     width: 32px;
-    gap:15px;
+    gap:5px;
     z-index: 2;
     /* background-color: rgba(255, 255, 255, 0.12); */
 }
@@ -389,6 +393,9 @@
     color: white;
     cursor: pointer;
     text-decoration: none;
+    font-size: 18px;
+    /* font-family: 'Karla', sans-serif; */
+    font-weight: 400;
 }
 
 .vright a:hover {
@@ -412,6 +419,7 @@
     justify-content: center;
     text-orientation: upright;
     writing-mode: horizontal-tb;
+    font-size: 16px;
 }
 
 .mailMobile{
@@ -467,12 +475,12 @@
 
 @media(max-width:377px) {
     .check_My_Work {
-        padding: 20px 17.7px;
+        padding: 20px 14.7px;
         min-width: 155px;
     }
 
     .Contact_ME {
-        padding: 10px 18.7px;
+        padding: 10px 15.7px;
         min-width: 130px;
     }
     .buttonAria a{

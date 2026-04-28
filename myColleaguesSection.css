@@ -9,8 +9,13 @@
     display: flex;
     align-items: center;
     margin: 0 auto 48px auto;
+    padding: 0px 5px;
     justify-content: center;
     max-width:600px;
+    font-size: 32px;
+    font-family: 'FiraCode', sans-serif;
+    color: rgba(61, 207, 182, 1);
+    font-weight: 700;
 }
 
 .colleagues{
@@ -198,6 +203,8 @@
 
 .mainText {
     margin-top: 30px;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
 }
 
 .name {
@@ -209,6 +216,8 @@
 
 .name p{
     min-width:190px;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
 }
 .name hr {
     width: 65%;
@@ -220,6 +229,19 @@
         margin-top:100px;
     }
 
+}
+@media(max-width:640px){
+    .headline{
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media(max-width:470px){
+
+    .quoteImg{
+        left:10%;
+    }
 }
 
 @media(max-width:400px){

@@ -34,6 +34,8 @@
     color:white;
     text-decoration: none;
     margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
 }
 
 .links img{
@@ -51,20 +53,20 @@
 
 .link1:hover img{
     display:flex;
-    margin-left:-69px;
-    margin-right:5px;
+    margin-left:-66px;
+    margin-right:8px;
 }
 
 .link2:hover img{
     display:flex;
-    margin-left:-75px;
-    margin-right:5px;
+    margin-left:-74px;
+    margin-right:8px;
 }
 
 .link3Floor:hover img{
     display:flex;
-    margin-left:-30px;
-    margin-right:5px;
+    margin-left:-27px;
+    margin-right:8px;
 }
 
 .logoNameDiv{
@@ -81,11 +83,13 @@
 .logoNameDiv p{
     margin: 8px 0px 0px 0px;
     font-size: 16px;
+    font-family: 'Karla', sans-serif;
 }
 
 .footerText{
     margin: 0px 0px 36px 0px;
     font-size: 18px;
+    font-family: 'FiraCode', sans-serif;
     color:rgba(61, 207, 182, 1);
 }
 

@@ -6,9 +6,10 @@
     gap:96px;
 }
 
-.headline{
+.headlineTechnologies{
     color: rgba(61, 207, 182, 1);
-    font-size: 32px;
+    font-size: 24px;
+    font-family: 'Karla', sans-serif;
 }
 
 .skillText{
@@ -115,12 +116,16 @@
 
 .skillDescription{
     color:white;
+    font-size: 18px;
+    font-family: 'FiraCode', sans-serif;
+    letter-spacing: -3px;
 }
 
 .skillPackage{
     display:flex;
     flex-direction: column;
     align-items: center;
+    min-width:90px;
 }
 .skillPackageMindset{
     display:flex;
@@ -199,10 +204,12 @@
 .skillTextHeadline{
     font-size: 64px;
     color: rgba(61, 207, 182, 1);
-    margin: 32px 32px 35px 32px;
+    margin: 32px 32px 25px 32px;
     font-weight: 500;
     text-align: left;
     letter-spacing: 10px;
+    font-family: 'FiraCode', sans-serif;
+    font-style: bold;
 }
 
 .skillTextParagraph{
@@ -214,6 +221,7 @@
     font-size: 18px;
     scrollbar-width: thin;
     padding-right:11px;
+    font-family: 'Karla', sans-serif;
 }
 
 .secondHeadline{
@@ -269,6 +277,9 @@
     .skillText{
         width:unset;
     }
+    .skillTextHeadline{
+        letter-spacing: 3px;
+    }
 }
 
 @media(max-width:870px){
@@ -295,6 +306,12 @@
     }
 }
 
+@media(max-width:550px){
+    .skillTextHeadline{
+        font-size: 48px;
+    }
+}
+
 @media(max-width:450px){
     .skillTextHeadline{
         font-size: 40px;
@@ -312,5 +329,25 @@
     .skillLogo{
         width:50px;
         height:50px;
+    }
+}
+
+@media(max-width:400px){
+    .techSkillsSection{
+        margin:12px 0px 120px 0px;
+        height:1200px;
+    }
+}
+
+@media(max-width:375px){
+    .techSkillsSection{
+        margin:12px 0px 120px 0px;
+        height:1350px;
+    }
+}
+
+@media(max-width:340px){
+    .skillTextHeadline{
+        font-size: 35px;
     }
 }

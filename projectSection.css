@@ -8,6 +8,18 @@
     background-color:rgb(3, 3, 3, 0.9);
 }
 
+.headlinePortfolio{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+    /* justify-content: center; */
+    max-width:600px;
+    font-size: 24px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    color:rgba(61, 207, 182, 1);
+}
+
 .portfolioFullsize {
     display: flex;
     justify-content: flex-start;
@@ -47,9 +59,10 @@
 
 .mainTopic {
     color: rgba(61, 207, 182, 1);
-    font-size: 32px;
+    font-size: 64px;
     font-weight: 700;
-    margin: 0px;
+    margin: 0px 0px 0px -6px;
+    font-family: 'FiraCode', sans-serif;
 }
 
 .portfolioMainDescription {
@@ -61,6 +74,9 @@
 
 .description {
     color: white;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .projectJoin {
@@ -135,12 +151,27 @@
 }
 
 
-.leftparagraph {
+.leftparagraphJoin {
+    font-family: 'FiraCode', sans-serif;
+    font-size: 24px;
+    height: 28px;
+}
+
+.leftparagraphElpollo {
+    font-family: 'FiraCode', sans-serif;
+    font-size: 24px;
+    height: 28px;
+}
+
+.leftparagraphBubble {
+    font-family: 'FiraCode', sans-serif;
     font-size: 24px;
     height: 28px;
 }
 
 .rightparagraph text {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
     margin: 0px 4px;
     color: rgba(61, 207, 182, 1);
 }
@@ -252,7 +283,7 @@
 
     .portfolioContent {
         width: 88%;
-        height: 1043px;
+        height: 700px;
     }
 
     .projectJoin {
@@ -294,6 +325,15 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: start;
+    }
+    .mainTopic{
+        font-size: 56px;
+    }
+}
+
+@media(max-width:690px){
+    .mainTopic{
+        font-size: 48px;
     }
 }
 

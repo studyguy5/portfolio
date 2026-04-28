@@ -56,6 +56,8 @@
 
 .firstLine {
     font-size: 24px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
     color: rgba(61, 207, 182, 1);
 }
 
@@ -65,31 +67,38 @@
     max-width: 852px;
     height: 652px;
     background: radial-gradient(22.43% 43.85% at 1.22% 32.45%, rgba(44, 236, 201, 0.3) 0%, #273131 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     color: white;
     margin-bottom: 22px;
+    /* min-width:530px; */
 }
 
 
 .paragraphHeadline {
-    margin: 32px 0px 40px 32px;
+    margin: 32px 0px 30px 32px;
     font-size: 64px;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: 'FiraCode', sans-serif;
     color: rgba(61, 207, 182, 1);
+}
+.whoIamBox .paragraphHeadline img{
+    /* opacity: 0; */
+    display:none;
 }
 
 .paragraphIntro {
     margin: 0px 32px 0px 32px;
-    font-size: 23px;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
 }
 
 .myLocation {
     display: flex;
     margin: 32px 32px 0px 17px;
     gap: 24px;
-    align-items: center;
-    /* width:100%; */
+    align-items: start;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
     max-width: 690px;
 }
 
@@ -97,8 +106,9 @@
     display: flex;
     margin: 16px 32px 0px 17px;
     gap: 24px;
-    align-items: center;
-    /* width:100%; */
+    align-items: start;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
     max-width: 690px;
 }
 
@@ -106,9 +116,16 @@
     display: flex;
     margin: 16px 32px 32px 17px;
     gap: 24px;
-    align-items: center;
-    /* width:100%; */
+    align-items: start;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
     max-width: 690px;
+}
+
+.myLocation p,
+.myMindset p,
+.myProblemSolvingSkills p {
+    margin: 0px;
 }
 
 .myLocation img,
@@ -128,26 +145,54 @@
     }
 }
 
+@media(max-width:1200px){
+    .paragraphIntro {
+        font-size: 18px;
+    }
+    .paragraphHeadline {
+        font-size: 50px;
+    }
+    .myLocation{
+        font-size: 17px;
+    }
+    .myMindset{
+        font-size: 17px;
+    }
+    .myProblemSolvingSkills{
+        font-size: 17px;
+    }
+}
+
+@media(max-width:1120px){
+    .paragraphIntro{
+        font-size: 17px;
+    }
+}
+
 @media(max-width:1020px) {
     .paragraphIntro {
-        font-size: 17px;
+        margin: 0px 32px 0px 32px;
+        font-size: 16px;
     }
 
     .paragraphHeadline {
-        font-size: 50px;
-        margin: 22px 0px 20px 32px;
+        font-size: 35px;
+        margin: 12px 0px 10px 32px;
     }
 
     .myLocation{
         margin:22px 32px 0px 17px;
+        font-size: 16px;
     }
 
     .myMindset{
         margin:10px 32px 0px 17px;
+        font-size: 16px;
     }
 
     .myProblemSolvingSkills{
         margin: 10px 32px 10px 17px;
+        font-size: 16px;
     }
 }
 

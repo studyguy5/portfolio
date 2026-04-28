@@ -13,6 +13,18 @@ body {
     width: 100%;
 }
 
+@font-face {
+    font-family: 'FiraCode';
+    src: url('./fonts/firaCode/FiraCode-Regular.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./fonts/Karla/Karla-Regular.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -72,6 +84,7 @@ body {
     align-items: center;
     cursor: pointer;
     color: white;
+    font-family: 'FiraCode', sans-serif;
 }
 
 .skills {
@@ -80,6 +93,7 @@ body {
     align-items: center;
     cursor: pointer;
     color: white;
+    font-family: 'FiraCode', sans-serif;
 }
 
 .projects {
@@ -88,6 +102,7 @@ body {
     align-items: center;
     cursor: pointer;
     color: white;
+    font-family: 'FiraCode', sans-serif;
 }
 
 .About img {
@@ -144,35 +159,55 @@ body {
     transition: opacity 0.3s ease-in-out
 }
 
-.language_HoverMobile {
+.languageMobile {
     position: absolute;
     cursor: pointer;
-    top: 198px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: block;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.language_HoverMobile:hover{
-    position: absolute;
-    cursor: pointer;
-    top: 198px;
+    top: 184px;
     left: 50%;
     transform: translateX(-50%);
     opacity: 1;
+    min-height:28px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.languageMobile:hover{
+    position: absolute;
+    cursor: pointer;
+    top: 184px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display:flex; */
+    opacity: 0;
     transition: opacity 0.3s ease-in-out
 }
 
-.link1{
+.link1M{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link2M{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     margin:0px;
 }
-.link2{
+.link3M{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     margin:0px;
 }
-.link3{
-    margin:0px;
+
+.link1M img, .link2M img, .link3M img{
+    display:none;
+}
+
+.link1M:hover img, .link2M:hover img, .link3M:hover img{
+    display:flex;
+    margin-bottom: -10px;
+    cursor: pointer;
+    gap:8px;
 }
 
 
@@ -188,14 +223,19 @@ body {
     text-decoration: none;
 }
 
+.imgWrapper{
+    min-height: 28px;
+
+}
+
 .burgerMenuMobile {
     display: none;
     gap:24px;
     position: relative;
+    position: absolute;
     flex-direction: column;
     width: 238px;
     height: 252px;
-    position: absolute;
     top: 80px;
     right: 26px;
     font-size:18px;
@@ -214,10 +254,11 @@ body {
 .burgerMenuMobile a {
     text-decoration: none;
     color: white;
+    height:40px;
+    text-align: center;
 }
 
 #nav-icon1 {
-
     width: 45px;
     height: 40px;
     position: relative;
