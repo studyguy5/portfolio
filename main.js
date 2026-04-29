@@ -5,8 +5,15 @@ function init() {
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
 
-lan.addEventListener('click', changeLanguage);
-hover.addEventListener('click', changeLanguage);
+lan.addEventListener('click', package);
+hover.addEventListener('click', package);
+
+function package() {
+    changeLanguage();
+    changeLanguageMobile();
+}
+
+
 
 let currentLang = 'en';
 function changeLanguage() {
@@ -43,8 +50,14 @@ function changeLanguage() {
 let langMobile = document.getElementsByClassName("languageMobile")[0]
 let langMobileHover = document.getElementsByClassName("languageMobile_Hover")[0]
 
-langMobile.addEventListener('click', changeLanguageMobile);
-langMobileHover.addEventListener('click', changeLanguageMobile);
+langMobile.addEventListener('click', packageMobile);
+langMobileHover.addEventListener('click', packageMobile);
+
+function packageMobile() {
+    changeLanguage();
+    changeLanguageMobile();
+}
+
 
 function changeLanguageMobile() {
     console.log("change language mobile")
@@ -59,6 +72,7 @@ function changeLanguageMobile() {
         let hover = document.getElementsByClassName("languageMobile_Hover")[0]
         hover.src = "";
         switchLanguage('de');
+        currentLang = 'de';
         setTimeout(() => {
             hover.src = "./img/german_hover.png";
         }, 80);
@@ -72,10 +86,11 @@ function changeLanguageMobile() {
         let hover = document.getElementsByClassName("languageMobile_Hover")[0]
         hover.src = "";
         switchLanguage('en');
+        currentLang = 'en';
         setTimeout(() => {
             hover.src = "./img/english_hover.png";
         }, 80);
-    }
+    }    
 }
 
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);
@@ -102,7 +117,7 @@ function checkLegalNotice() {
 }
 let collectIntervalls = null;
 function startIntervals() {
-    if(collectIntervalls != null) {clearInterval(collectIntervalls);}
+    if (collectIntervalls != null) { clearInterval(collectIntervalls); }
     let allIntervals = setInterval(() => {
         checkLegalNotice();
         changeWidthOnLetsTalk();
@@ -174,35 +189,44 @@ function switchLanguage(langcode) {
 }
 
 function changeAbsolutePosition() {
-        let contactP = document.querySelector(".Contact_ME p");
-        let contactO = document.querySelector(".Contact_ME");
-        if (contactP.innerHTML == "Contact me") {
-            contactO.style.minWidth = "135px";
-            contactP.style.left = "20px";
-            contactP.style.minWidth = "100px";
-        };
-        if (contactP.innerHTML == "Kontaktiere mich") {
-            contactO.style.minWidth = "170px";
-            contactP.style.left = "17px";
-            contactP.style.minWidth = "130px";
-        }
+    let width = window.innerWidth;
+    let contactP = document.querySelector(".Contact_ME p");
+    let contactO = document.querySelector(".Contact_ME");
+    if (contactP.innerHTML == "Contact me" && width >= 378) {
+        contactO.style.minWidth = "165px";
+        contactP.style.left = "30px";
+        contactP.style.width = "65%";
+    } else if (contactP.innerHTML == "Contact me" && width <= 377) {
+        contactO.style.minWidth = "145px";
+        contactP.style.left = "26px";
+    };
+    if (contactP.innerHTML == "Kontaktiere mich" && width >= 378) {
+        contactO.style.minWidth = "170px";
+        contactP.style.left = "13px";
+        contactP.style.minWidth = "130px";
+        contactP.style.width = "94%";
+    }else if (contactP.innerHTML == "Kontaktiere mich" && width <= 377) {
+        contactO.style.minWidth = "145px";
+        contactP.style.left = "14px";
+        contactP.style.width = "94%";
+    }
 }
 
 
 function changeWidthOnLetsTalk() {
-        let button = document.querySelector(".contactButton");
-        let p = document.querySelector(".contactButton p");
-        if (p.innerHTML == "Let's talk") {
-            button.style.width = "110px";
-            p.style.left = "13px";
-            p.style.minWidth = "100px";
-        };
-        if (p.innerHTML == "Lass uns reden") {
-            button.style.width = "150px";
-            p.style.left = "10px";
-            p.style.minWidth = "130px";
-        }
-    
+    let button = document.querySelector(".contactButton");
+    let p = document.querySelector(".contactButton p");
+    if (p.innerHTML == "Let's talk") {
+        button.style.width = "110px";
+        p.style.left = "13px";
+        p.style.minWidth = "100px";
+    };
+    if (p.innerHTML == "Lass uns reden") {
+        button.style.width = "150px";
+        p.style.left = "10px";
+        p.style.minWidth = "130px";
+    }
+
 }
 
 

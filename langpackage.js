@@ -13,8 +13,8 @@ const translations = {
     "ready to Learn": "bereit zur Weiterbildung",
     "Who I am": "Wer ich bin",
 
-    "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems do problem solving. Basicly I find solutions and improve them afterwords, like an architect or engineer.": 
-    "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.Grundsätzlich finde ich Lösungen und verbessere sie danach, wie ein Architekt oder Ingenieur.",
+    "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems and do problem solving.": 
+    "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.",
 
     "I'm currently based in Austria/Innsbruck, but I'm open for remote work or relocation with almost no limit.":
     "Ich bin derzeit in Osterreich/Innsbruck, aber ich bin offen auf Remote Arbeit oder Umzug mit fast keiner Begrenzung",
@@ -28,8 +28,8 @@ const translations = {
     "Technologies": "Technologien",
     "Skill Set": "Skill Set",
     
-    "I have created a good fundament of Skills in HTML, CSS and JavaScript through my project focused work. I made a Task-Manager, a Canvas Game and a few easy projects where I started. My takeaways are finding different ways to solve a problem and catch the makroperspektive, take an eye on datatraffic, load performance and a flow in UX. In the future I want to learn Phyton for AI and Machine Learning. I truly want to understand things on a deeper level, that's the main reason why I feel so comfertable within the Programming sphere. We Programmer have to constantly adapt, but I am curious what smarter ways an tech people find to be more efficient and productive. Nobody is good in every Language but we can learn from each other and make the digital life a good place to experience technology.":
-    "Ich habe durch meine projektorientierte Arbeit <br> ein gutes Fundament an Fähigkeiten in HTML, CSS und JavaScript geschaffen. Ich habe einen Task-Manager, ein Canvas-Spiel und einige einfache Projekte erstellt, bei denen ich angefangen habe. Meine Erkenntnisse sind, verschiedene Möglichkeiten zu finden, um ein Problem zu lösen und die Makroperspektive einzunehmen, ein Auge auf den Datenverkehr, die Ladeleistung und den Fluss in der UX zu haben. In Zukunft möchte ich Python für KI und maschinelles Lernen lernen. Ich möchte Dinge wirklich auf einer tieferen Ebene verstehen, das ist der Hauptgrund, warum ich mich in der Programmierwelt so wohl fühle. Wir Programmierer müssen uns ständig anpassen, aber ich bin neugierig, welche intelligenteren Wege Menschen in der Technik finden, um effizienter und produktiver zu sein. Niemand ist in jeder Sprache gut, aber wir können voneinander lernen und das digitale Leben zu einem guten Ort machen, um Technologie zu erleben.",
+    "In the past two years, I have built a solid foundation of competencies. I started with a simple website using HTML/CSS. After that, I learned JavaScript, native functions, how to store data, the CRUD concept, and how to manipulate the DOM. In a Pokémon Viewer, I learned how to fetch data from an API, how to use async/await, and how to check data traffic. In a team project, I learned login logic, auth, and Firebase integration. A jump-and-run game based on OOP was also included. And now I'm learning TypeScript, SCSS, Angular, N8N, and more. I also plan to learn Python for AI and backend development.":
+    "Ich habe in den vergangenen zwei Jahren eine solide Grundlage an Kompetenzen aufgebaut. Gestartet habe ich mit einer einfachen Website unter Verwendung von HTML/CSS. Danach habe ich JavaScript gelernt, native Funktionen, wie man Daten speichert, das CRUD-Konzept und wie man den DOM manipuliert. In einem Pokémon-Viewer habe ich gelernt, wie man Daten aus einer API abruft, wie man async/await verwendet und Datenverkehr überprüft. In einem Teamprojekt habe ich Login-Logik, Auth und Firebase-Integration gelernt. Auch ein Jump-and-Run Spiel auf OOP Basis durfte nicht fehlen. Und jetzt lerne ich TypeScript, SCSS, Angular, N8N und mehr. Ich plane auch, Python für KI und Backend-Entwicklung zu lernen.",
 
      
     "You need another skill?": "Du brauchst <span>eine andere Fähigkeit?</span>",
@@ -58,7 +58,7 @@ const translations = {
     "Leonhard hat seinen Teil im Projekt gut gemacht. Er war zuverlässig und hat aktiv an Diskussionen teilgenommen. Insgesamt hat er eine gute Arbeitsatmosphäre aufrechterhalten.",
 
     "Contact Me": "Kontaktiere mich",
-    "Let's Work\nTogether": "Lass uns zusammen<br> arbeiten",
+    "Let's work\ntogether": "Lass uns zusammen<br> arbeiten",
     "Got a Problem to solve?": "Hast du ein Problem zu lösen?",
 
     "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.\n\nNeed a Frontend developer? Let’s talk!":
@@ -93,8 +93,8 @@ const translations = {
     "bereit zur Weiterbildung": "ready to learn",
     "Wer ich bin": "Who I am",
 
-    "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.Grundsätzlich finde ich Lösungen und verbessere sie danach, wie ein Architekt oder Ingenieur.":
-    "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems do problem solving. Basicly I find solutions and improve them afterwords, like an architect or engineer.", 
+    "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.":
+    "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems and do problem solving.", 
 
     "Ich bin derzeit in Osterreich/Innsbruck, aber ich bin offen auf Remote Arbeit oder Umzug mit fast keiner Begrenzung":
     "I'm currently based in Austria/Innsbruck, but I'm open for remote work or relocation with almmost no limit",
@@ -108,8 +108,8 @@ const translations = {
     "Technologien":"Technologies",
     "Skill Set": "Skill Set",
     
-    "Ich habe durch meine projektorientierte Arbeit\nein gutes Fundament an Fähigkeiten in HTML, CSS und JavaScript geschaffen. Ich habe einen Task-Manager, ein Canvas-Spiel und einige einfache Projekte erstellt, bei denen ich angefangen habe. Meine Erkenntnisse sind, verschiedene Möglichkeiten zu finden, um ein Problem zu lösen und die Makroperspektive einzunehmen, ein Auge auf den Datenverkehr, die Ladeleistung und den Fluss in der UX zu haben. In Zukunft möchte ich Python für KI und maschinelles Lernen lernen. Ich möchte Dinge wirklich auf einer tieferen Ebene verstehen, das ist der Hauptgrund, warum ich mich in der Programmierwelt so wohl fühle. Wir Programmierer müssen uns ständig anpassen, aber ich bin neugierig, welche intelligenteren Wege Menschen in der Technik finden, um effizienter und produktiver zu sein. Niemand ist in jeder Sprache gut, aber wir können voneinander lernen und das digitale Leben zu einem guten Ort machen, um Technologie zu erleben.":
-    "I have created a good fundament <br>of Skills in HTML, CSS and JavaScript through my project focused work. I made a Task-Manager, a Canvas Game and a few easy projects where I started. My takeaways are finding different ways to solve a problem and catch the makroperspektive, take an eye on datatraffic, load performance and a flow in UX. In the future I want to learn Phyton for AI and Machine Learning. I truly want to understand things on a deeper level, that's the main reason why I feel so comfertable within the Programming sphere. We Programmer have to constantly adapt, but I am curious what smarter ways an tech people find to be more efficient and productive. Nobody is good in every Language but we can learn from each other and make the digital life a good place to experience technology.",
+    "Ich habe in den vergangenen zwei Jahren eine solide Grundlage an Kompetenzen aufgebaut. Gestartet habe ich mit einer einfachen Website unter Verwendung von HTML/CSS. Danach habe ich JavaScript gelernt, native Funktionen, wie man Daten speichert, das CRUD-Konzept und wie man den DOM manipuliert. In einem Pokémon-Viewer habe ich gelernt, wie man Daten aus einer API abruft, wie man async/await verwendet und Datenverkehr überprüft. In einem Teamprojekt habe ich Login-Logik, Auth und Firebase-Integration gelernt. Auch ein Jump-and-Run Spiel auf OOP Basis durfte nicht fehlen. Und jetzt lerne ich TypeScript, SCSS, Angular, N8N und mehr. Ich plane auch, Python für KI und Backend-Entwicklung zu lernen.":
+    "In the past two years, I have built a solid foundation of competencies. I started with a simple website using HTML/CSS. After that, I learned JavaScript, native functions, how to store data, the CRUD concept, and how to manipulate the DOM. In a Pokémon Viewer, I learned how to fetch data from an API, how to use async/await, and how to check data traffic. In a team project, I learned login logic, auth, and Firebase integration. A jump-and-run game based on OOP was also included. And now I'm learning TypeScript, SCSS, Angular, N8N, and more. I also plan to learn Python for AI and backend development.",
 
     "Du brauchst eine andere Fähigkeit?": "You need <span>another skill?</span>", 
     
@@ -138,7 +138,7 @@ const translations = {
     "Leonhard did his part well in the project. He was dependable and actively participated in discussions. Overall, he kept a good work environment.",
 
     "Kontaktiere mich": "Contact me",
-    "Lass uns zusammen\narbeiten": "Let's Work<br> Together",
+    "Lass uns zusammen\narbeiten": "Let's work<br> together",
     "Hast du ein Problem zu lösen?": "Got a Problem to solve?",
 
     "Ermutige Menschen, dich zu kontaktieren und beschreibe, welche Rolle dich interessiert. Zeige, dass du Wert zu ihren Projekten durch deine Arbeit hinzufügst.\n\nBrauchst du einen Frontend-Entwickler? Lass uns reden!":
