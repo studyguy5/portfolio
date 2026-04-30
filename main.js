@@ -122,6 +122,9 @@ function startIntervals() {
         checkLegalNotice();
         changeWidthOnLetsTalk();
         changeAbsolutePosition();
+        checkContacSection();
+        checkContactFormAria();
+        changeProjectFontSize();
     }, 100);
 }
 let lastPosition = window.scrollY;
@@ -188,6 +191,29 @@ function switchLanguage(langcode) {
 
 }
 
+function checkContacSection(){
+    let letsConnect = document.querySelector(".Contact_mainTopic");
+    let connectDescription = document.querySelector(".contactDescriptionAria");
+    if (letsConnect.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth >= 820) {
+        letsConnect.style.height = "232px";
+    }else if (letsConnect.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth <= 819) {
+        letsConnect.style.height = "173px";
+        connectDescription.style.height = "500px";
+    }
+}
+
+function checkContactFormAria(){
+    let contactFormAria = document.querySelector(".Contact_mainTopic");
+    let mesection = document.querySelector(".contact_Me_Section");
+    let connectDescription = document.querySelector(".contactDescriptionAria");
+    let p = document.querySelector(".paragraph")
+    if (contactFormAria.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth <= 420) {
+        mesection.style.height = "1180px";
+        connectDescription.style.width = "90%";
+        p.style.width = "90%";
+    }
+}
+
 function changeAbsolutePosition() {
     let width = window.innerWidth;
     let contactP = document.querySelector(".Contact_ME p");
@@ -198,7 +224,7 @@ function changeAbsolutePosition() {
         contactP.style.width = "65%";
     } else if (contactP.innerHTML == "Contact me" && width <= 377) {
         contactO.style.minWidth = "145px";
-        contactP.style.left = "26px";
+        contactP.style.left = "28px";
     };
     if (contactP.innerHTML == "Kontaktiere mich" && width >= 378) {
         contactO.style.minWidth = "170px";
@@ -210,6 +236,14 @@ function changeAbsolutePosition() {
         contactP.style.left = "14px";
         contactP.style.width = "94%";
     }
+}
+
+function changeProjectFontSize() {
+    let width = window.innerWidth;
+    let p = document.querySelector(".mainTopic");
+    if(p.innerHTML == "Ausgewählte Projekte" && width <= 350){
+        p.style.fontSize = "40px";
+    }else{p.style.fontSize = "48px"};
 }
 
 

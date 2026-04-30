@@ -277,7 +277,7 @@ input[type="checkbox"]:checked:hover {
     }
     .contactDescriptionAria{
         height:400px;
-        width:92%;
+        width:90%;
         margin-bottom:64px;
     }
 
@@ -293,8 +293,14 @@ input[type="checkbox"]:checked:hover {
     }
 }
 
-@media(max-width:370px){
+@media(max-width:380px){
     .contactDescriptionAria{
         height:500px;
+    }
+}
+
+@media(max-width:350px){
+    .emailField{
+        letter-spacing: -2px;
     }
 }

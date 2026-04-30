@@ -311,7 +311,7 @@
 
     .skillset {
         margin: 0 auto;
-        width: 88%;
+        width: 90%;
     }
 
     .skillImages {
@@ -329,6 +329,13 @@
 @media(max-width:550px) {
     .skillTextHeadline {
         font-size: 48px;
+    }
+    
+}
+
+@media(max-width:525px) {
+    .techSkillsSection{
+        height:1150px;
     }
 }
 
@@ -375,7 +382,7 @@
     }
 }
 
-@media(max-width:375px) {
+@media(max-width:405px) {
     .techSkillsSection {
         margin: 12px 0px 120px 0px;
         height: 1500px;

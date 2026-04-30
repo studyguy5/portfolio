@@ -1,0 +1,92 @@
+
+@media(max-width:820px) {
+    .mainBanner h2 {
+        font-size: clamp(12px, 14px + 3vw, 40px);
+    }
+
+    .mainBanner h1 {
+        font-size: clamp(16px, 8px + 9vw, 128px);
+    }
+
+    .vright a:nth-child(5) {
+        display: none;
+    }
+
+    .slider {
+        height: 53px;
+        gap: 15px;
+    }
+
+    .slider p {
+        font-size: 24px;
+        width: 290px;
+    }
+
+    .vright hr {
+        --var: 100vh;
+        height: calc(var(--var) *18 / 100);
+    }
+
+    .Contact_ME {
+        min-width:173px;
+    }
+
+    .Contact_ME p {
+        width: 92%;
+    }
+
+    .mailMobile {
+        display: block;
+    }
+
+    .headlineDiv {
+        margin-top: -150px;
+    }
+
+}
+
+@media(max-width:760px) {
+    .buttonAria {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .verticalDiv {
+        padding: 0px 16px 0px 16px;
+    }
+}
+
+@media(max-width:377px) {
+    .check_My_Work {
+        padding: 20px 11.7px;
+        min-width: 140px;
+    }
+    .check_My_Work p {
+        font-size: 15px;
+        /* left:27px */
+    }
+
+    .Contact_ME {
+        padding: 10px 5.7px;
+        display: block;
+    }
+    
+    .Contact_ME p {
+        font-size: 15px;
+    }
+
+    .buttonAria a {
+        font-size: 16px;
+    }
+
+    .buttonAria {
+        gap: 10px;
+        width: 260px;
+    }
+}
+
+@media(max-height:600px) {
+    .vright a:nth-child(5) {
+        display: none;
+    }
+}
