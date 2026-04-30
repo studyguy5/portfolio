@@ -1,0 +1,65 @@
+
+@media(max-width:820px) {
+    .projectMaxView {
+        position: fixed;
+        /* height: clamp(550px, calc(100vh - 30px), calc(100vw - 35px)); */
+        top: 50%;
+        left: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .portfolioContent {
+        width: 88%;
+        height: 700px;
+    }
+
+    .projectJoin {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .leftparagraphJoin {
+        margin-bottom: 0px;
+    }
+
+    .leftparagraphElpollo {
+        margin-bottom: 0px;
+    }
+
+    .leftparagraphBubble {
+        margin-bottom: 0px;
+    }
+
+    .bilderDiv {
+        display: none;
+    }
+
+    .rightparagraph {
+        margin-top: 0px;
+    }
+
+    .projectElPollo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .projectBubble {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+    .mainTopic{
+        font-size: 56px;
+    }
+}
+
+@media(max-width:690px){
+    .mainTopic{
+        font-size: 48px;
+    }
+}

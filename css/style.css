@@ -5,7 +5,7 @@ body {
     align-items: center;
     margin: 0px;
     padding: 0px;
-    background-image: url(./img/porfolio_bg.png);
+    background-image: url(../img/porfolio_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -14,13 +14,13 @@ body {
 
 @font-face {
     font-family: 'FiraCode';
-    src: url('./fonts/firaCode/FiraCode-Regular.ttf') format('truetype');
+    src: url('../fonts/firaCode/FiraCode-Regular.ttf') format('truetype');
     /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 }
 
 @font-face {
     font-family: 'Karla';
-    src: url('./fonts/Karla/Karla-Regular.ttf') format('truetype');
+    src: url('../fonts/Karla/Karla-Regular.ttf') format('truetype');
     /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3-5 */
 }
 

@@ -1,0 +1,141 @@
+.projectContent {
+    display: flex;
+    max-width: 1088px;
+    margin-top: 124px;
+    gap: 88px;
+}
+
+
+.closeSection {
+    position: absolute;
+    right: 80px;
+    top: 18px;
+    cursor: pointer;
+    text-align: end;
+}
+
+.closeSection img:hover {
+    content: url(../img/closeButton_hover.png);
+}
+
+.projectInfo {
+    display: flex;
+    position: relative;
+    bottom: 70px;
+    flex-direction: column;
+}
+
+.projectImage img {
+    width: clamp(12.5rem, 40vw, 32.5rem);
+}
+
+.projectQuestion {
+    font-size: 24px;
+    color: rgba(61, 207, 182, 1);
+    margin-bottom: 20px;
+}
+
+.projectInfo h3 {
+    font-size: 128px;
+    margin: 0px 0px 0px 0px;
+}
+
+.projectName {
+    height: 58px;
+    margin-bottom: 40px;
+    font-size: 64px;
+    color: white;
+    width:max-content;
+}
+
+.projectDescription {
+    height: 80px;
+    font-size: 17px;
+    width: 90%;
+    margin-bottom: 32px;
+    color: white;
+}
+
+.projectStack {
+    display: flex;
+    align-items: center;
+    gap: 1.5px;
+    margin-bottom: 40px;
+}
+
+.projectImageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.projectImageDiv button {
+    margin-bottom: 48.22px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    border: unset;
+    cursor: pointer;
+    gap: 4px;
+    color: rgba(61, 207, 182, 1);
+    font-size: 16px;
+}
+
+.nextProjectMobile{
+    display: none;
+    background-color: transparent;
+    justify-content: space-between;
+    position:fixed;
+    right:10px;
+    bottom: 15px;
+    align-items: center;
+    border: unset;
+    width:140px;
+    cursor: pointer;
+    gap: 4px;
+    color: rgba(61, 207, 182, 1);
+    font-size: 16px;
+}
+
+.projectImageDiv button:hover {
+    color: white;
+}
+
+.projectImageDiv button img {
+    width: 24px;
+    height: 24px;
+    color: rgba(61, 207, 182, 1);
+}
+
+.projectImageDiv button:hover img {
+    margin: 0px -10px 0px 10px;
+    content: url(../img/arrow_horizontal_türkis_bold.png);
+    transition: 0.2s ease-in-out;
+}
+
+.projectStack p {
+    margin: 0px 16px 0px 0px;
+    color: white;
+}
+
+.projectLinks {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.projectLinks a {
+    display: flex;
+    align-items: center;
+    padding: 13px 24px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    gap: 4px;
+}
+
+

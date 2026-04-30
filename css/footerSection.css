@@ -93,11 +93,4 @@
     color:rgba(61, 207, 182, 1);
 }
 
-@media(max-width:820px){
-    .footerText{
-        display:none;
-    }
-    .footerTextMobile{
-        display:block;
-    }
-}
+

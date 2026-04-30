@@ -179,7 +179,7 @@
 
 
 .leftparagraphJoin:after {
-    content: url(./img/arrow_outward.png);
+    content: url(../img/arrow_outward.png);
     display: inline-block;
     height: 26px;
     align-items: center;
@@ -189,7 +189,7 @@
 }
 
 .leftparagraphElpollo:after {
-    content: url(./img/arrow_outward.png);
+    content: url(../img/arrow_outward.png);
     display: inline-block;
     height: 26px;
     align-items: center;
@@ -199,7 +199,7 @@
 }
 
 .leftparagraphBubble:after {
-    content: url(./img/arrow_outward.png);
+    content: url(../img/arrow_outward.png);
     display: inline-block;
     height: 26px;
     align-items: center;
@@ -267,73 +267,10 @@
     justify-self: center;
     align-items: center;
     transition: opacity 0.2s ease-in-out;
-    background-image: url('./img/porfolio_bg.png');
+    background-image: url('../img/porfolio_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media(max-width:820px) {
-    .projectMaxView {
-        position: fixed;
-        /* height: clamp(550px, calc(100vh - 30px), calc(100vw - 35px)); */
-        top: 50%;
-        left: -50%;
-        transform: translate(-50%, -50%);
-    }
 
-    .portfolioContent {
-        width: 88%;
-        height: 700px;
-    }
-
-    .projectJoin {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: start;
-    }
-
-    .leftparagraphJoin {
-        margin-bottom: 0px;
-    }
-
-    .leftparagraphElpollo {
-        margin-bottom: 0px;
-    }
-
-    .leftparagraphBubble {
-        margin-bottom: 0px;
-    }
-
-    .bilderDiv {
-        display: none;
-    }
-
-    .rightparagraph {
-        margin-top: 0px;
-    }
-
-    .projectElPollo {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: start;
-    }
-
-    .projectBubble {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: start;
-    }
-    .mainTopic{
-        font-size: 56px;
-    }
-}
-
-@media(max-width:690px){
-    .mainTopic{
-        font-size: 48px;
-    }
-}
 
