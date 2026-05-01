@@ -414,7 +414,7 @@ function slideToNext() {
     }
 }
 
-function validateContactForm() {
+function validateContactForm(event) {
     let name = document.getElementById("nameInput");
     let email = document.getElementById("emailInput");
     let message = document.getElementById("helpInput");
@@ -427,10 +427,47 @@ function validateContactForm() {
     }
     if (!validateCheckBox()) return;
     // showCheckboxError();
-
-    if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
-        submitInfo();
+    if (validateNameField()){
+        submitInfo(event);
     }
+
+    // if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
+    //     submitInfo(event);
+    // }
+}
+
+function submitInfo(event) {
+    event.preventDefault();
+    console.log("submit");
+    let name = document.getElementById("nameInput");
+    let email = document.getElementById("emailInput");
+    let message = document.getElementById("helpInput");
+    const data = {
+        name: name.value,
+        email: email.value,
+        message: message.value
+    }
+    fetch("https://formspree.io/f/mjglvngj", {
+        method: "POST",
+        body: JSON.stringify(data), //data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        emptyFields();
+        document.querySelector('.submittedFeedback').classList.add('success');
+        setTimeout(() => {
+        document.querySelector('.submittedFeedback').classList.remove('success');
+        }, 3000);
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function emptyFields(){
+    document.getElementById("nameInput").value = "";
+    document.getElementById("emailInput").value = "";
+    document.getElementById("helpInput").value = "";
 }
 
 function showCheckboxError() {
@@ -499,10 +536,13 @@ function validateNameField() {
     if (!validateName(name) && name.value != "") {
         nameError.style.color = "rgba(236, 123, 123, 0.8)";
         nameError.innerHTML = "Please enter a correct name";
+        return false
     } else if (name.value == "") {
         nameError.innerHTML = "Please enter your name";
+        return false
     } else if (validateName(name) && name.value != "") {
         nameError.innerHTML = "";
+        return true
     }
 }
 

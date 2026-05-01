@@ -49,7 +49,7 @@ body {
 
 .headLogo:hover img {
     cursor: pointer;
-    content: url(./img/final_unfilled.png);
+    content: url(../img/final_unfilled.png);
 }
 
 .headLogo:hover h3 {

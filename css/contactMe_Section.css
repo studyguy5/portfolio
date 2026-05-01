@@ -47,6 +47,7 @@ hr{
     width:230px;
     font-size: 18px;
     font-family: 'Karla', sans-serif;
+    color:white;
 }
 
 .errorDivName{
@@ -82,9 +83,10 @@ hr{
     background-color: transparent;
     padding:5px 30px 5px 0px;
     margin: 0px 0px 0px 0px;
-    width:230px;
+    width:236px;
     font-size: 18px;
     font-family: 'Karla', sans-serif;
+    color:white;
 }
 
 .helpField{
@@ -107,6 +109,33 @@ hr{
     min-width:230px;
     font-size: 18px;
     font-family: 'Karla', sans-serif;
+    color:white;
+    resize: none;
+    width:90%;
+    overflow: scroll;
+}
+
+
+.submittedFeedback{
+    position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    bottom:200px;
+    right:-300px;
+    padding: 5px 25px;
+    width:200px;
+    height:50px;
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    color:rgba(61, 207, 182, 1);
+    background-color: transparent;
+    transition: 0.5s ease-in-out
+}
+.success{
+    right:200px;
 }
 
 .lastHR{
