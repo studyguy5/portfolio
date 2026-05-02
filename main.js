@@ -1,6 +1,10 @@
 
 function init() {
     startIntervals();
+    if(localStorage.getItem('lang') == '') {
+        localStorage.setItem('lang', 'en');
+    }
+    checkLanguage();
 }
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
@@ -15,7 +19,7 @@ function package() {
 
 
 
-let currentLang = 'en';
+let currentLang;
 function changeLanguage() {
     console.log("change language normal")
     let basic = document.getElementsByClassName("language")[0]
@@ -28,6 +32,7 @@ function changeLanguage() {
         hover.src = "";
         switchLanguage('de');
         currentLang = 'de';
+        localStorage.setItem('lang', 'de');
         setTimeout(() => {
             hover.src = "./img/german_hover.png";
         }, 80);
@@ -40,6 +45,7 @@ function changeLanguage() {
         hover.src = "";
         switchLanguage('en');
         currentLang = 'en';
+        localStorage.setItem('lang', 'en');
         setTimeout(() => {
             hover.src = "./img/english_hover.png";
         }, 80);
@@ -91,6 +97,13 @@ function changeLanguageMobile() {
             hover.src = "./img/english_hover.png";
         }, 80);
     }    
+}
+
+function checkLanguage(){
+    if(localStorage.getItem('lang') != 'en'){
+        changeLanguage();
+        changeLanguageMobile();
+    }else{}
 }
 
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);

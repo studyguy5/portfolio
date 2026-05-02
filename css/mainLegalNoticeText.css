@@ -25,6 +25,9 @@
 .impressumPhone{
     color:rgba(61, 207, 182, 1);
 }
+.impressumPhone a{
+    color:rgb(235, 236, 236, 0.7);
+}
 
 .mainContent h1{
     font-size: 30px;
@@ -33,6 +36,18 @@
     color:rgba(61, 207, 182, 1);
     display:flex;
     justify-content: center;
+}
+.mainContent h1 img{
+    display:none;
+}
+
+ul li{
+    display:flex;
+    /* gap:10px; */
+    align-items: center;
+}
+li img{
+    margin-right:10px;
 }
 .mainContent h3{
     font-size: 19px;

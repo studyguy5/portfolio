@@ -49,8 +49,8 @@ const translations = {
 
     "What my Colleagues say about me": "Was meine Kollegen über mich sagen",
 
-    "Leonhard was a reliable team partner on the project. He wrote solid code and was open to feedback. His communication made working together straightforward.":
-    "Leonhard war ein zuverlässiges und engagiertes Teammitglied während unserem gemeinsamen Projekt. Er lieferte stets soliden Code und war immer offen für Feedback, um den Projekterfolg sicherzustellen. Seine Kommunikation war klar und effektiv, um voran zu kommen.",
+    "Leonhard was a reliable team partner on the project. His communication made working together straightforward.":
+    "Leonhard war ein zuverlässiges und engagiertes Teammitglied während unserem gemeinsamen Projekt. Seine Kommunikation war klar und effektiv, um voran zu kommen.",
 
     "Working with Leonhard was uncomplicated. He completed his tasks diligently and was always willing to help when questions came up. A good addition to our team.":
     "Die Zusammenarbeit mit Leonhard war unkompliziert. Er erledigte seine Aufgaben gewissenhaft und war immer bereit zu helfen, wenn Fragen auftauchten. Eine gute Ergänzung für unser Team.",
@@ -79,6 +79,42 @@ const translations = {
 
     "Say Hello ;)": "Sag Hallo ;)",
     "Legal Notice": "<img src='./img/dot.png'>Rechtlicher Hinweis",
+
+    // For additional Impressum Elements
+    "Imprint": "Impressum",
+    "Address:": "<img src='./img/dot.png'>Adresse:",
+    "Phone:": "<img src='./img/dot.png'>Telefon:",
+
+    "Responsible for the Content": "Verantwortlich für den Inhalt",
+    "Acceptence of Terms": "Akzeptanz der Bedingungen",
+    
+    "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies,\nguidelines, or amendments thereto that may be presented to you from time to time. I, Leonhard Siegele, may update or change\nthe terms and conditions from time to time without notice.":
+    "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie etwaige Richtlinien,<br> Vorgaben oder Änderungen daran an, die Ihnen von Zeit zu Zeit vorgelegt werden können. Ich, Leonhard Siegele, behalte mir vor,<br> die Bedingungen jederzeit ohne Vorankündigung zu aktualisieren oder zu ändern.",
+
+    "Scope and Ownership of the Product": "Umfang und Eigentum des Produkts",
+
+    "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH.\nIt has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent\navailability, reliability, accuracy, or any other aspect of quality regarding this Product.\n\nThe design of Portfolio is owned by the Developer Akademie GmbH.\nUnauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.":
+    "Portfolio wurde als Teil eines Studentengruppenprojekts im Web-Development-Bootcamp an der Developer Akademie GmbH entwickelt. Es dient einem Bildungszweck und ist nicht für umfangreiche persönliche oder geschäftliche Nutzung vorgesehen. Aus diesem Grund können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsaspekte dieses Produkts garantieren.<br><br>Der Designentwurf von Portfolio gehört der Developer Akademie GmbH. Unbefugte Nutzung, Vervielfältigung, Bearbeitung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
+    
+    "Proprietary Rights": "Eigentumsrechte",
+    
+    "Aside from the design owned by Developer Akademie GmbH, we, the listed students,\nretain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.":
+    "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen Eigentumsinformationen, vollständig bei uns.",
+    
+    "Use of the Product": "Verwendung des Produkts",
+
+    "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations.\nAny use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.":
+    "Portfolio ist ausschließlich für rechtmäßige Zwecke gemäß allen geltenden Gesetzen und Vorschriften gedacht.<br>Jede Nutzung von Portfolio für illegale Aktivitäten oder um eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens verboten. Sie haften allein für Ihre Interaktionen mit anderen Nutzern von Portfolio.",
+
+    "Disclaimer": "Haftungsausschluss",
+
+    "Portfolio is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied\nwarranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the\nDeveloper Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not\nlimited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility\nof such damages, arising out of or in connection with the use or performance of Portfolio.":
+    "Portfolio wird „so wie“ bereitgestellt, ohne jegliche Garantie jeglicher Art, seien es ausdrückliche oder implizite Garantien, einschließlich, aber nicht beschränkt auf die impliziten Garantien der Marktfähigkeit, Eignung für einen bestimmten Zweck und Nicht-Verletzung fremder Rechte. Unter keinen Umständen haften wir, die aufgeführten Studenten, oder die Developer Akademie für direkte, indirekte, zufällige, spezielle, Folge- oder Muster-Schadensfälle, einschließlich, aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Goodwill, Nutzung, Daten oder sonstigen immateriellen Verlusten, selbst wenn wir über die Möglichkeit solcher Schäden informiert wurden, die aus der Nutzung oder Leistung von Portfolio entstehen oder damit im Zusammenhang stehen.",
+
+    "Indemnification": "Schadensersatz",
+
+    "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,\nofficers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable\nlegal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.\n\nFor any questions or notices, please contact us at [Contact Email].\n\nDate: July 26, 2025":
+    "Sie erklären sich bereit, uns, die aufgeführten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner,<br>Offiziere, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtsanwaltsgebühren)<br> freizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit im Zusammenhang stehen.<br><br>Für alle Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Contact Email].<br><br>Datum: July 26, 2025"
     },
 
     en :{
@@ -130,8 +166,8 @@ const translations = {
 
     "Was meine Kollegen über mich sagen": "What my Colleagues say about me",
 
-    "Leonhard war ein zuverlässiges und engagiertes Teammitglied während unserem gemeinsamen Projekt. Er lieferte stets soliden Code und war immer offen für Feedback, um den Projekterfolg sicherzustellen. Seine Kommunikation war klar und effektiv, um voran zu kommen.":
-    "Leonhard was a reliable teampartner on the project. He wrote solid code and was open to feedback. His communication made working together straightforward.",
+    "Leonhard war ein zuverlässiges und engagiertes Teammitglied während unserem gemeinsamen Projekt. Seine Kommunikation war klar und effektiv, um voran zu kommen.":
+    "Leonhard was a reliable teampartner on the project. His communication made working together straightforward.",
 
     "Die Zusammenarbeit mit Leonhard war unkompliziert. Er erledigte seine Aufgaben gewissenhaft und war immer bereit zu helfen, wenn Fragen auftauchten. Eine gute Ergänzung für unser Team.":
     "Working with Leonhard was uncomplicated. He completed his tasks diligently and was always willing to help when questions came up. A good addition to our team.",
@@ -159,9 +195,50 @@ const translations = {
     "Füge deine Nachricht hier ein": "Your message goes here",
 
     "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten gemäß der Richtlinie zu.":
-    "I've read the privacy policy and agree to the processing of my data as outlined in the policy.",
+    "I've read the <a href='privacy-policy.html'>privacy policy</a> and agree to the processing of my data as outlined in the policy.",
 
     "Sag Hallo": "Say Hello",
     "Rechtlicher Hinweis": "<img src='./img/dot.png'>Legal Notice",
+
+    // For additional Impressum Elements
+    "Impressum": "Imprint",
+    "Adresse:": "<img src='./img/dot.png'>Address:",
+    "Telefon:": "<img src='./img/dot.png'>Phone:",
+
+    "Verantwortlich für den Inhalt": "Responsible for the Content",
+    "Akzeptanz der Bedingungen": "Acceptance of Terms",
+    
+    
+    "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie etwaige Richtlinien,\nVorgaben oder Änderungen daran an, die Ihnen von Zeit zu Zeit vorgelegt werden können. Ich, Leonhard Siegele, behalte mir vor,\ndie Bedingungen jederzeit ohne Vorankündigung zu aktualisieren oder zu ändern.":
+    "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies,<br>guidelines, or amendments thereto that may be presented to you from time to time. I, Leonhard Siegele, may update or change<br>the terms and conditions from time to time without notice.",
+
+    "Umfang und Eigentum des Produkts": "Scope and Ownership of the Product",
+
+    
+    "Portfolio wurde als Teil eines Studentengruppenprojekts im Web-Development-Bootcamp an der Developer Akademie GmbH entwickelt. Es dient einem Bildungszweck und ist nicht für umfangreiche persönliche oder geschäftliche Nutzung vorgesehen. Aus diesem Grund können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsaspekte dieses Produkts garantieren.\n\nDer Designentwurf von Portfolio gehört der Developer Akademie GmbH. Unbefugte Nutzung, Vervielfältigung, Bearbeitung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.":
+    "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH.<br>It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent<br>availability, reliability, accuracy, or any other aspect of quality regarding this Product.<br><br>The design of Portfolio is owned by the Developer Akademie GmbH.<br>Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    
+    "Eigentumsrechte": "Proprietary Rights",
+
+    "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen Eigentumsinformationen, vollständig bei uns.":
+    "Aside from the design owned by Developer Akademie GmbH, we, the listed students,<br>retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
+    
+    "Verwendung des Produkts": "Use of the Product",
+
+    
+    "Portfolio ist ausschließlich für rechtmäßige Zwecke gemäß allen geltenden Gesetzen und Vorschriften gedacht.\nJede Nutzung von Portfolio für illegale Aktivitäten oder um eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens verboten. Sie haften allein für Ihre Interaktionen mit anderen Nutzern von Portfolio.":
+    "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations.<br>Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
+
+    "Haftungsausschluss": "Disclaimer",
+
+    
+    "Portfolio wird \„so wie\“ bereitgestellt, ohne jegliche Garantie jeglicher Art, seien es ausdrückliche oder implizite Garantien, einschließlich, aber nicht beschränkt auf die impliziten Garantien der Marktfähigkeit, Eignung für einen bestimmten Zweck und Nicht-Verletzung fremder Rechte. Unter keinen Umständen haften wir, die aufgeführten Studenten, oder die Developer Akademie für direkte, indirekte, zufällige, spezielle, Folge- oder Muster-Schadensfälle, einschließlich, aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Goodwill, Nutzung, Daten oder sonstigen immateriellen Verlusten, selbst wenn wir über die Möglichkeit solcher Schäden informiert wurden, die aus der Nutzung oder Leistung von Portfolio entstehen oder damit im Zusammenhang stehen.":
+    "Portfolio is provided 'as is' without warranty of any kind, whether express or implied, including but not limited to the implied<br>warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the<br>Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not<br>limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility<br>of such damages, arising out of or in connection with the use or performance of Portfolio.",
+
+    "Schadensersatz": "Indemnification",
+
+
+    "Sie erklären sich bereit, uns, die aufgeführten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner,\nOffiziere, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtsanwaltsgebühren)\nfreizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit im Zusammenhang stehen.\n\nFür alle Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Contact Email].\n\nDatum: July 26, 2025":
+    "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,<br>officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees)<br>arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.<br><br>For any questions or notices, please contact us at [Contact Email].<br><br>Date: July 26, 2025"
     }
 }

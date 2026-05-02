@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=`${currentLang}`>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="footerSection.css">
-    <link rel="stylesheet" href="mainLegalNoticeText.css">
+    <title>Legal Notice</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footerSection.css">
+    <link rel="stylesheet" href="./css/mainLegalNoticeText.css">
 </head>
 
-<body>
+<body onload="checkLanguage()">
     <header class="headfullsize">
         <div class="headcontent">
             <div class="logoMobile"><img src="./img/final_filled.png">Leonhard Siegele</div>
@@ -21,18 +21,23 @@
             </div>
             <!-- <img src="./img/burgerMenu_symbol.png" alt="burgerMenu" class="burgerMenu"> -->
             <div class="burgerMenuMobile">
-                <a onclick="toggleBurgerMenu()" class="link1" href="#aboutMeSection">About me</a>
-                <a onclick="toggleBurgerMenu()" class="link2" href="#techSkillsSection">Skills</a>
-                <a onclick="toggleBurgerMenu()" class="link3" href="#portfolioSection">Projects</a>
-                <img class="languageMobile" src="./img/english.png">
-                <img class="language_HoverMobile" src="./img/english_hover.png">
+                <a onclick="toggleBurgerMenu()" class="link1M" href="#aboutMeSection" data-lang>About me<img
+                        src="./img/dot.png"></a>
+                <a onclick="toggleBurgerMenu()" class="link2M" href="#techSkillsSection" data-lang>Skills<img
+                        src="./img/dot.png"></a>
+                <a onclick="toggleBurgerMenu()" class="link3M" href="#portfolioSection" data-lang>Projects<img
+                        src="./img/dot.png"></a>
+                <div onclick="toggleBurgerMenu()" class="imgWrapper">
+                    <img class="languageMobile" src="./img/english.png">
+                    <img class="languageMobile_Hover" src="./img/english_hover.png">
+                </div>
             </div>
             <nav class="headNavbar">
                 <img class="language" src="./img/english.png">
                 <img class="language_Hover" src="./img/english_hover.png">
-                <a href="index.html#aboutMeSection" class="About" href="">About me<img src="./img/dot.png"></a>
-                <a href="index.html#techSkillsSection" class="skills" href="">Skills<img src="./img/dot.png"></a>
-                <a href="index.html#portfolioSection" class="projects" href="">Projects<img src="./img/dot.png"></a>
+                <a href="index.html#aboutMeSection" class="About" data-lang>About me<img src="./img/dot.png"></a>
+                <a href="index.html#techSkillsSection" class="skills" data-lang>Skills<img src="./img/dot.png"></a>
+                <a href="index.html#portfolioSection" class="projects" data-lang>Projects<img src="./img/dot.png"></a>
             </nav>
             <div class="headLogo">
                 <img src="./img/final_filled.png">
@@ -41,28 +46,28 @@
         </div>
     </header>
     <section class="mainContent">
-        <h1>Legal Notice</h1>
+        <h1 data-lang>Legal Notice</h1>
         <article class="mainLegalNoticeText">
             <section class="impressumPhone">
-                <h3>Imprint</h3>
+                <h3 data-lang>Imprint</h3>
                 <ul>
-                    <li>Leonhard Siegele</li>
-                    <li>Address: Musterstraße 123, 1010 Wien, Austria</li>
-                    <li>Phone: +43 123 456 789</li>
+                    <li><img src="./img/dot.png">Leonhard Siegele</li>
+                    <li><p data-lang><img src="./img/dot.png">Address:</p>&nbsp;Musterstraße 123, 1010 Wien, Austria</li>
+                    <li><p data-lang><img src="./img/dot.png">Phone:</p>&nbsp;+43 123 456 789</li>
                 </ul>
-                <h3>Exploring the Board</h3>
-                Email: <a href="mailto:bR9oO@example.com">bR9oO@example.com</a>
+                <h3 data-lang>Responsible for the Content</h3>
+                Email: <a href="mailto:leonhard.siegele39@gmail.com">leonhard.siegele39@gmail.com</a>
             </section>
             <section class="acceptanceOfTerms">
-                <h3>Acceptance of Terms</h3>
-                <p>By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and
+                <h3 data-lang>Acceptance of Terms</h3>
+                <p data-lang>By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and
                     conditions, and any policies,<br> guidelines, or amendments thereto that may be presented to you
-                    from time to time. We, the listed students, may update or change<br> the terms and conditions from
+                    from time to time. I, Leonhard Siegele, may update or change<br> the terms and conditions from
                     time to time without notice.</p>
             </section>
             <section class="scope_and_Ownership_ofTheProduct">
-                <h3>Scope and Ownership of the Product</h3>
-                <p>Portfolio has been developed as part of a student group project in a web development bootcamp at the
+                <h3 data-lang>Scope and Ownership of the Product</h3>
+                <p data-lang>Portfolio has been developed as part of a student group project in a web development bootcamp at the
                     Developer Akademie GmbH.<br>
                     It has an educational purpose and is not intended for extensive personal & business usage. As such,
                     we cannot guarantee consistent<br>
@@ -75,22 +80,22 @@
                 </p>
             </section>
             <section class="proprietery_rights">
-                <h3>Proprietary Rights</h3>
-                <p>Aside from the design owned by Developer Akademie GmbH, we, the listed students,<br>retain all
+                <h3 data-lang>Proprietary Rights</h3>
+                <p data-lang>Aside from the design owned by Developer Akademie GmbH, we, the listed students,<br>retain all
                     proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and
                     other proprietary information.</p>
             </section>
             <section class="useOfTheProduct">
-                <h3>Use of the Product</h3>
-                <p>Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and
+                <h3 data-lang>Use of the Product</h3>
+                <p data-lang>Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and
                     regulations.<br>
                     Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another
                     person, is strictly prohibited. You are solely responsible for your interactions with other users of
                     Portfolio.</p>
             </section>
             <section class="disclaimer">
-                <h3>Disclaimer</h3>
-                <p>Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but
+                <h3 data-lang>Disclaimer</h3>
+                <p data-lang>Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but
                     not limited to the implied<br>
                     warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event
                     will we, the listed students, or the<br>
@@ -101,8 +106,8 @@
                     of such damages, arising out of or in connection with the use or performance of Portfolio.</p>
             </section>
             <section class="indemnification">
-            <h3>Indemnification</h3>
-            <p>You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,<br>
+            <h3 data-lang>Indemnification</h3>
+            <p data-lang>You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,<br>
                 officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable<br>
                  legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.
                 <br>
@@ -128,12 +133,12 @@
         <div class="links">
             <a href="" class="link1"><img src="./img/dot.png">Github</a>
             <a href="" class="link2"><img src="./img/dot.png">Email</a>
-            <a href="" class="link3"><img src="./img/dot.png">Legal Notice</a>
+            <a href="./legal-notice.html" class="link3" data-lang><img src="./img/dot.png">Legal Notice</a>
         </div>
     </section>
     <!-- <p class="footerTextMobile">© Leonhard Siegele 2026</p> -->
 
 </body>
 <script src="main.js"></script>
-
+<script src="langpackage.js"></script>
 </html>
