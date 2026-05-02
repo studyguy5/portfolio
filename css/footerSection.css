@@ -1,7 +1,6 @@
 
 .footerSection{
     display:flex;
-    /* background-color: rgb(177, 144, 94, 0.4); */
     justify-content: space-between;
     align-items: end;
     max-width:1248px;
@@ -15,12 +14,13 @@
     width:44px;
     height:54px;
     margin-right:8px;
-    /* margin-bottom: -12px; */
 }
 
 .logo{
     display:flex;
     align-items: center;
+    width:132px;
+    height:48px;
 }
 
 .links{

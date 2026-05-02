@@ -42,6 +42,7 @@ const translations = {
     "Growth Mindset": "Wachstumsdenken",
 
     "Featured Projects": "Ausgewählte Projekte",
+    "more projects coming soon...": "mehr Projekte folgen...",
 
     "Explore a selection of my work here - Interact with\nprojects to see my skills in action.": 
     "Erkunde eine Auswahl meiner Projekte hier - interagiere mit Projekten, <br>um meine Fähigkeiten in Aktion zu sehen.",
@@ -57,7 +58,7 @@ const translations = {
     "Leonhard did his part well in the project. He was dependable and actively participated in discussions. Overall, he kept a good work environment.":
     "Leonhard hat seinen Teil im Projekt gut gemacht. Er war zuverlässig und hat aktiv an Diskussionen teilgenommen. Insgesamt hat er eine gute Arbeitsatmosphäre aufrechterhalten.",
 
-    "Contact Me": "Kontaktiere mich",
+    "Contact me": "Kontaktiere mich",
     "Let's work\ntogether": "Lass uns zusammen<br> arbeiten",
     "Got a Problem to solve?": "Hast du ein Problem zu lösen?",
 
@@ -122,6 +123,7 @@ const translations = {
     "Wachstumsdenken": "Growth Mindset",
 
     "Ausgewählte Projekte": "Featured Projects",
+    "mehr Projekte folgen...": "more projects coming soon...",
 
     "Erkunde eine Auswahl meiner Projekte hier - interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.":
     "Explore a selection of my projects here - interact with projects to see my skills in action.",

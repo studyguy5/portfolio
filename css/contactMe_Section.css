@@ -219,6 +219,7 @@ input[type="checkbox"]:checked:hover {
 
 .helpInput::placeholder{
     font-size: 18px;
+    color:rgb(255, 255, 255, 0.8);
 }
 
 .nameInput:focus{
@@ -226,6 +227,7 @@ input[type="checkbox"]:checked:hover {
 }
 .nameInput::placeholder{
     font-size: 18px;
+    color:rgb(255, 255, 255, 0.8);
 }
 
 .emailInput:focus{
@@ -234,6 +236,7 @@ input[type="checkbox"]:checked:hover {
 
 .emailInput::placeholder{
     font-size: 18px;
+    color:rgb(255, 255, 255, 0.8);
 }
 
 .Contact_headline{
@@ -265,6 +268,7 @@ input[type="checkbox"]:checked:hover {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     color:white;
+    /* height:110px; */
     width:90%;
 }
 

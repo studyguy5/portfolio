@@ -24,16 +24,17 @@ let projectArray = {
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}]
     }, 
-    {
-        'projectName': 'DABubble',
-        'projectDescription': 'This App is a Slack Clone App. It revolutionizes team communication' + 
-        ' and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-        'projectImage': './img/bubble_bigFrame.png',
-        'projectLink': 'https://bsp-join.web.app/',
-        'projectGithub': 'https://github.com/bsp-join/bsp-join',
-        'projectStack': [{icon : "./img/mini_Angular.png", stack : 'Angular'}, {icon : "./img/mini_typeScript.png", stack : 'TypeScript'}, 
-            {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
-    }],
+    // {
+    //     'projectName': 'DABubble',
+    //     'projectDescription': 'This App is a Slack Clone App. It revolutionizes team communication' + 
+    //     ' and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    //     'projectImage': './img/bubble_bigFrame.png',
+    //     'projectLink': 'https://bsp-join.web.app/',
+    //     'projectGithub': 'https://github.com/bsp-join/bsp-join',
+    //     'projectStack': [{icon : "./img/mini_Angular.png", stack : 'Angular'}, {icon : "./img/mini_typeScript.png", stack : 'TypeScript'}, 
+    //         {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
+    // }],
+],
 
     de : [{
         'projectName': 'Join',
@@ -55,16 +56,17 @@ let projectArray = {
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}]
     }, 
-    {
-        'projectName': 'DABubble',
-        'projectDescription': 'Dies ist ein Slack-Klone-App. Es revolutionisiert die Teamkommunikation' +
-        ' die intuitive Benutzeroberfläche, live Nachrichten und eine robuste Kanalorganisation.',
-        'projectImage': './img/bubble_bigFrame.png',
-        'projectLink': 'https://bsp-join.web.app/',
-        'projectGithub': 'https://github.com/bsp-join/bsp-join',
-        'projectStack': [{icon : "./img/mini_Angular.png", stack : 'Angular'}, {icon : "./img/mini_typeScript.png", stack : 'TypeScript'}, 
-            {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
-    }]
+    // {
+    //     'projectName': 'DABubble',
+    //     'projectDescription': 'Dies ist ein Slack-Klone-App. Es revolutionisiert die Teamkommunikation' +
+    //     ' die intuitive Benutzeroberfläche, live Nachrichten und eine robuste Kanalorganisation.',
+    //     'projectImage': './img/bubble_bigFrame.png',
+    //     'projectLink': 'https://bsp-join.web.app/',
+    //     'projectGithub': 'https://github.com/bsp-join/bsp-join',
+    //     'projectStack': [{icon : "./img/mini_Angular.png", stack : 'Angular'}, {icon : "./img/mini_typeScript.png", stack : 'TypeScript'}, 
+    //         {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
+    // }
+]
 }
 
 function renderProjects(index) {

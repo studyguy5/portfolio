@@ -186,10 +186,11 @@
     margin-top: 30px;
     font-family: 'Karla', sans-serif;
     font-size: 20px;
+    color:white;
 }
 
 .name {
-    /* margin-top:150px; */
+    color:white;
     display: flex;
     align-items: center;
     gap:15px;
@@ -203,5 +204,6 @@
 .name hr {
     width: 65%;
     height: 1px;
+    border-color:white;
 }
 

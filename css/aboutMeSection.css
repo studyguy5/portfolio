@@ -9,13 +9,13 @@
 }
 
 .myPhoto {
-    /* padding: 0px 0px 0px 25px; */
     width: 42%;
     height: fit-content;
     position: relative;
 }
 
 .myPhoto img {
+    border-radius: 30px;
     width: 100%;
     height: auto;
     z-index: -1;

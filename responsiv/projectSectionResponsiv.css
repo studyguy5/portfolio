@@ -10,7 +10,7 @@
 
     .portfolioContent {
         width: 88%;
-        height: 700px;
+        height: 495px;
     }
 
     .projectJoin {
@@ -61,5 +61,11 @@
 @media(max-width:690px){
     .mainTopic{
         font-size: 48px;
+    }
+}
+
+@media(max-width:590px){
+    .portfolioContent{
+        height:620px;
     }
 }
