@@ -6,6 +6,13 @@ function init() {
     }
     checkLanguage();
 }
+
+function initPrivacy() {
+    checkLanguage();
+    startIntervals2();
+}
+
+
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
 
@@ -17,7 +24,14 @@ function package() {
     changeLanguageMobile();
 }
 
-
+let collectIntervalls2 = null;
+function startIntervals2() {
+    if (collectIntervalls2 != null) { clearInterval(collectIntervalls2); }
+    let allIntervals2 = setInterval(() => {
+        checkLegalNotice();
+        
+    }, 100);
+}
 
 let currentLang;
 function changeLanguage() {

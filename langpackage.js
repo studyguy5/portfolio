@@ -120,8 +120,8 @@ const translations = {
     "Privacy Policy": "Datenschutzerklärung",
     "Information Obligation Statement":"Informationserklärung",
 
-    "the following text is generated automatically by fairesRecht.at": 
-    "Der folgende Text wurde automatisch von <a href='https://www.fairesrecht.at'><b>fairesRecht.at</b></a> erzeugt",
+    "the following text is generated automatically by\nfairesRecht.at": 
+    "Der folgende Text wurde automatisch von <a href='https://www.fairesrecht.at'>fairesRecht.at</a>erzeugt",
 
     "In the following privacy policy, we inform you about the important aspects of data processing in connection with our website. We collect and process personal data only on the basis of legal regulations (General Data Protection Regulation, Telecommunications Act 2003).":
     "In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).",
@@ -172,11 +172,18 @@ const translations = {
     "You can reach us at the following contact details:":
     "Sie erreichen uns unter folgenden Kontaktdaten:",
 
-    "Website operator: Leonhard Siegele\nPhone number: 067763070252\nEmail: leonhard.siegele39@gmail.com": 
-    "Webseitenbetreiber: Leonhard Siegele<br>Telefonnummer: 067763070252<br>Email: leonhard.siegele39@gmail.com",
+    "Website operator: Leonhard Siegele": 
+    "Webseitenbetreiber: Leonhard Siegele",
+
+    "Phone number: 067763070252":
+    "Telefonnummer: 067763070252",
+
+    // "Email:\n leonhard.siegele39@gmail.com":
+    // "Email:&nbsp; leonhard.siegele39@gmail.com",
+
     "Phone number:": "Telefonnummer:",
 
-    "Legal text from Source: fairesRecht.at in cooperation with Lawyer Traffic Law":
+    "Legal text from Source: fairesRecht.at in cooperation with\nLawyer Traffic Law":
     "Rechtstext von Quelle: fairesRecht.at in Kooperation mit <a href='https://law-austria.com/'>Rechtsanwalt KFZ-Recht</a>"
 
 },
@@ -309,8 +316,8 @@ const translations = {
     "Datenschutzerklärung": "Privacy Policy",
     "Informationserklärung": "Information Obligation Statement",
 
-    "Der folgende Text wurde automatisch von fairesRecht.at erzeugt":
-    "the following text is generated automatically by <a href='https://www.fairesrecht.at'><b>fairesRecht.at</b></a>",
+    "Der folgende Text wurde automatisch von\nfairesRecht.at\nerzeugt":
+    "the following text is generated automatically by <a href='https://www.fairesrecht.at'>&nbsp;fairesRecht.at</a>",
 
     "In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).":
     "In the following privacy policy, we inform you about the important aspects of data processing in connection with our website. We collect and process personal data only on the basis of legal regulations (General Data Protection Regulation, Telecommunications Act 2003).",
@@ -361,12 +368,15 @@ const translations = {
     "Sie erreichen uns unter folgenden Kontaktdaten:":
     "You can reach us at the following contact details:",
 
-    "Webseitenbetreiber: Leonhard Siegele\nTelefonnummer: 067763070252\nEmail: leonhard.siegele39@gmail.com":
-    "Website operator: Leonhard Siegele<br>Phone number: 067763070252<br>Email: leonhard.siegele39@gmail.com", 
+    "Webseitenbetreiber: Leonhard Siegele":
+    "Website operator: Leonhard Siegele", 
+
+    "Telefonnummer: 067763070252": 
+    "Phone number: 067763070252",
     
     "Telefonnummer:": "Phone number",
 
-    "Rechtstext von Quelle: fairesRecht.at in Kooperation mit Rechtsanwalt KFZ-Recht":
+    "Rechtstext von Quelle: fairesRecht.at in Kooperation mit\nRechtsanwalt KFZ-Recht":
     "Legal text from Source: fairesRecht.at in cooperation with <a href='https://law-austria.com/'> Lawyer Traffic Law"
 }
 }

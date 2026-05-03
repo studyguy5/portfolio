@@ -7,11 +7,15 @@
     color:white;
     font-size: 17px;
     font-family: 'Karla', sans-serif;
+    /* width:90%; */
+    display:flex;
+    gap:3px;
 }
 
 .mainContent a{
     color: rgba(61, 207, 182, 1);
     text-decoration: none;
+    /* margin-right:10px; */
 }
 
 .mainContent li{
@@ -36,4 +40,19 @@
     color: rgba(61, 207, 182, 1);
     font-size: 20px;
     font-family: 'FiraCode', sans-serif;
+}
+
+.footerText{
+    font-size: 18px;
+    font-family: 'FiraCode', sans-serif;
+    color: rgba(61, 207, 182, 1);
+}
+
+@media(max-width:600px){
+    .footerText{
+        display:none;
+    }
+    .footerTextMobile{
+        display:block;
+    }
 }
