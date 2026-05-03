@@ -1,6 +1,30 @@
 .mainContent{
     padding: 10px 15px;
+    max-width:1248px;
     box-sizing: border-box;
+}
+/* .mainContent h3{
+    width:70%;
+} */
+
+.backButton{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    width:90% !important;
+    position:relative;
+    top:-105px;
+    color:white !important;
+}
+.backButton img{
+    width:40px;
+    height:40px;
+}
+.backButton:hover img{
+    content: url(../img/arrow_leftTürkis.png);
+}
+.backButton:hover{
+    margin-left:4px;
 }
 
 .mainContent p{
@@ -28,6 +52,7 @@
     color: rgba(61, 207, 182, 1);
     font-size: 32px;
     font-family: 'FiraCode', sans-serif;
+    text-align: center;
 }
 
 .mainContent h2{
