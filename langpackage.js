@@ -80,7 +80,7 @@ const translations = {
     "Say Hello ;)": "Sag Hallo ;)",
     "Legal Notice": "<img src='./img/dot.png'>Rechtlicher Hinweis",
 
-    // For additional Impressum Elements
+    // For additional Impressum Elements===============================
     "Imprint": "Impressum",
     "Address:": "<img src='./img/dot.png'>Adresse:",
     "Phone:": "<img src='./img/dot.png'>Telefon:",
@@ -114,8 +114,72 @@ const translations = {
     "Indemnification": "Schadensersatz",
 
     "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,\nofficers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable\nlegal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.\n\nFor any questions or notices, please contact us at [Contact Email].\n\nDate: July 26, 2025":
-    "Sie erklären sich bereit, uns, die aufgeführten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner,<br>Offiziere, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtsanwaltsgebühren)<br> freizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit im Zusammenhang stehen.<br><br>Für alle Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Contact Email].<br><br>Datum: July 26, 2025"
-    },
+    "Sie erklären sich bereit, uns, die aufgeführten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner,<br>Offiziere, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtsanwaltsgebühren)<br> freizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit im Zusammenhang stehen.<br><br>Für alle Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Contact Email].<br><br>Datum: July 26, 2025",
+
+    //For Privacy Policy
+    "Privacy Policy": "Datenschutzerklärung",
+    "Information Obligation Statement":"Informationserklärung",
+
+    "the following text is generated automatically by fairesRecht.at": 
+    "Der folgende Text wurde automatisch von <a href='https://www.fairesrecht.at'><b>fairesRecht.at</b></a> erzeugt",
+
+    "In the following privacy policy, we inform you about the important aspects of data processing in connection with our website. We collect and process personal data only on the basis of legal regulations (General Data Protection Regulation, Telecommunications Act 2003).":
+    "In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).",
+
+    "As soon as you as a user access or visit our website, your IP address, start time and start and end of the session are recorded. This is technically necessary and therefore constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.":
+    "Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.",
+
+    "Contact with us":"Kontakt mit uns",
+
+    "If you contact us, either via our contact form on our website or by email, the data you transmit to us will be stored with us for the purpose of processing your request or in the event of further follow-up questions for six months. Your transmitted data will not be passed on to third parties without your consent.":
+    "Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten.",
+
+    "Google Fonts":"Google Schriftart",
+
+    "Our website uses fonts from \"Google Fonts\". The service provider of this function is:":
+    "Unsere Website verwendet Schriftarten von „Google Fonts“. Der Dienstanbieter dieser Funktion ist:",
+
+    "When you access this website, your browser loads fonts and stores them in the cache. Since you, as a visitor to the website, receive data from the service provider, Google may set or analyze cookies on your computer.":
+    "Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren.",
+
+    "The use of \"Google Fonts\" serves to optimize our services and ensure uniform display of content. This constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.":
+    "Die Nutzung von „Google-Fonts“ dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.",
+
+    "For more information about Google Fonts, please visit the following link:":
+    "Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:",
+
+    "For more information about Google's handling of user data, please see the privacy policy:":
+    "Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen:",
+
+    "Google also processes data in the USA, but has agreed to\nthe EU-US Privacy Shield.":
+    "Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen.",
+
+    "Your Rights as an Affected Person": "Ihre Rechte als Betroffener",
+
+    "As an affected person, you have the following rights with regard to your data stored with us:":
+    "Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:",
+
+    "Right to access": "Auskunft",
+    "Right to erasure": "Löschung der Daten",
+    "Right to rectification": "Berichtigung der Daten",
+    "Right to data portability": "Übertragbarkeit der Daten",
+    "Right to withdraw and object to data processing": "Wiederruf und Widerspruch zur Datenverarbeitung",
+    "Right to restrict processing": "Einschränkung",
+
+    "If you suspect that violations of data protection law have occurred during the processing of your data, you have the option to contact us (leonhard.siegele39@gmail.com) or the data protection authority.":
+    "Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (leonhard.siegele39@gmail.com) oder der Datenschutzbehörde zu beschweren.",
+
+    "You can reach us at the following contact details:":
+    "Sie erreichen uns unter folgenden Kontaktdaten:",
+
+    "Website operator: Leonhard Siegele\nPhone number: 067763070252\nEmail: leonhard.siegele39@gmail.com": 
+    "Webseitenbetreiber: Leonhard Siegele<br>Telefonnummer: 067763070252<br>Email: leonhard.siegele39@gmail.com",
+    "Phone number:": "Telefonnummer:",
+
+    "Legal text from Source: fairesRecht.at in cooperation with Lawyer Traffic Law":
+    "Rechtstext von Quelle: fairesRecht.at in Kooperation mit <a href='https://law-austria.com/'>Rechtsanwalt KFZ-Recht</a>"
+
+},
 
     en :{
     "Über mich": "About me<img src='./img/dot.png'>",
@@ -239,6 +303,70 @@ const translations = {
 
 
     "Sie erklären sich bereit, uns, die aufgeführten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner,\nOffiziere, Direktoren, Vertreter und Mitarbeiter von und gegen alle Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtsanwaltsgebühren)\nfreizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit im Zusammenhang stehen.\n\nFür alle Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Contact Email].\n\nDatum: July 26, 2025":
-    "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,<br>officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees)<br>arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.<br><br>For any questions or notices, please contact us at [Contact Email].<br><br>Date: July 26, 2025"
-    }
+    "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners,<br>officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees)<br>arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.<br><br>For any questions or notices, please contact us at [Contact Email].<br><br>Date: July 26, 2025",
+    
+    //For Privacy Policy
+    "Datenschutzerklärung": "Privacy Policy",
+    "Informationserklärung": "Information Obligation Statement",
+
+    "Der folgende Text wurde automatisch von fairesRecht.at erzeugt":
+    "the following text is generated automatically by <a href='https://www.fairesrecht.at'><b>fairesRecht.at</b></a>",
+
+    "In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).":
+    "In the following privacy policy, we inform you about the important aspects of data processing in connection with our website. We collect and process personal data only on the basis of legal regulations (General Data Protection Regulation, Telecommunications Act 2003).",
+
+    "Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.":
+    "As soon as you as a user access or visit our website, your IP address, start time and start and end of the session are recorded. This is technically necessary and therefore constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.",
+
+    "Kontakt mit uns": "Contact with us",
+
+    "Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten.":
+    "If you contact us, either via our contact form on our website or by email, the data you transmit to us will be stored with us for the purpose of processing your request or in the event of further follow-up questions for six months. Your transmitted data will not be passed on to third parties without your consent.",
+
+    "Google Schriftart": "Google Fonts",
+
+    "Unsere Website verwendet Schriftarten von \„Google Fonts\“. Der Dienstanbieter dieser Funktion ist:":
+    "Our website uses fonts from 'Google Fonts'. The service provider of this function is:",
+
+    "Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren.":
+    "When you access this website, your browser loads fonts and stores them in the cache. Since you, as a visitor to the website, receive data from the service provider, Google may set or analyze cookies on your computer.",
+
+    "Die Nutzung von \„Google-Fonts\“ dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.":
+    "The use of \„Google Fonts\" serves to optimize our services and ensure uniform display of content. This constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.",
+
+    "Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:":
+    "For more information about Google Fonts, please visit the following link:",
+
+    "Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen:":
+    "For more information about Google's handling of user data, please see the privacy policy:",
+
+    "Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen.":
+    "Google also processes data in the USA, but has agreed to<br>the EU-US Privacy Shield.",
+
+    "Ihre Rechte als Betroffener": "Your Rights as an Affected Person",
+
+    "Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:":
+    "As an affected person, you have the following rights with regard to your data stored with us:",
+
+    "Auskunft": "Right to access",
+    "Löschung der Daten": "Right to erasure",
+    "Berichtigung der Daten": "Right to rectification",
+    "Übertragbarkeit der Daten": "Right to data portability",
+    "Wiederruf und Widerspruch zur Datenverarbeitung": "Right to withdraw and object to data processing",
+    "Einschränkung": "Right to restrict processing",
+
+    "Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (leonhard.siegele39@gmail.com) oder der Datenschutzbehörde zu beschweren.":
+    "If you suspect that violations of data protection law have occurred during the processing of your data, you have the option to contact us (leonhard.siegele39@gmail.com) or the data protection authority.",
+
+    "Sie erreichen uns unter folgenden Kontaktdaten:":
+    "You can reach us at the following contact details:",
+
+    "Webseitenbetreiber: Leonhard Siegele\nTelefonnummer: 067763070252\nEmail: leonhard.siegele39@gmail.com":
+    "Website operator: Leonhard Siegele<br>Phone number: 067763070252<br>Email: leonhard.siegele39@gmail.com", 
+    
+    "Telefonnummer:": "Phone number",
+
+    "Rechtstext von Quelle: fairesRecht.at in Kooperation mit Rechtsanwalt KFZ-Recht":
+    "Legal text from Source: fairesRecht.at in cooperation with <a href='https://law-austria.com/'> Lawyer Traffic Law"
+}
 }

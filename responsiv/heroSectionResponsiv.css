@@ -82,6 +82,7 @@
     .buttonAria {
         gap: 10px;
         width: 260px;
+        z-index: 4;
     }
 }
 

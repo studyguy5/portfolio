@@ -1,0 +1,39 @@
+.mainContent{
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.mainContent p{
+    color:white;
+    font-size: 17px;
+    font-family: 'Karla', sans-serif;
+}
+
+.mainContent a{
+    color: rgba(61, 207, 182, 1);
+    text-decoration: none;
+}
+
+.mainContent li{
+    color:white;
+    font-size: 17px;
+    font-family: 'Karla', sans-serif;
+}
+
+.mainContent h1{
+    color: rgba(61, 207, 182, 1);
+    font-size: 32px;
+    font-family: 'FiraCode', sans-serif;
+}
+
+.mainContent h2{
+    color: rgba(61, 207, 182, 1);
+    font-size: 24px;
+    font-family: 'FiraCode', sans-serif;
+}
+
+.mainContent h5{
+    color: rgba(61, 207, 182, 1);
+    font-size: 20px;
+    font-family: 'FiraCode', sans-serif;
+}

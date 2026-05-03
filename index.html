@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" href="./img/final_filled.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/heroSection.css">
     <link rel="stylesheet" href="./css/aboutMeSection.css">
@@ -83,8 +84,10 @@
             <!-- <div class="vcenter"></div> -->
             <div class="vright">
                 <hr>
-                <img class="linkedIn" src="./img/linkedIn_türkis.png">
-                <a class="githubATag" href="https://github.com/studyguy5"><img class="githubLogo"
+                <button class="linkedIn">
+                <img  src="./img/linkedIn_türkis.png">
+                </button>
+                <a class="githubATag" href="https://github.com/studyguy5" target="_blank" rel="noopener noreferrer"><img class="githubLogo"
                         src="./img/github_türkis.png"></a>
                 <a href="mailto:leonhard.siegele39@gmail.com"><img class="mailMobile"
                         src="./img/mail_türkis_mobile.png"></a>
@@ -110,7 +113,7 @@
     </section>
     <section id="aboutMeSection" class="aboutMeSection">
         <div class="myPhoto">
-            <img onmouseenter="moveOnce()" src="./img/business_portrait.JPG">
+            <img onmouseenter="moveOnce()" src="./img/business_portrait.webp">
             <img class="schraffierter_bg" src="./img/schraffierter_bg.png">
         </div>
         <div class="aboutMeTextAria">
@@ -315,21 +318,21 @@
             <hr>
             <div class="nameFieldWrapper">
                 <p class="nameField" id="nameField" data-lang>What's your name?</p>
-                <input type="text" class="nameInput" onchange="validateNameField()" placeholder="Your name goes here"
+                <input type="text" class="nameInput" onchange="validateNameField()" oninput="checkAllFields()" placeholder="Your name goes here"
                     id="nameInput" data-lang>
                 <div class="errorDivName" id="errorDivName"></div>
             </div>
             <hr>
             <div class="emailFieldWrapper">
                 <p class="emailField" id="emailField" data-lang>What's your email?</p>
-                <input type="email" class="emailInput" onchange="validateEmailField()"
+                <input type="email" class="emailInput" onchange="validateEmailField()" oninput="checkAllFields()"
                     placeholder="Your email goes here" id="emailInput" data-lang>
                 <div class="errorDivEmail" id="errorDivEmail"></div>
             </div>
             <hr>
             <div class="helpContainer" id="helpContainer">
                 <p class="helpField" id="helpField" data-lang>How can I help you?</p>
-                <input type="text" class="helpInput" onchange="validateMessageField()"
+                <input type="text" class="helpInput" onchange="validateMessageField()" oninput="checkAllFields()"
                     placeholder="Your message goes here" id="helpInput" data-lang>
                 <div class="errorDivMessage" id="errorDivMessage"></div>
             </div>
@@ -337,13 +340,13 @@
             <div class="checkboxDiv" id="checkboxDiv">
                 <input type="checkbox" class="agreeBox" onchange="validateCheckBox()" id="agreeBox">&nbsp;<p data-lang>
                     I've read
-                    the <a href="www.google.at">privacy policy</a> and agree to the processing of my data as outlined in
+                    the <a href="./privacy-policy.html">privacy policy</a> and agree to the processing of my data as outlined in
                     the policy.
                 </p>
             </div>
             <div class="errorDivCheckbox" id="errorDivCheckbox"></div>
             <div class="submittedFeedback">Email successfully sent</div>
-            <button onclick="validateContactForm(event)" class="sendButton" id="sendButton" data-lang>Say Hello ;)</button>
+            <button disabled = "true" onclick="validateContactForm(event)" class="sendButton" id="sendButton" data-lang>Say Hello ;)</button>
         </div>
     </section>
     <section class="footerSection" id="footerSection">

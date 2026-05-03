@@ -1,7 +1,7 @@
 
 function init() {
     startIntervals();
-    if(localStorage.getItem('lang') == '') {
+    if (localStorage.getItem('lang') == '') {
         localStorage.setItem('lang', 'en');
     }
     checkLanguage();
@@ -96,14 +96,14 @@ function changeLanguageMobile() {
         setTimeout(() => {
             hover.src = "./img/english_hover.png";
         }, 80);
-    }    
+    }
 }
 
-function checkLanguage(){
-    if(localStorage.getItem('lang') != 'en'){
+function checkLanguage() {
+    if (localStorage.getItem('lang') != 'en') {
         changeLanguage();
         changeLanguageMobile();
-    }else{}
+    } else { }
 }
 
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);
@@ -113,9 +113,11 @@ function toggleBurgerMenu() {
     if (document.querySelector(".open")) {
         document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
         document.querySelector(".burgerMenuMobile").style.opacity = "1";
+        document.querySelector(".burgerMenuMobile").style.pointerEvents = "all";
     } else {
         document.querySelector(".burgerMenuMobile").style.transition = "0.5s";
         document.querySelector(".burgerMenuMobile").style.opacity = "0";
+        document.querySelector(".burgerMenuMobile").style.pointerEvents = "none";
     }
 }
 
@@ -204,18 +206,18 @@ function switchLanguage(langcode) {
 
 }
 
-function checkContacSection(){
+function checkContacSection() {
     let letsConnect = document.querySelector(".Contact_mainTopic");
     let connectDescription = document.querySelector(".contactDescriptionAria");
     if (letsConnect.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth >= 820) {
         letsConnect.style.height = "232px";
-    }else if (letsConnect.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth <= 819) {
+    } else if (letsConnect.innerHTML == "Lass uns zusammen<br> arbeiten" && window.innerWidth <= 819) {
         letsConnect.style.height = "173px";
         connectDescription.style.height = "500px";
     }
 }
 
-function checkContactFormAria(){
+function checkContactFormAria() {
     let contactFormAria = document.querySelector(".Contact_mainTopic");
     let mesection = document.querySelector(".contact_Me_Section");
     let connectDescription = document.querySelector(".contactDescriptionAria");
@@ -244,7 +246,7 @@ function changeAbsolutePosition() {
         contactP.style.left = "13px";
         contactP.style.minWidth = "130px";
         contactP.style.width = "94%";
-    }else if (contactP.innerHTML == "Kontaktiere mich" && width <= 377) {
+    } else if (contactP.innerHTML == "Kontaktiere mich" && width <= 377) {
         contactO.style.minWidth = "145px";
         contactP.style.left = "14px";
         contactP.style.width = "94%";
@@ -254,9 +256,9 @@ function changeAbsolutePosition() {
 function changeProjectFontSize() {
     let width = window.innerWidth;
     let p = document.querySelector(".mainTopic");
-    if(p.innerHTML == "Ausgewählte Projekte" && width <= 350){
+    if (p.innerHTML == "Ausgewählte Projekte" && width <= 350) {
         p.style.fontSize = "40px";
-    }else{p.style.fontSize = "48px"};
+    } else { p.style.fontSize = "48px" };
 }
 
 
@@ -439,14 +441,12 @@ function validateContactForm(event) {
         showSpecificError(name, email, message);
     }
     if (!validateCheckBox()) return;
-    // showCheckboxError();
-    if (validateNameField()){
-        submitInfo(event);
+    
+    
+    if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
+            submitInfo(event);
+            document.getElementById("sendButton").disabled = true;
     }
-
-    // if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
-    //     submitInfo(event);
-    // }
 }
 
 function submitInfo(event) {
@@ -455,6 +455,7 @@ function submitInfo(event) {
     let name = document.getElementById("nameInput");
     let email = document.getElementById("emailInput");
     let message = document.getElementById("helpInput");
+    document.getElementById("agreeBox").checked = false;
     const data = {
         name: name.value,
         email: email.value,
@@ -470,14 +471,14 @@ function submitInfo(event) {
         emptyFields();
         document.querySelector('.submittedFeedback').classList.add('success');
         setTimeout(() => {
-        document.querySelector('.submittedFeedback').classList.remove('success');
+            document.querySelector('.submittedFeedback').classList.remove('success');
         }, 3000);
     }).catch((error) => {
         console.log(error);
     });
 }
 
-function emptyFields(){
+function emptyFields() {
     document.getElementById("nameInput").value = "";
     document.getElementById("emailInput").value = "";
     document.getElementById("helpInput").value = "";
@@ -552,12 +553,17 @@ function validateNameField() {
         return false
     } else if (name.value == "") {
         nameError.innerHTML = "Please enter your name";
-        return false
     } else if (validateName(name) && name.value != "") {
         nameError.innerHTML = "";
-        return true
+        // return true
     }
-}
+    if(checkAllFields()){
+        document.getElementById("sendButton").disabled = false;
+        return true;
+    }else{
+        document.getElementById("sendButton").disabled = true;
+    return false;}
+} 
 
 function validateEmailField() {
     let email = document.getElementById("emailInput");
@@ -569,6 +575,13 @@ function validateEmailField() {
         emailError.innerHTML = "Please enter your email";
     } else if (validateEmail(email) && email.value != "") {
         emailError.innerHTML = "";
+    }
+    if(checkAllFields()){
+        document.getElementById("sendButton").disabled = false;
+        return true;
+    }else{
+        document.getElementById("sendButton").disabled = true;
+        return false;
     }
 }
 
@@ -583,31 +596,49 @@ function validateMessageField() {
     } else if (validateMessage(message) && message.value != "") {
         messageError.innerHTML = "";
     }
+    if(checkAllFields()){
+        document.getElementById("sendButton").disabled = false;
+        return true;
+    }else{
+        document.getElementById("sendButton").disabled = true;
+        return false;
+    }
 }
 
-// function validatePrivacyandConditions() {
-//     if (validateCheckBox()) {
-//         clearCheckboxError();
-//     } else {
-//         showCheckboxError();
-//     }
-// }
 
-function clearCheckboxError() {
+    function validateCheckBox() {
+        let checkbox = document.getElementById("agreeBox");
+        if (checkbox.checked == false) {
+            showCheckboxError();
+        }else{clearCheckboxError();}
+        if (checkAllFields()) {
+            clearCheckboxError();
+            document.getElementById("sendButton").disabled = false;
+            return true;
+        }else{
+            document.getElementById("sendButton").disabled = true;
+        }
+    }
+    
+    function clearCheckboxError() {
     let checkbox = document.getElementById("agreeBox");
     checkbox.classList.remove('agreeBoxError')
     let checkboxError = document.getElementById("errorDivCheckbox");
     checkboxError.innerHTML = "";
 }
 
-function validateCheckBox() {
+
+
+function checkAllFields() {
+    let name = document.getElementById("nameInput");
+    let email = document.getElementById("emailInput");
+    let message = document.getElementById("helpInput");
     let checkbox = document.getElementById("agreeBox");
-    if (checkbox.checked == false) {
-        showCheckboxError();
-        return false;
-    } else {
-        clearCheckboxError();
+    if (name.value != "" && email.value != "" && message.value != "" && checkbox.checked == true) {
+        document.getElementById("sendButton").disabled = false;
         return true;
+    }else{
+        document.getElementById("sendButton").disabled = true;
     }
 }
 
@@ -627,7 +658,7 @@ function validateEmail(email) {
 function validateMessage(message) {
     const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
     return messageRegex.test(message.value.trim());
-
+    
 }
 
 function stopPropagation(event) {
