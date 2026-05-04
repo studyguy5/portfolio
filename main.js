@@ -29,7 +29,6 @@ function startIntervals2() {
     if (collectIntervalls2 != null) { clearInterval(collectIntervalls2); }
     let allIntervals2 = setInterval(() => {
         checkLegalNotice();
-        
     }, 100);
 }
 
@@ -38,32 +37,40 @@ function changeLanguage() {
     console.log("change language normal")
     let basic = document.getElementsByClassName("language")[0]
     if (basic.src.includes('english.png')) {
-        basic.style.transition = "0.2s";
-        basic.style.opacity = "0";
-        basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
-        basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        let hover = document.getElementsByClassName("language_Hover")[0]
-        hover.src = "";
-        switchLanguage('de');
-        currentLang = 'de';
-        localStorage.setItem('lang', 'de');
-        setTimeout(() => {
-            hover.src = "./img/german_hover.png";
-        }, 80);
+        switchToGerman();
     } else {
-        basic.style.transition = "0.2s";
-        basic.style.opacity = "0";
-        basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
-        basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        let hover = document.getElementsByClassName("language_Hover")[0]
-        hover.src = "";
-        switchLanguage('en');
-        currentLang = 'en';
-        localStorage.setItem('lang', 'en');
-        setTimeout(() => {
-            hover.src = "./img/english_hover.png";
-        }, 80);
+        switchToEnglish();
     }
+}
+
+function switchToGerman() {
+    basic.style.transition = "0.2s";
+    basic.style.opacity = "0";
+    basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+    let hover = document.getElementsByClassName("language_Hover")[0]
+    hover.src = "";
+    switchLanguage('de');
+    currentLang = 'de';
+    localStorage.setItem('lang', 'de');
+    setTimeout(() => {
+        hover.src = "./img/german_hover.png";
+    }, 80);
+}
+
+function switchToEnglish() {
+    basic.style.transition = "0.2s";
+    basic.style.opacity = "0";
+    basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.style.opacity = "1";       // Fade in (mit 2s Transition)
+    let hover = document.getElementsByClassName("language_Hover")[0]
+    hover.src = "";
+    switchLanguage('en');
+    currentLang = 'en';
+    localStorage.setItem('lang', 'en');
+    setTimeout(() => {
+        hover.src = "./img/english_hover.png";
+    }, 80);
 }
 
 
@@ -83,34 +90,34 @@ function changeLanguageMobile() {
     console.log("change language mobile")
     let basic = document.getElementsByClassName("languageMobile")[0]
     if (basic.src.includes('english.png')) {
-        basic.style.transition = "0.2s";
-        // basic.style.opacity = "0";
-        basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
-        // basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        // basic.setAttribute('onclick',"switchLanguage('de')")
-        // switchLanguage('de');
-        let hover = document.getElementsByClassName("languageMobile_Hover")[0]
-        hover.src = "";
-        switchLanguage('de');
-        currentLang = 'de';
-        setTimeout(() => {
-            hover.src = "./img/german_hover.png";
-        }, 80);
+        switchMobileToGerman();
     } else {
-        basic.style.transition = "0.2s";
-        // basic.style.opacity = "0";
-        basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
-        // basic.style.opacity = "1";       // Fade in (mit 2s Transition)
-        // basic.setAttribute('onclick',"switchLanguage('en')")
-        // switchLanguage('en');
-        let hover = document.getElementsByClassName("languageMobile_Hover")[0]
-        hover.src = "";
-        switchLanguage('en');
-        currentLang = 'en';
-        setTimeout(() => {
-            hover.src = "./img/english_hover.png";
-        }, 80);
+        switchMobileToEnglish();
     }
+}
+
+function switchMobileToGerman() {
+    basic.style.transition = "0.2s";
+    basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
+    let hover = document.getElementsByClassName("languageMobile_Hover")[0]
+    hover.src = "";
+    switchLanguage('de');
+    currentLang = 'de';
+    setTimeout(() => {
+        hover.src = "./img/german_hover.png";
+    }, 80);
+}
+
+function switchMobileToEnglish() {
+    basic.style.transition = "0.2s";
+    basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
+    let hover = document.getElementsByClassName("languageMobile_Hover")[0]
+    hover.src = "";
+    switchLanguage('en');
+    currentLang = 'en';
+    setTimeout(() => {
+        hover.src = "./img/english_hover.png";
+    }, 80);
 }
 
 function checkLanguage() {
@@ -144,6 +151,7 @@ function checkLegalNotice() {
         image.style.marginLeft = "-16px";
     }
 }
+
 let collectIntervalls = null;
 function startIntervals() {
     if (collectIntervalls != null) { clearInterval(collectIntervalls); }
@@ -166,31 +174,41 @@ window.addEventListener('scroll', function () {
     const heightChanged = currentHeight !== lastHeight;
     if (lastPosition < currentPosition && !heightChanged) {
         p = "down"
-        // console.log("down")
     } else if (lastPosition > currentPosition && !heightChanged) {
         p = "up"
-        if (currentPosition > startPoint) {
-            document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0.7)";
-            // console.log('current Position', currentPosition);
-            // console.log('start Position', startPoint);
-        } else {
-            document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0)";
-        }
-    }
-    if (p == "up") {
-        document.querySelector('.headfullsize').style.transition = "0.5s";
-        document.querySelector('.headfullsize').style.position = "sticky";
-        // document.querySelector('.headfullsize').style.z-index = 5;
-        document.querySelector('.headfullsize').style.top = "0px";
-    } else {
-        document.querySelector('.headfullsize').style.transition = "0.5s";
-        document.querySelector('.headfullsize').style.position = "unset";
-        document.querySelector('.headfullsize').style.top = "-100px";
-    }
-
+        manipulateBackground(currentPosition, startPoint);}
+    adjustHeader(p);
     lastPosition = currentPosition;
     lastHeight = currentHeight;
 });
+
+function adjustHeader(p){
+    if (p == "up") {
+        makeHeaderSticky();
+    } else {
+        makeHeaderDissappear();
+    }
+}
+
+function manipulateBackground(currentPosition, startPoint) {
+    if (currentPosition > startPoint) {
+        document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0.7)";
+    } else {
+        document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0)";
+    }
+}
+
+function makeHeaderSticky() {
+    document.querySelector('.headfullsize').style.transition = "0.5s";
+    document.querySelector('.headfullsize').style.position = "sticky";
+    document.querySelector('.headfullsize').style.top = "0px";
+}
+
+function makeHeaderDissappear() {
+    document.querySelector('.headfullsize').style.transition = "0.5s";
+    document.querySelector('.headfullsize').style.position = "unset";
+    document.querySelector('.headfullsize').style.top = "-100px";
+}
 
 let done = false;
 function moveOnce() {
@@ -216,8 +234,6 @@ function switchLanguage(langcode) {
             element.innerHTML = translations[langcode][baseKey] || element.innerHTML; // Fallback auf den Originaltext, wenn keine Übersetzung vorhanden ist
         }
     });
-
-
 }
 
 function checkContacSection() {
@@ -247,6 +263,12 @@ function changeAbsolutePosition() {
     let width = window.innerWidth;
     let contactP = document.querySelector(".Contact_ME p");
     let contactO = document.querySelector(".Contact_ME");
+    regulateConctactME(contactO, contactP, width);
+    regulateContactMEGermanVersion(contactO, contactP, width);
+}
+
+
+function regulateConctactME(contactO, contactP, width) {
     if (contactP.innerHTML == "Contact me" && width >= 378) {
         contactO.style.minWidth = "165px";
         contactP.style.left = "30px";
@@ -255,6 +277,9 @@ function changeAbsolutePosition() {
         contactO.style.minWidth = "145px";
         contactP.style.left = "28px";
     };
+}
+
+function regulateContactMEGermanVersion(contactO, contactP, width) {
     if (contactP.innerHTML == "Kontaktiere mich" && width >= 378) {
         contactO.style.minWidth = "170px";
         contactP.style.left = "13px";
@@ -325,356 +350,5 @@ function hideFrame(event) {
     }
 }
 
-function skipColleagues(direction) {
-    let colleagueLeft = document.getElementsByClassName("singleColleaguesCardLeft");
-    let colleagueRight = document.getElementsByClassName("singleColleaguesCardRight");
-    let colleagueMiddle = document.getElementsByClassName("singleColleaguesCardMiddle");
-    if (direction == "left") {
-        slideToNext();
-        changeDotToLeft();
-    } else if (direction == "right") {
-        slideToPrev();
-        changeDotToRight();
-    }
-}
-
-function changeDotToRight() {
-    let d = document.querySelector(".dot_türkis");
-    if (!d) return;
-    d.src = "./img/dot_white.png";
-    d.classList.remove("dot_türkis");
-    d.classList.add("dot_white");
-    let next = d.nextElementSibling;
-    // next.src = "./img/dot_türkis.png";
-    if (next.className == "dot_white") {
-        next.src = "./img/dot_türkis.png";
-        next.classList.remove("dot_white");
-        next.classList.add("dot_türkis");
-    }
-    if (next.src.includes("/img/arrow_Right.png")) {
-        let first = document.querySelector(".dot_white");
-        first.src = "./img/dot_türkis.png";
-        first.classList.remove("dot_white");
-        first.classList.add("dot_türkis");
-    };
-
-}
-
-function changeDotToLeft() {
-    let d = document.querySelector(".dot_türkis");
-    if (!d) return;
-    d.src = "./img/dot_white.png";
-    d.classList.remove("dot_türkis");
-    d.classList.add("dot_white");
-    let prev = d.previousElementSibling;
-    // next.src = "./img/dot_türkis.png";
-    if (prev.className == "dot_white") {
-        prev.src = "./img/dot_türkis.png";
-        prev.classList.remove("dot_white");
-        prev.classList.add("dot_türkis");
-    }
-    if (prev.src.includes("/img/arrow_Left.png")) {
-        let first = document.querySelector(".dot_white");
-        let second = first.nextElementSibling.nextElementSibling.src = "./img/dot_türkis.png";
-        first.nextElementSibling.nextElementSibling.classList.remove("dot_white");
-        first.nextElementSibling.nextElementSibling.classList.add("dot_türkis");
-    };
-
-}
-
-function slideToPrev() {
-    let center = document.querySelectorAll(".active");
-    let right = document.querySelectorAll(".next");
-    let left = document.querySelectorAll(".prev");
-    let colleagues = document.querySelectorAll(".colleaguesCards");
-    if (center) {
-        center[0].classList.remove("active");
-        center[0].classList.add("prev");
-    }
-    if (right) {
-        right[0].classList.remove("next");
-        right[0].classList.add("active");
-    }
-    if (left) {
-        let clone = left[0].cloneNode(true);
-        clone.classList.remove("prev");
-        clone.classList.add("slideInStart");
-        colleagues[0].appendChild(clone);
-        left[0].classList.remove("prev");
-        left[0].classList.add("slideOut");
-        setTimeout(() => {
-            left[0].remove();
-        }, 500);
-        setTimeout(() => {
-            clone.classList.remove("slideInStart");
-            clone.classList.add("next");
-        }, 50);
-    }
-
-}
-
-function slideToNext() {
-    let center = document.querySelectorAll(".active");
-    let right = document.querySelectorAll(".next");
-    let left = document.querySelectorAll(".prev");
-    let colleagues = document.querySelectorAll(".colleaguesCards");
-    if (center) {
-        center[0].classList.remove("active");
-        center[0].classList.add("next");
-    }
-    if (left) {
-        left[0].classList.remove("prev");
-        left[0].classList.add("active");
-    }
-    if (right) {
-        let clone = right[0].cloneNode(true);
-        clone.classList.remove("next");// next entfernen und links auserhalb hinzufügen
-        clone.classList.add("slideOut");//hier links weite auserhalb hinzufügen
-        colleagues[0].appendChild(clone);//ins DOm hinzufügen
-        right[0].classList.remove("next"); //original next entfernen und nach rechts raushauen
-        right[0].classList.add("slideInStart");
-        setTimeout(() => {
-            right[0].remove();
-        }, 500);
-        setTimeout(() => {
-            clone.classList.remove("slideOut");
-            clone.classList.add("prev");
-        }, 50);
-    }
-}
-
-function validateContactForm(event) {
-    let name = document.getElementById("nameInput");
-    let email = document.getElementById("emailInput");
-    let message = document.getElementById("helpInput");
-    let checkboxError = document.getElementById("errorDivCheckbox");
-    if (name.value == "" && email.value == "" && message.value == "") {
-        showErrorComplete();
-    }
-    if (name.value == "" || email.value == "" || message.value == "") {
-        showSpecificError(name, email, message);
-    }
-    if (!validateCheckBox()) return;
-    
-    
-    if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
-            submitInfo(event);
-            document.getElementById("sendButton").disabled = true;
-    }
-}
-
-function submitInfo(event) {
-    event.preventDefault();
-    console.log("submit");
-    let name = document.getElementById("nameInput");
-    let email = document.getElementById("emailInput");
-    let message = document.getElementById("helpInput");
-    document.getElementById("agreeBox").checked = false;
-    const data = {
-        name: name.value,
-        email: email.value,
-        message: message.value
-    }
-    fetch("https://formspree.io/f/mjglvngj", {
-        method: "POST",
-        body: JSON.stringify(data), //data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(() => {
-        emptyFields();
-        document.querySelector('.submittedFeedback').classList.add('success');
-        setTimeout(() => {
-            document.querySelector('.submittedFeedback').classList.remove('success');
-        }, 3000);
-    }).catch((error) => {
-        console.log(error);
-    });
-}
-
-function emptyFields() {
-    document.getElementById("nameInput").value = "";
-    document.getElementById("emailInput").value = "";
-    document.getElementById("helpInput").value = "";
-}
-
-function showCheckboxError() {
-    let checkbox = document.getElementById("agreeBox");
-    checkbox.classList.add('agreeBoxError')
-    let checkboxError = document.getElementById("errorDivCheckbox");
-    checkboxError.style.color = "rgba(236, 123, 123, 0.8)";
-    checkboxError.innerHTML = "Please accept the terms and conditions";
-
-}
 
 
-function showErrorComplete() {
-    let nameError = document.getElementById("errorDivName");
-    let emailError = document.getElementById("errorDivEmail");
-    let messageError = document.getElementById("errorDivMessage");
-    nameError.style.color = "rgba(236, 123, 123, 0.8)";
-    nameError.innerHTML = "Please enter your name";
-    emailError.style.color = "rgba(236, 123, 123, 0.8)";
-    emailError.innerHTML = "Please enter your email";
-    messageError.style.color = "rgba(236, 123, 123, 0.8)";
-    messageError.innerHTML = "Please enter your message";
-}
-
-function showSpecificError(name, email, message) {
-    let nameError = document.getElementById("errorDivName");
-    let emailError = document.getElementById("errorDivEmail");
-    let messageError = document.getElementById("errorDivMessage");
-    if (name.value == "") {
-        nameError.style.color = "rgba(236, 123, 123, 0.8)";
-        nameError.innerHTML = "Please enter your name";
-    }
-    if (email.value == "") {
-        emailError.style.color = "rgba(236, 123, 123, 0.8)";
-        emailError.innerHTML = "Please enter your email";
-    }
-    if (message.value == "") {
-        messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter your message";
-    }
-    if (name.value == "" && email.value == "") {
-        nameError.style.color = "rgba(236, 123, 123, 0.8)";
-        nameError.innerHTML = "Please enter your name";
-        emailError.style.color = "rgba(236, 123, 123, 0.8)";
-        emailError.innerHTML = "Please enter your email";
-    }
-    if (name.value == "" && message.value == "") {
-        nameError.style.color = "rgba(236, 123, 123, 0.8)";
-        nameError.innerHTML = "Please enter your name";
-        messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter your message";
-    }
-    if (email.value == "" && message.value == "") {
-        emailError.style.color = "rgba(236, 123, 123, 0.8)";
-        emailError.innerHTML = "Please enter your email";
-        messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter your message";
-    }
-}
-
-
-
-function validateNameField() {
-    let name = document.getElementById("nameInput");
-    let nameError = document.getElementById("errorDivName");
-    if (!validateName(name) && name.value != "") {
-        nameError.style.color = "rgba(236, 123, 123, 0.8)";
-        nameError.innerHTML = "Please enter a correct name";
-        return false
-    } else if (name.value == "") {
-        nameError.innerHTML = "Please enter your name";
-    } else if (validateName(name) && name.value != "") {
-        nameError.innerHTML = "";
-        // return true
-    }
-    if(checkAllFields()){
-        document.getElementById("sendButton").disabled = false;
-        return true;
-    }else{
-        document.getElementById("sendButton").disabled = true;
-    return false;}
-} 
-
-function validateEmailField() {
-    let email = document.getElementById("emailInput");
-    let emailError = document.getElementById("errorDivEmail");
-    if (!validateEmail(email) && email.value != "") {
-        emailError.style.color = "rgba(236, 123, 123, 0.8)";
-        emailError.innerHTML = "Please enter a correct email";
-    } else if (email.value == "") {
-        emailError.innerHTML = "Please enter your email";
-    } else if (validateEmail(email) && email.value != "") {
-        emailError.innerHTML = "";
-    }
-    if(checkAllFields()){
-        document.getElementById("sendButton").disabled = false;
-        return true;
-    }else{
-        document.getElementById("sendButton").disabled = true;
-        return false;
-    }
-}
-
-function validateMessageField() {
-    let message = document.getElementById("helpInput");
-    let messageError = document.getElementById("errorDivMessage");
-    if (!validateMessage(message) && message.value != "") {
-        messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter a correct message";
-    } else if (message.value == "") {
-        messageError.innerHTML = "Please enter your message";
-    } else if (validateMessage(message) && message.value != "") {
-        messageError.innerHTML = "";
-    }
-    if(checkAllFields()){
-        document.getElementById("sendButton").disabled = false;
-        return true;
-    }else{
-        document.getElementById("sendButton").disabled = true;
-        return false;
-    }
-}
-
-
-    function validateCheckBox() {
-        let checkbox = document.getElementById("agreeBox");
-        if (checkbox.checked == false) {
-            showCheckboxError();
-        }else{clearCheckboxError();}
-        if (checkAllFields()) {
-            clearCheckboxError();
-            document.getElementById("sendButton").disabled = false;
-            return true;
-        }else{
-            document.getElementById("sendButton").disabled = true;
-        }
-    }
-    
-    function clearCheckboxError() {
-    let checkbox = document.getElementById("agreeBox");
-    checkbox.classList.remove('agreeBoxError')
-    let checkboxError = document.getElementById("errorDivCheckbox");
-    checkboxError.innerHTML = "";
-}
-
-
-
-function checkAllFields() {
-    let name = document.getElementById("nameInput");
-    let email = document.getElementById("emailInput");
-    let message = document.getElementById("helpInput");
-    let checkbox = document.getElementById("agreeBox");
-    if (name.value != "" && email.value != "" && message.value != "" && checkbox.checked == true) {
-        document.getElementById("sendButton").disabled = false;
-        return true;
-    }else{
-        document.getElementById("sendButton").disabled = true;
-    }
-}
-
-
-
-function validateName(name) {
-    const titleRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
-    return titleRegex.test(name.value.trim());
-
-}
-
-function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]{3,}\.[^\s@]{2,}$/;
-    return regex.test(email.value.trim());
-}
-
-function validateMessage(message) {
-    const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
-    return messageRegex.test(message.value.trim());
-    
-}
-
-function stopPropagation(event) {
-    event.stopPropagation();
-}
