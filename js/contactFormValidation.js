@@ -329,7 +329,7 @@ function validateEmail(email) {
  * @returns void
  */
 function validateMessage(message) {
-    const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
+    const messageRegex = /^[A-Za-zÄÖÜäöüß0-9\s.\-?!,;:'"()@#&/\\]+$/;
     return messageRegex.test(message.value.trim());
 
 }
