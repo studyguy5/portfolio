@@ -32,7 +32,7 @@
     }
 
     .Contact_ME p {
-        width: 92%;
+        width: 100%;
     }
 
     .mailMobile {
@@ -61,11 +61,13 @@
         padding: 20px 11.7px;
         min-width: 140px;
     }
+    
     .check_My_Work p {
         font-size: 15px;
-        /* left:27px */
+        left:18px;
+        width:120px;
+        min-width:unset;
     }
-
     .Contact_ME {
         padding: 10px 5.7px;
         display: block;
@@ -73,6 +75,7 @@
     
     .Contact_ME p {
         font-size: 15px;
+        min-width:unset;
     }
 
     .buttonAria a {

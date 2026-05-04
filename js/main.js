@@ -1,4 +1,9 @@
 
+/**
+ * This function is called when the index.html page is loaded
+ * It starts the intervals, sets lang to en in the localStorage and checks the language after that
+ * @returns void
+ */
 function init() {
     startIntervals();
     if (localStorage.getItem('lang') == '') {
@@ -7,43 +12,80 @@ function init() {
     checkLanguage();
 }
 
+/**
+ * This function is called when the privacy-policy.html page is loaded
+ * it checks the language and starts the intervals
+ * @returns void
+ */
 function initPrivacy() {
     checkLanguage();
     startIntervals2();
 }
 
-
+/**
+ * @param {lan} lan the language button img
+ * @param {hover} hover the language hover img
+ */
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
 
+/**
+ * This function is called when the language button is clicked
+ * it calls the package function
+ * @returns void
+ */
 lan.addEventListener('click', package);
 hover.addEventListener('click', package);
 
+/**
+ * This function is called when the language button is clicked
+ * it changes the language in desktop and mobile view
+ * @returns void
+ */
 function package() {
     changeLanguage();
     changeLanguageMobile();
 }
 
-let collectIntervalls2 = null;
+
+/**
+ * @param {} basic 
+ * This function starts a interval to check in which language the link legal Notice is in every 100ms
+ * in order to change margins, with or other specifications
+ * @returns void
+ */
+let intervall2 = null;
 function startIntervals2() {
-    if (collectIntervalls2 != null) { clearInterval(collectIntervalls2); }
-    let allIntervals2 = setInterval(() => {
+    if (intervall2 != null) { clearInterval(intervall2); }
+    intervall2 = setInterval(() => {
         checkLegalNotice();
     }, 100);
 }
 
+/**
+ * This function is called when the language button is clicked
+ * it checks witch img is in the DOM and corrects accordingly
+ * @param {currentLang} currentLang the current language
+ * @returns void
+ */
 let currentLang;
 function changeLanguage() {
     console.log("change language normal")
     let basic = document.getElementsByClassName("language")[0]
     if (basic.src.includes('english.png')) {
-        switchToGerman();
+        switchToGerman(basic);
     } else {
-        switchToEnglish();
+        switchToEnglish(basic);
     }
 }
 
-function switchToGerman() {
+/**
+ * This function is called when the language button is clicked
+ * it checks witch img is in the DOM and corrects accordingly and change the language afterwards
+ * @param {basic} basic the language button img
+ * @returns void 
+ */
+function switchToGerman(basic) {
     basic.style.transition = "0.2s";
     basic.style.opacity = "0";
     basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
@@ -58,7 +100,12 @@ function switchToGerman() {
     }, 80);
 }
 
-function switchToEnglish() {
+/**
+ * This function is called when the language button is clicked and the current language is german
+ * @param {basic} basic the language button img
+ * @returns void 
+ */
+function switchToEnglish(basic) {
     basic.style.transition = "0.2s";
     basic.style.opacity = "0";
     basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
@@ -73,30 +120,47 @@ function switchToEnglish() {
     }, 80);
 }
 
-
+/**
+ * @param {langMobile} langMobile the language button img
+ * @param {langMobileHover} langMobileHover the language hover img
+ * @returns void
+ */
 let langMobile = document.getElementsByClassName("languageMobile")[0]
 let langMobileHover = document.getElementsByClassName("languageMobile_Hover")[0]
 
 langMobile.addEventListener('click', packageMobile);
 langMobileHover.addEventListener('click', packageMobile);
 
+/**
+ * This function is called when the language button is clicked
+ * it changes the language in desktop and mobile view
+ * @returns void
+ */
 function packageMobile() {
     changeLanguage();
     changeLanguageMobile();
 }
 
-
+/**
+ * This function changes the language in mobile view
+ * @returns void
+ */
 function changeLanguageMobile() {
     console.log("change language mobile")
     let basic = document.getElementsByClassName("languageMobile")[0]
     if (basic.src.includes('english.png')) {
-        switchMobileToGerman();
+        switchMobileToGerman(basic);
     } else {
-        switchMobileToEnglish();
+        switchMobileToEnglish(basic);
     }
 }
 
-function switchMobileToGerman() {
+/**
+ * This function changes the language in mobile view to german
+ * @param {basic} basic the language button img
+ * @returns void 
+ */
+function switchMobileToGerman(basic) {
     basic.style.transition = "0.2s";
     basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
     let hover = document.getElementsByClassName("languageMobile_Hover")[0]
@@ -108,7 +172,12 @@ function switchMobileToGerman() {
     }, 80);
 }
 
-function switchMobileToEnglish() {
+/**
+ * This function changes the language in mobile view to english
+ * @param {basic} basic the language button img
+ * @returns void 
+ */
+function switchMobileToEnglish(basic) {
     basic.style.transition = "0.2s";
     basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
     let hover = document.getElementsByClassName("languageMobile_Hover")[0]
@@ -120,6 +189,11 @@ function switchMobileToEnglish() {
     }, 80);
 }
 
+/**
+ * This function checks in which language the user is and changes the language accordingly
+ * we set a variable with the name lang : en  in the localStorage and check this variable everytime
+ * @returns void
+ */
 function checkLanguage() {
     if (localStorage.getItem('lang') != 'en') {
         changeLanguage();
@@ -127,6 +201,12 @@ function checkLanguage() {
     } else { }
 }
 
+/**
+ * @function {toggleBurgerMenu}
+ * This function toggles the mobile menü with opacity and removing/adding pointer events
+ * @property {#nav-icon1} this is the mobile menü container
+ * @returns void
+ */
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);
 function toggleBurgerMenu() {
     let t = document.getElementById("nav-icon1");
@@ -142,6 +222,12 @@ function toggleBurgerMenu() {
     }
 }
 
+/**
+ * this function checks the innerHTML of an a-tag in the footer,
+ * if the innerHTML is not "Legal Notice" it changes the style accordingly
+ * and it runs every 100ms
+ * @returns void
+ */
 function checkLegalNotice() {
     let legal = document.querySelector('.link3Floor');
     let image = document.querySelector('.link3Floor img');
@@ -152,10 +238,16 @@ function checkLegalNotice() {
     }
 }
 
+/**
+ * Here we start an intervall with the important functions to regulate CSS according to the language
+ * wich is difficult to achive with plain CSS
+ * @property {collectIntervalls} this is the interval that runs the functions above
+ * @returns void
+ */
 let collectIntervalls = null;
 function startIntervals() {
     if (collectIntervalls != null) { clearInterval(collectIntervalls); }
-    let allIntervals = setInterval(() => {
+    collectIntervalls = setInterval(() => {
         checkLegalNotice();
         changeWidthOnLetsTalk();
         changeAbsolutePosition();
@@ -164,6 +256,20 @@ function startIntervals() {
         changeProjectFontSize();
     }, 100);
 }
+
+/**
+ * @property {lastPosition} this is the last scroll position
+ * @property {lastHeight} this is the last scroll height
+ * @function {window.addEventListener('scroll', function ()}
+ * this function compares the last position with the current position 
+ * if the last position is smaller than the current position it means the user scrolls down
+ * if the last position is bigger than the current position it means the user scrolls up
+ * at the end we update these two values
+ * simultaniously we use the same method and check the currentHeight and the last height,
+ * we combine this in the if statement to check if the height changed, after a stop it updates,
+ * therefore we use the lastHeight and the currentHeight and update all values
+ * @returns void
+ */
 let lastPosition = window.scrollY;
 let lastHeight = document.documentElement.scrollHeight;
 window.addEventListener('scroll', function () {
@@ -182,6 +288,11 @@ window.addEventListener('scroll', function () {
     lastHeight = currentHeight;
 });
 
+/**
+ * this function makes the header visible while scrolling up and dissappear while scrolling down
+ * @param {p} p is scroll direction 
+ * @returns void
+ */
 function adjustHeader(p){
     if (p == "up") {
         makeHeaderSticky();
@@ -190,6 +301,14 @@ function adjustHeader(p){
     }
 }
 
+/**
+ * in this function we check if the current scroll position is bigger than the startPoint,
+ * if so we keep the opacity of the header to 0.7 and black
+ * if not we keep the opacity of the header to 0
+ * @param {currentPosition} currentPosition the current scroll position 
+ * @param {startPoint} startPoint this is the point where the opacity of the header changes to 0
+ * @returns void 
+ */
 function manipulateBackground(currentPosition, startPoint) {
     if (currentPosition > startPoint) {
         document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0.7)";
@@ -198,18 +317,32 @@ function manipulateBackground(currentPosition, startPoint) {
     }
 }
 
+/**
+ * this function makes the header sticky if we scroll up
+ * @returns void
+ */
 function makeHeaderSticky() {
     document.querySelector('.headfullsize').style.transition = "0.5s";
     document.querySelector('.headfullsize').style.position = "sticky";
     document.querySelector('.headfullsize').style.top = "0px";
 }
 
+/**
+ * this function makes the header dissappear if we scroll down
+ * @returns void
+ */
 function makeHeaderDissappear() {
     document.querySelector('.headfullsize').style.transition = "0.5s";
     document.querySelector('.headfullsize').style.position = "unset";
     document.querySelector('.headfullsize').style.top = "-100px";
 }
 
+
+/**
+ * this function makes the schraffierter background appear once if we hover of the portrait image
+ * @property {done} this is the boolean that checks if the background is already appeared
+ * @returns void
+ */
 let done = false;
 function moveOnce() {
     let once = document.querySelector(".schraffierter_bg");
@@ -219,6 +352,17 @@ function moveOnce() {
         done = true;
     }
 }
+
+/**
+ * This function searches after every "data-lang" in the DOM, reads the innerText and looks
+ * in the translations object, if there is exactly this value
+ * if so, it uses the value of the key it found, which is german if the current language is german
+ * and vise versa
+ * so we dont need an API or anything like that
+ * the first forEach Loop is for input fields and textareas, the second one is for text elements and basic tags
+ * @param {langcode} langcode is "en" or "de"
+ * @returns void 
+ */
 function switchLanguage(langcode) {
     console.log("switch language " + langcode);
     const elements = document.querySelectorAll('[data-lang]');
@@ -236,6 +380,12 @@ function switchLanguage(langcode) {
     });
 }
 
+/**
+ * this function checks the language in the contact section in a specific div and 
+ * changes the css accordingly
+ * simultaneoulsy we check the innerWidth of the screen and replace a media query
+ * @returns void
+ */
 function checkContacSection() {
     let letsConnect = document.querySelector(".Contact_mainTopic");
     let connectDescription = document.querySelector(".contactDescriptionAria");
@@ -247,6 +397,11 @@ function checkContacSection() {
     }
 }
 
+/**
+ * this function checks the language in the contact form and changes the css accordingly
+ * simultaneoulsy we check the innerWidth of the screen and replace a media query
+ * @returns void
+ */
 function checkContactFormAria() {
     let contactFormAria = document.querySelector(".Contact_mainTopic");
     let mesection = document.querySelector(".contact_Me_Section");
@@ -259,6 +414,11 @@ function checkContactFormAria() {
     }
 }
 
+/**
+ * this function checks the language in the hero section and changes the css accordingly
+ * german words need often more space than english ones
+ * @returns void
+ */
 function changeAbsolutePosition() {
     let width = window.innerWidth;
     let contactP = document.querySelector(".Contact_ME p");
@@ -267,18 +427,32 @@ function changeAbsolutePosition() {
     regulateContactMEGermanVersion(contactO, contactP, width);
 }
 
-
+/**
+ * This is the execution of the changeAbsolutePosition function above
+ * @param {contactO} contactO the parent div 
+ * @param {contactP} contactP the paragraph
+ * @param {width} width the innerWidth
+ * @returns void
+ */
 function regulateConctactME(contactO, contactP, width) {
     if (contactP.innerHTML == "Contact me" && width >= 378) {
         contactO.style.minWidth = "165px";
         contactP.style.left = "30px";
         contactP.style.width = "65%";
     } else if (contactP.innerHTML == "Contact me" && width <= 377) {
-        contactO.style.minWidth = "145px";
-        contactP.style.left = "28px";
+        contactO.style.minWidth = "115px";
+        contactP.style.left = "12px";
+        contactP.style.width = "85%";
     };
 }
 
+/**
+ * This regulates the css in case the language is german
+ * @param {contactO} contactO the parent div 
+ * @param {contactP} contactP the paragraph
+ * @param {width} width the innerWidth
+ * @returns void
+ */
 function regulateContactMEGermanVersion(contactO, contactP, width) {
     if (contactP.innerHTML == "Kontaktiere mich" && width >= 378) {
         contactO.style.minWidth = "170px";
@@ -292,6 +466,11 @@ function regulateContactMEGermanVersion(contactO, contactP, width) {
     }
 }
 
+/**
+ * this function checks the language in the project section and changes the css
+ * after a breakpoint in order to make it keep looking good
+ * @returns void
+ */
 function changeProjectFontSize() {
     let width = window.innerWidth;
     let p = document.querySelector(".mainTopic");
@@ -300,7 +479,11 @@ function changeProjectFontSize() {
     } else { p.style.fontSize = "48px" };
 }
 
-
+/**
+ * this function checks the language in a button and changes the width accordingly
+ * in order to keep the paragraph within the button
+ * @returns void
+ */
 function changeWidthOnLetsTalk() {
     let button = document.querySelector(".contactButton");
     let p = document.querySelector(".contactButton p");
@@ -317,7 +500,10 @@ function changeWidthOnLetsTalk() {
 
 }
 
-
+/**
+ * this function renders after the DOM is loaded the frame for the easter egg
+ * @returns void
+ */
 document.addEventListener("DOMContentLoaded", renderFrame());
 function renderFrame() {
     let frame = document.querySelector(".githubATag");
@@ -331,6 +517,13 @@ function renderFrame() {
     `
 }
 
+/**
+ * here i set the mouse events for the easter egg
+ * and let it disappear on mouse leave and appear (display flex) on mouse enter
+ * like a hovereffect
+ * @param {event} event the mouse event
+ * @returns void
+ */
 let l1 = document.querySelector(".linkedIn")
 if (l1)
     l1.addEventListener('mouseenter', showFrame);
@@ -344,6 +537,10 @@ function showFrame(event) {
     }
 }
 
+/**
+ * This function hides the frame if the user leaves the div with his mouse
+ * @param {event} event mouse event 
+ */
 function hideFrame(event) {
     if (event.type === 'mouseleave') {
         document.querySelector(".easterEggDiv").style.display = "none";
