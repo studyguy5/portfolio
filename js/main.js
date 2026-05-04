@@ -29,20 +29,16 @@ function initPrivacy() {
 let lan = document.getElementsByClassName("language")[0]
 let hover = document.getElementsByClassName("language_Hover")[0]
 
-/**
- * This function is called when the language button is clicked
- * it calls the package function
- * @returns void
- */
-lan.addEventListener('click', package);
-hover.addEventListener('click', package);
+
+lan.addEventListener('click', package1);
+hover.addEventListener('click', package1);
 
 /**
  * This function is called when the language button is clicked
  * it changes the language in desktop and mobile view
  * @returns void
  */
-function package() {
+function package1() {
     changeLanguage();
     changeLanguageMobile();
 }
@@ -204,7 +200,7 @@ function checkLanguage() {
 /**
  * @function {toggleBurgerMenu}
  * This function toggles the mobile menü with opacity and removing/adding pointer events
- * @property {#nav-icon1} this is the mobile menü container
+ * @property {nav-icon1} this is the mobile menü container
  * @returns void
  */
 document.querySelector("#nav-icon1").addEventListener('click', toggleBurgerMenu);

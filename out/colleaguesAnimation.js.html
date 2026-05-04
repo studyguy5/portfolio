@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: colleaguesAnimation.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: colleaguesAnimation.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * This function activates the animation of the cards with colleagues feedback
+ * if the user clicks on the arrow buttons, the cards slide to the left or to the right
+ * @param {direction} direction of the animation
+ * @returns void
+ */
+function skipColleagues(direction) {
+    let colleagueLeft = document.getElementsByClassName("singleColleaguesCardLeft");
+    let colleagueRight = document.getElementsByClassName("singleColleaguesCardRight");
+    let colleagueMiddle = document.getElementsByClassName("singleColleaguesCardMiddle");
+    if (direction == "left") {
+        slideToNext();
+        changeDotToLeft();
+    } else if (direction == "right") {
+        slideToPrev();
+        changeDotToRight();
+    }
+}
+
+/**
+ * This function puts the türkis colored dot to the right if the user clicks on the right arrow
+ * in order to show the user which card is active
+ * @returns void
+ */
+function changeDotToRight() {
+    let d = document.querySelector(".dot_türkis");
+    if (!d) return;
+    d.src = "./img/dot_white.png";
+    d.classList.remove("dot_türkis");
+    d.classList.add("dot_white");
+    let next = d.nextElementSibling;
+    dotToRightAndStartLeftIfLast(next);
+    
+
+}
+
+/**
+ * This function puts the türkis colored dot to the left if the user clicks on the left arrow
+ * and is a extension of the changeDotToRight function
+ * @param {next} next sibling element of the dot 
+ */
+function dotToRightAndStartLeftIfLast(next){
+    if (next.className == "dot_white") {
+        next.src = "./img/dot_türkis.png";
+        next.classList.remove("dot_white");
+        next.classList.add("dot_türkis");
+    }
+    if (next.src.includes("/img/arrow_Right.png")) {
+        let first = document.querySelector(".dot_white");
+        first.src = "./img/dot_türkis.png";
+        first.classList.remove("dot_white");
+        first.classList.add("dot_türkis");
+    };
+}
+
+/**
+ * This function puts the türkis colored dot to the left if the user clicks on the left arrow
+ * in order to show the user which card is active
+ * @returns void
+ */
+function changeDotToLeft() {
+    let d = document.querySelector(".dot_türkis");
+    if (!d) return;
+    d.src = "./img/dot_white.png";
+    d.classList.remove("dot_türkis");
+    d.classList.add("dot_white");
+    let prev = d.previousElementSibling;
+    dotToLeftAndStartRightIfFirst(prev)
+
+}
+
+/**
+ * This function puts the türkis colored dot to the left if the user clicks on the left arrow
+ * and is a extension of the changeDotToLeft function
+ * @param {prev} prev the previous sibling element of the dot 
+ */
+function dotToLeftAndStartRightIfFirst(prev) {
+    if (prev.className == "dot_white") {
+        prev.src = "./img/dot_türkis.png";
+        prev.classList.remove("dot_white");
+        prev.classList.add("dot_türkis");
+    }
+    if (prev.src.includes("/img/arrow_Left.png")) {
+        let first = document.querySelector(".dot_white");
+        let second = first.nextElementSibling.nextElementSibling.src = "./img/dot_türkis.png";
+        first.nextElementSibling.nextElementSibling.classList.remove("dot_white");
+        first.nextElementSibling.nextElementSibling.classList.add("dot_türkis");
+    };
+}
+
+/**
+ * This function slides the cards to the left and switches the main three classes in order
+ * to move every card to the right place
+ * @returns void
+ */
+function slideToPrev() {
+    let center = document.querySelectorAll(".active");
+    let right = document.querySelectorAll(".next");
+    let left = document.querySelectorAll(".prev");
+    let colleagues = document.querySelectorAll(".colleaguesCards");
+    if (center) {
+        center[0].classList.remove("active");
+        center[0].classList.add("prev");
+    }
+    if (right) {
+        right[0].classList.remove("next");
+        right[0].classList.add("active");
+    }
+    if (left) {
+        letSlideOutAndLetCopieSlideFromRight(left);
+    }
+}
+
+/**
+ * This function slides the left card out, clones it and let the clone slide in from the right
+ * in order to make a smooth transition
+ * @param {left} left the previous sibling element of the active class (prev)
+ * @returns void 
+ */
+function letSlideOutAndLetCopieSlideFromRight(left){
+    let clone = left[0].cloneNode(true);
+        clone.classList.remove("prev");
+        clone.classList.add("slideInStart");
+        colleagues[0].appendChild(clone);
+        left[0].classList.remove("prev");
+        left[0].classList.add("slideOut");
+        setTimeout(() => {
+            left[0].remove();
+        }, 500);
+        setTimeout(() => {
+            clone.classList.remove("slideInStart");
+            clone.classList.add("next");
+        }, 50);
+}
+
+/**
+ * This function slides the cards to the right and switches the main three classes in order
+ * to move every card to the right place
+ * @returns void
+ */
+function slideToNext() {
+    let center = document.querySelectorAll(".active");
+    let right = document.querySelectorAll(".next");
+    let left = document.querySelectorAll(".prev");
+    let colleagues = document.querySelectorAll(".colleaguesCards");
+    if (center) {
+        center[0].classList.remove("active");
+        center[0].classList.add("next");
+    }
+    if (left) {
+        left[0].classList.remove("prev");
+        left[0].classList.add("active");
+    }
+    if (right) {
+        letSlideOutAndLetCopieSlideFromLeft(right);
+    }
+}
+
+/**
+ * This function slides the right card out, clones it and let the clone slide in from the left
+ * in order to make a smooth transition
+ * @param {right} right  
+ * @returns void
+ */
+function letSlideOutAndLetCopieSlideFromLeft(right){
+    let clone = right[0].cloneNode(true);
+        clone.classList.remove("next");// next entfernen und links auserhalb hinzufügen
+        clone.classList.add("slideOut");//hier links weite auserhalb hinzufügen
+        colleagues[0].appendChild(clone);//ins DOm hinzufügen
+        right[0].classList.remove("next"); //original next entfernen und nach rechts raushauen
+        right[0].classList.add("slideInStart");
+        setTimeout(() => {
+            right[0].remove();
+        }, 500);
+        setTimeout(() => {
+            clone.classList.remove("slideOut");
+            clone.classList.add("prev");
+        }, 50);
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#adjustHeader">adjustHeader</a></li><li><a href="global.html#changeAbsolutePosition">changeAbsolutePosition</a></li><li><a href="global.html#changeDotToLeft">changeDotToLeft</a></li><li><a href="global.html#changeDotToRight">changeDotToRight</a></li><li><a href="global.html#changeLanguageMobile">changeLanguageMobile</a></li><li><a href="global.html#changeProjectFontSize">changeProjectFontSize</a></li><li><a href="global.html#changeWidthOnLetsTalk">changeWidthOnLetsTalk</a></li><li><a href="global.html#checkAllFieldAfterValidation">checkAllFieldAfterValidation</a></li><li><a href="global.html#checkAllFields">checkAllFields</a></li><li><a href="global.html#checkContacSection">checkContacSection</a></li><li><a href="global.html#checkContactFormAria">checkContactFormAria</a></li><li><a href="global.html#checkLanguage">checkLanguage</a></li><li><a href="global.html#checkLegalNotice">checkLegalNotice</a></li><li><a href="global.html#clearCheckboxError">clearCheckboxError</a></li><li><a href="global.html#collectIntervalls">collectIntervalls</a></li><li><a href="global.html#currentLang">currentLang</a></li><li><a href="global.html#done">done</a></li><li><a href="global.html#dotToLeftAndStartRightIfFirst">dotToLeftAndStartRightIfFirst</a></li><li><a href="global.html#dotToRightAndStartLeftIfLast">dotToRightAndStartLeftIfLast</a></li><li><a href="global.html#emptyFields">emptyFields</a></li><li><a href="global.html#hideFrame">hideFrame</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initPrivacy">initPrivacy</a></li><li><a href="global.html#intervall2">intervall2</a></li><li><a href="global.html#l1">l1</a></li><li><a href="global.html#lan">lan</a></li><li><a href="global.html#langMobile">langMobile</a></li><li><a href="global.html#letSlideOutAndLetCopieSlideFromLeft">letSlideOutAndLetCopieSlideFromLeft</a></li><li><a href="global.html#letSlideOutAndLetCopieSlideFromRight">letSlideOutAndLetCopieSlideFromRight</a></li><li><a href="global.html#makeHeaderDissappear">makeHeaderDissappear</a></li><li><a href="global.html#makeHeaderSticky">makeHeaderSticky</a></li><li><a href="global.html#manipulateBackground">manipulateBackground</a></li><li><a href="global.html#package1">package1</a></li><li><a href="global.html#packageMobile">packageMobile</a></li><li><a href="global.html#postAndShowSuccessMessage">postAndShowSuccessMessage</a></li><li><a href="global.html#regulateConctactME">regulateConctactME</a></li><li><a href="global.html#regulateContactMEGermanVersion">regulateContactMEGermanVersion</a></li><li><a href="global.html#showCheckboxError">showCheckboxError</a></li><li><a href="global.html#showErrorComplete">showErrorComplete</a></li><li><a href="global.html#showErrorOnOneField">showErrorOnOneField</a></li><li><a href="global.html#showErrorOnTwoFields">showErrorOnTwoFields</a></li><li><a href="global.html#showSpecificError">showSpecificError</a></li><li><a href="global.html#skipColleagues">skipColleagues</a></li><li><a href="global.html#slideToNext">slideToNext</a></li><li><a href="global.html#slideToPrev">slideToPrev</a></li><li><a href="global.html#stopPropagation">stopPropagation</a></li><li><a href="global.html#submitInfo">submitInfo</a></li><li><a href="global.html#switchLanguage">switchLanguage</a></li><li><a href="global.html#switchMobileToEnglish">switchMobileToEnglish</a></li><li><a href="global.html#switchMobileToGerman">switchMobileToGerman</a></li><li><a href="global.html#switchToEnglish">switchToEnglish</a></li><li><a href="global.html#switchToGerman">switchToGerman</a></li><li><a href="global.html#validateCheckBox">validateCheckBox</a></li><li><a href="global.html#validateContactForm">validateContactForm</a></li><li><a href="global.html#validateEmail">validateEmail</a></li><li><a href="global.html#validateEmailField">validateEmailField</a></li><li><a href="global.html#validateMessage">validateMessage</a></li><li><a href="global.html#validateMessageField">validateMessageField</a></li><li><a href="global.html#validateName">validateName</a></li><li><a href="global.html#validateNameField">validateNameField</a></li><li><a href="global.html#%257BtoggleBurgerMenu%257DThisfunctiontogglesthemobilemen%25C3%25BCwithopacityandremoving/addingpointerevents">{toggleBurgerMenu}This function toggles the mobile menü with opacity and removing/adding pointer events</a></li><li><a href="global.html#%257Bwindow.addEventListener('scroll',function()%257DthisfunctioncomparesthelastpositionwiththecurrentpositionifthelastpositionissmallerthanthecurrentpositionitmeanstheuserscrollsdownifthelastpositionisbiggerthanthecurrentpositionitmeanstheuserscrollsupattheendweupdatethesetwovaluessimultaniouslyweusethesamemethodandcheckthecurrentHeightandthelastheight,wecombinethisintheifstatementtocheckiftheheightchanged,afterastopitupdates,thereforeweusethelastHeightandthecurrentHeightandupdateallvalues">{window.addEventListener('scroll', function ()}this function compares the last position with the current position if the last position is smaller than the current position it means the user scrolls downif the last position is bigger than the current position it means the user scrolls upat the end we update these two valuessimultaniously we use the same method and check the currentHeight and the last height,we combine this in the if statement to check if the height changed, after a stop it updates,therefore we use the lastHeight and the currentHeight and update all values</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon May 04 2026 22:16:52 GMT+0200 (Mitteleuropäische Sommerzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

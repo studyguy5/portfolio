@@ -80,18 +80,6 @@ function emptyFields() {
     document.getElementById("helpInput").value = "";
 }
 
-/**
- * This function shows the error message for the checkbox, if the checkbox is not checked
- * @returns void
- */
-function showCheckboxError() {
-    let checkbox = document.getElementById("agreeBox");
-    checkbox.classList.add('agreeBoxError')
-    let checkboxError = document.getElementById("errorDivCheckbox");
-    checkboxError.style.color = "rgba(236, 123, 123, 0.8)";
-    checkboxError.innerHTML = "Please accept the terms and conditions";
-
-}
 
 /**
  * This function shows the error message for the input fields, if all fields are empty
@@ -338,7 +326,7 @@ function validateEmail(email) {
 /**
  * This function checks the message field value with with a regular expression (RegExp)
  * @param {message} message the value from the message input
- * @returns 
+ * @returns void
  */
 function validateMessage(message) {
     const messageRegex = /^[A-Za-zÄÖÜäöüß\s.-]+$/;
@@ -348,7 +336,8 @@ function validateMessage(message) {
 
 /**
  * This function stops the propagation of the onclick event
- * @param {event} event 
+ * @param {event} event
+ * @returns void 
  */
 function stopPropagation(event) {
     event.stopPropagation();
