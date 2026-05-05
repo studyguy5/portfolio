@@ -7,10 +7,10 @@ const translations = {
     "Frontend Developer": "Frontend Entwickler",
     "Check my Work": "Meine Projekte",
     "Contact me": "Kontaktiere mich",
-    "based in Austria": "Zuhause in Österreich",
+    "based in Innsbruck": "zuhause in Innsbruck",
     "love coding": "liebe Coding",
-    "ready for Remote Work": "bereit für Remote Arbeit",
-    "ready to Learn": "bereit zur Weiterbildung",
+    "ready for remote Work": "bereit für remote Arbeit",
+    "steady improvement": "stetige Verbesserung",
     "Who I am": "Wer ich bin",
 
     "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems and do problem solving.": 
@@ -195,10 +195,10 @@ const translations = {
     "Frontend Entwickler": "Frontend Developer",
     "Meine Projekte": "Check my Work",
     "Kontakt": "Contact me",
-    "Zuhause in Österreich": "based in Austria",
+    "zuhause in Innsbruck": "based in Innsbruck",
     "liebe Coding": "love coding",
-    "bereit für Remote Arbeit": "ready for Remote Work",
-    "bereit zur Weiterbildung": "ready to learn",
+    "bereit für remote Arbeit": "ready for remote Work",
+    "stetige Verbesserung": "steady improvement",
     "Wer ich bin": "Who I am",
 
     "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.":
