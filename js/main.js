@@ -58,6 +58,7 @@ function startIntervals2() {
     }, 100);
 }
 
+
 /**
  * This function is called when the language button is clicked
  * it checks witch img is in the DOM and corrects accordingly
@@ -80,7 +81,7 @@ function changeLanguage() {
  * it checks witch img is in the DOM and corrects accordingly and change the language afterwards
  * @param {basic} basic the language button img
  * @returns void 
- */
+*/
 function switchToGerman(basic) {
     basic.style.transition = "0.2s";
     basic.style.opacity = "0";
@@ -155,7 +156,7 @@ function changeLanguageMobile() {
  * This function changes the language in mobile view to german
  * @param {basic} basic the language button img
  * @returns void 
- */
+*/
 function switchMobileToGerman(basic) {
     basic.style.transition = "0.2s";
     basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
@@ -239,7 +240,7 @@ function checkLegalNotice() {
  * wich is difficult to achive with plain CSS
  * @property {collectIntervalls} this is the interval that runs the functions above
  * @returns void
- */
+*/
 let collectIntervalls = null;
 function startIntervals() {
     if (collectIntervalls != null) { clearInterval(collectIntervalls); }
@@ -250,8 +251,30 @@ function startIntervals() {
         checkContacSection();
         checkContactFormAria();
         changeProjectFontSize();
+        // checkPrivacyLink();
     }, 100);
 }
+
+function checkPrivacyLink(){
+    let link = document.querySelector('.checkboxDiv a')
+    let linkHover = document.querySelector('.checkboxDiv a:hover');
+    if (link.innerHTML == "privacy policy"){
+        if(linkHover){
+            link.style.setProperty('--link-background-size', '120px 2px');
+            link.style.setProperty('--link-width-hover', '120px')
+            link.style.setProperty('--link-margin-hover', '0 -5.2px 0 -9.8px')
+        }
+    }else{
+        link.style.setProperty('--link-width', '160px');
+        if(linkHover){
+            console.log('german hover')
+            link.style.setProperty('--link-background-size', '195px 2px');
+            link.style.setProperty('--link-width-hover', '175px')
+            link.style.setProperty('--link-margin-hover', '0 -7.5px 0 -7.5px')
+        }
+    }
+}
+
 
 /**
  * @property {lastPosition} this is the last scroll position

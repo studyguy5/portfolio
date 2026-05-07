@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang=`${currentLang}`>
+<html lang=`${currentLang}` translate="no">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Notice</title>
+    <link rel="icon" href="./img/final_filled.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footerSection.css">
     <link rel="stylesheet" href="./css/mainLegalNoticeText.css">
+    <link rel="stylesheet" href="./responsiv/footerSectionResponsiv.css">
 </head>
 
 <body onload="checkLanguage()">
@@ -21,11 +23,11 @@
             </div>
             <!-- <img src="./img/burgerMenu_symbol.png" alt="burgerMenu" class="burgerMenu"> -->
             <div class="burgerMenuMobile">
-                <a onclick="toggleBurgerMenu()" class="link1M" href="#aboutMeSection" data-lang>About me<img
+                <a onclick="toggleBurgerMenu()" class="link1M" href="index.html#aboutMeSection" data-lang>About me<img
                         src="./img/dot.png"></a>
-                <a onclick="toggleBurgerMenu()" class="link2M" href="#techSkillsSection" data-lang>Skills<img
+                <a onclick="toggleBurgerMenu()" class="link2M" href="index.html#techSkillsSection" data-lang>Skills<img
                         src="./img/dot.png"></a>
-                <a onclick="toggleBurgerMenu()" class="link3M" href="#portfolioSection" data-lang>Projects<img
+                <a onclick="toggleBurgerMenu()" class="link3M" href="index.html#portfolioSection" data-lang>Projects<img
                         src="./img/dot.png"></a>
                 <div onclick="toggleBurgerMenu()" class="imgWrapper">
                     <img class="languageMobile" src="./img/english.png">
@@ -136,7 +138,7 @@
             <a href="./legal-notice.html" class="link3" data-lang><img src="./img/dot.png">Legal Notice</a>
         </div>
     </section>
-    <!-- <p class="footerTextMobile">© Leonhard Siegele 2026</p> -->
+    <p class="footerTextMobile">© Leonhard Siegele 2026</p>
 
 </body>
 <script src="./js/main.js"></script>

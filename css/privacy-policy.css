@@ -2,6 +2,7 @@
     padding: 10px 15px;
     max-width:1248px;
     box-sizing: border-box;
+    width:stretch;
 }
 /* .mainContent h3{
     width:70%;
@@ -13,7 +14,8 @@
     justify-content: end;
     width:90% !important;
     position:relative;
-    top:-105px;
+    top:-50px;
+    height:20px;
     color:white !important;
 }
 .backButton img{
@@ -31,7 +33,6 @@
     color:white;
     font-size: 17px;
     font-family: 'Karla', sans-serif;
-    /* width:90%; */
     display:flex;
     gap:3px;
 }
@@ -65,6 +66,7 @@
     color: rgba(61, 207, 182, 1);
     font-size: 20px;
     font-family: 'FiraCode', sans-serif;
+    margin-bottom: 0px;
 }
 
 .footerText{
@@ -79,5 +81,8 @@
     }
     .footerTextMobile{
         display:block;
+    }
+    .mainContent h1{
+        font-size: 21px;
     }
 }

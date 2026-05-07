@@ -16,6 +16,7 @@
     font-family: 'FiraCode', sans-serif;
     color: rgba(61, 207, 182, 1);
     font-weight: 700;
+    text-align: center;
 }
 
 .colleagues{
@@ -165,7 +166,7 @@
     } */
     
     .skipAria {
-        display: flex;
+    display: flex;
     justify-self: center;
     align-items: center;
     justify-content: space-between;
@@ -173,8 +174,8 @@
     width: 184px;
     height: 40px;
     cursor: pointer;
-    /* border: 1px solid purple; */
-    /* background-color: black; */
+    margin:0 auto;
+    
 }
 
 .dot_white {

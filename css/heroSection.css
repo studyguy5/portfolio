@@ -217,6 +217,11 @@
     height: 27px;
 }
 
+.linkedIn img {
+    width: 27px;
+    height: 27px;
+}
+
 .linkedIn:hover {
     content: url(../img/linkedIn_white.png);
 }
@@ -382,8 +387,8 @@
     top: -40px;
     right: 42px;
     width: 215px;
-    height: 95px;
-    padding: 10px;
+    height: 105px;
+    padding: 7px;
     background-color: azure;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 0px;
@@ -391,10 +396,12 @@
     border-top-left-radius: 0px;
     border: 1px solid green;
     display: none;
+    font-size: 16px;
     justify-content: center;
     text-orientation: upright;
     writing-mode: horizontal-tb;
     font-size: 16px;
+    text-align: center;
 }
 
 .mailMobile {

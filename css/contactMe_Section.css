@@ -176,9 +176,18 @@ input:-webkit-text-autofill {
     margin-bottom: 40px;
 }
 
+.checkboxWrapper{
+    width:24px;
+    height:24px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .agreeBox{
     width:24px;
     height:24px;
+    box-sizing: border-box;
 }
 
 input[type = "checkbox"]{
@@ -186,17 +195,24 @@ input[type = "checkbox"]{
     content:url(../img/checkbox_unchecked.png);
     background-color: transparent;
     color:white;
+    width:24px;
+    height:24px;
 }
 
 input[type = "checkbox"]:hover{
     cursor: pointer;
     content:url(../img/checkbox_unchecked_hover.png);
+    width:24px;
+    height:24px;
 }
+/* input[type = "checkbox"]:hover ~ p{
+    margin-left:10.2px;
+} */
 
 input[type="checkbox"]:checked {
     content: url(../img/checkbox_checked.png);
-    width:24px;
-    height:24px;
+    /* width:24px;
+    height:24px; */
 }
 
 input[type="checkbox"]:checked:hover {
@@ -205,9 +221,10 @@ input[type="checkbox"]:checked:hover {
 }
 
 .checkboxDiv{
-    display:flex;
+    display:inline-flex;
     align-items: center;
     margin-bottom: 5px;
+    gap: 1px;
 }
 .checkboxDiv p{
     margin-left: 10px;
@@ -218,6 +235,19 @@ input[type="checkbox"]:checked:hover {
 .checkboxDiv a{
     color: rgba(61, 207, 182, 1);
     text-decoration: none;
+    display:inline-flex;
+    padding-bottom: 6px;
+}
+
+.checkboxDiv a:hover{
+    display:inline-block;
+    justify-content: center;
+    color: rgb(252, 252, 252);
+    text-decoration: underline;
+    text-decoration-color: rgba(61, 207, 182, 1);
+    text-underline-offset: 8px;
+    cursor: pointer;
+    display:-moz-inline-stack;
 }
 
 
@@ -233,6 +263,7 @@ input[type="checkbox"]:checked:hover {
 .errorDivCheckbox{
     font-family: 'Karla', sans-serif;
     height:30px;
+    color:rgba(236, 123, 123, 0.8);
 }
 
 .sendButton{

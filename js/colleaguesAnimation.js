@@ -108,7 +108,7 @@ function slideToPrev() {
         right[0].classList.add("active");
     }
     if (left) {
-        letSlideOutAndLetCopieSlideFromRight(left);
+        letSlideOutAndLetCopieSlideFromRight(left, colleagues);
     }
 }
 
@@ -118,7 +118,7 @@ function slideToPrev() {
  * @param {left} left the previous sibling element of the active class (prev)
  * @returns void 
  */
-function letSlideOutAndLetCopieSlideFromRight(left){
+function letSlideOutAndLetCopieSlideFromRight(left, colleagues){
     let clone = left[0].cloneNode(true);
         clone.classList.remove("prev");
         clone.classList.add("slideInStart");
@@ -153,7 +153,7 @@ function slideToNext() {
         left[0].classList.add("active");
     }
     if (right) {
-        letSlideOutAndLetCopieSlideFromLeft(right);
+        letSlideOutAndLetCopieSlideFromLeft(right, colleagues);
     }
 }
 
@@ -163,7 +163,7 @@ function slideToNext() {
  * @param {right} right  
  * @returns void
  */
-function letSlideOutAndLetCopieSlideFromLeft(right){
+function letSlideOutAndLetCopieSlideFromLeft(right, colleagues){
     let clone = right[0].cloneNode(true);
         clone.classList.remove("next");// next entfernen und links auserhalb hinzufügen
         clone.classList.add("slideOut");//hier links weite auserhalb hinzufügen
