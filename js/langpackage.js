@@ -32,7 +32,7 @@ const translations = {
     "Ich habe in den vergangenen zwei Jahren eine solide Grundlage an Kompetenzen aufgebaut. Gestartet habe ich mit einer einfachen Website unter Verwendung von HTML/CSS. Danach habe ich JavaScript gelernt, native Funktionen, wie man Daten speichert, das CRUD-Konzept und wie man den DOM manipuliert. In einem Pokémon-Viewer habe ich gelernt, wie man Daten aus einer API abruft, wie man async/await verwendet und Datenverkehr überprüft. In einem Teamprojekt habe ich Login-Logik, Auth und Firebase-Integration gelernt. Auch ein Jump-and-Run Spiel auf OOP Basis durfte nicht fehlen. Und jetzt lerne ich TypeScript, SCSS, Angular, N8N und mehr. Ich plane auch, Python für KI und Backend-Entwicklung zu lernen.",
 
      
-    "You need another skill?": "Du brauchst <span>eine andere Fähigkeit?</span>",
+    "You need another skill?": "Du brauchst <span>eine<br> andere Fähigkeit?</span>",
     
     "Feel free to contact me. I look forward to expanding on my previous knowledge.": 
     "Zögere nicht, mich zu kontaktieren. Ich bin offen für neue Herausforderungen und Lernmöglichkeiten.",
@@ -219,7 +219,7 @@ const translations = {
     "Ich habe in den vergangenen zwei Jahren eine solide Grundlage an Kompetenzen aufgebaut. Gestartet habe ich mit einer einfachen Website unter Verwendung von HTML/CSS. Danach habe ich JavaScript gelernt, native Funktionen, wie man Daten speichert, das CRUD-Konzept und wie man den DOM manipuliert. In einem Pokémon-Viewer habe ich gelernt, wie man Daten aus einer API abruft, wie man async/await verwendet und Datenverkehr überprüft. In einem Teamprojekt habe ich Login-Logik, Auth und Firebase-Integration gelernt. Auch ein Jump-and-Run Spiel auf OOP Basis durfte nicht fehlen. Und jetzt lerne ich TypeScript, SCSS, Angular, N8N und mehr. Ich plane auch, Python für KI und Backend-Entwicklung zu lernen.":
     "In the past two years, I have built a solid foundation of competencies. I started with a simple website using HTML/CSS. After that, I learned JavaScript, native functions, how to store data, the CRUD concept, and how to manipulate the DOM. In a Pokémon Viewer, I learned how to fetch data from an API, how to use async/await, and how to check data traffic. In a team project, I learned login logic, auth, and Firebase integration. A jump-and-run game based on OOP was also included. And now I'm learning TypeScript, SCSS, Angular, N8N, and more. I also plan to learn Python for AI and backend development.",
 
-    "Du brauchst eine andere Fähigkeit?": "You need <span>another skill?</span>", 
+    "Du brauchst eine\nandere Fähigkeit?": "You need <span>another skill?</span>", 
     
     
     "Zögere nicht, mich zu kontaktieren. Ich bin offen für neue Herausforderungen und Lernmöglichkeiten.":

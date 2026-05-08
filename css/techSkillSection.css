@@ -15,7 +15,7 @@
     border-radius: 30px;
     border: 1px solid rgba(61, 207, 182, 1);
     width: 522px;
-    height: 520px;
+    height: fit-content;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(44, 236, 201, 0.3) 0%, #192525 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     ;
