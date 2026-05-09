@@ -1,3 +1,11 @@
+@media(max-width:1010px){
+    .vright a:nth-child(5) {
+        display: none;
+    }
+    .mailMobile {
+        display: block;
+    }
+}
 
 @media(max-width:820px) {
     .mainBanner h2 {
@@ -8,10 +16,7 @@
         font-size: clamp(16px, 8px + 9vw, 128px);
     }
 
-    .vright a:nth-child(5) {
-        display: none;
-    }
-
+    
     .slider {
         height: 53px;
         gap: 15px;
@@ -21,7 +26,7 @@
         font-size: 24px;
         width: 290px;
     }
-
+    
     .vright hr {
         --var: 100vh;
         height: calc(var(--var) *18 / 100);
@@ -30,20 +35,18 @@
     .Contact_ME {
         min-width:173px;
     }
-
+    
     .Contact_ME p {
         width: 100%;
     }
-
-    .mailMobile {
-        display: block;
-    }
-
+    
+    
     .headlineDiv {
         margin-top: -150px;
     }
 
 }
+
 
 @media(max-width:760px) {
     .buttonAria {
@@ -89,7 +92,7 @@
     }
 }
 
-@media(max-height:600px) {
+@media(max-height:650px) {
     .vright a:nth-child(5) {
         display: none;
     }

@@ -56,7 +56,6 @@ body {
     cursor: pointer;
     -webkit-text-stroke: 0.3px white;
     -webkit-text-fill-color: black;
-    /* text-stroke: 1px white; */
 }
 
 .headLogo img {
@@ -260,6 +259,7 @@ body {
     height:40px;
     text-align: center;
     width:max-content;
+    font-family: 'FiraCode', sans-serif;
 }
 
 #nav-icon1 {

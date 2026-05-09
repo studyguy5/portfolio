@@ -17,8 +17,7 @@
     width: 522px;
     height: fit-content;
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(44, 236, 201, 0.3) 0%, #192525 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 
 }
 
@@ -44,7 +43,7 @@
     position: absolute;
     font-size: 18px;
     top: 13px;
-    /* width:100%; */
+    font-family: 'Karla', sans-serif;
     margin: 0px;
     /* min-width:125px; */
 }
@@ -103,13 +102,21 @@
 
 .skillImages {
     display: flex;
+    justify-content: center;
+}
+
+.skillImageHolder{
+    display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
-    column-gap: 72px;
+    column-gap: 74px;
     row-gap: 40px;
     margin-top: 100px;
     max-width: 610px;
-    max-height: 428px;
+    
+}
+
+#scrum{
+    width:117px;
 }
 
 .skillImages img:hover {
@@ -227,9 +234,28 @@
     margin: 0px 32px 28px 32px;
     text-align: left;
     font-size: 18px;
-    scrollbar-width: thin;
+    /* scrollbar-width:thin; */
     padding-right: 11px;
     font-family: 'Karla', sans-serif;
+}
+
+.skillTextParagraph::-webkit-scrollbar {
+    width: 4px;
+   
+}
+.skillTextParagraph::-webkit-scrollbar-thumb {
+    background: rgba(61, 207, 182, 1);
+    border-radius: 25px;
+}
+.skillTextParagraph::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .skillTextParagraph {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(61, 207, 182, 1) transparent;
+    }
 }
 
 .secondHeadline {
@@ -237,10 +263,13 @@
     font-size: 32px;
     margin: 0px 0px 16px 32px;
     text-align: left;
+    font-family: 'FiraCode', sans-serif;
+    letter-spacing: -3px;
 }
 
 .secondHeadline span {
     color: rgba(61, 207, 182, 1);
+    font-family: 'FiraCode', sans-serif;
 }
 
 .lastParagraph {
@@ -248,4 +277,5 @@
     text-align: left;
     font-size: 18px;
     color: white;
+    font-family: 'Karla', sans-serif;
 }

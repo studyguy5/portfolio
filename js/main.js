@@ -105,7 +105,6 @@ function switchToGerman(basic) {
     hover.src = "";
     switchLanguage('de');
     currentLang = 'de';
-    console.log(currentLang);
     localStorage.setItem('lang', 'de');
     setTimeout(() => {
         hover.src = "./img/german_hover.png";
@@ -126,7 +125,6 @@ function switchToEnglish(basic) {
     hover.src = "";
     switchLanguage('en');
     currentLang = 'en';
-    console.log(currentLang);
     localStorage.setItem('lang', 'en');
     setTimeout(() => {
         hover.src = "./img/english_hover.png";

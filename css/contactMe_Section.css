@@ -159,12 +159,13 @@ input:-webkit-text-autofill {
     padding: 5px 25px;
     width:200px;
     height:50px;
-    border: 1px solid rgba(61, 207, 182, 1);
+    border: 3px solid goldenrod;
     border-radius: 30px;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     color:rgba(61, 207, 182, 1);
-    background-color: transparent;
+    background-color: rgb(117 114 114 / 20%);
+    font-weight:bold;
     transition: 0.5s ease-in-out
 }
 .success{
@@ -276,6 +277,30 @@ input[type="checkbox"]:checked:hover {
     display: flex;
     cursor: pointer;
 }
+
+.addon {
+    border: 2px solid transparent;
+    border-radius: 25px;
+    animation: borderOrbit 1s linear infinite;
+    transition: 1s;
+}
+
+@keyframes borderOrbit {
+    0%   { border-color: cyan transparent transparent transparent; }
+    25%  { border-color: transparent cyan transparent transparent; }
+    50%  { border-color: transparent transparent cyan transparent; }
+    75%  { border-color: transparent transparent transparent cyan; }
+    100% { border-color: cyan transparent transparent transparent; }
+}
+/* .addon{
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { border-color: white;
+    border-width: 3px; }
+    50%       { border-color: transparent; }
+} */
 
 .sendButton[disabled]{
     cursor: not-allowed;

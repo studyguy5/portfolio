@@ -1,20 +1,47 @@
 
-@media(max-width:1150px) {
-    .skillImages {
-        row-gap: 20px;
-        column-gap: 32px;
-        max-height: 428px;
+@media(max-width:1250px) {
+    .skillImageHolder {
+        justify-content: space-evenly;
     }
 
+}
+
+@media(max-width:1090px) {
+    .skillImageHolder {
+        column-gap: 50px;
+    }
+    .techSkillsSection {
+        gap: 40px;
+    }
 }
 
 @media(max-width:1050px) {
     .techSkillsSection {
-        gap: 20px;
+        gap: 40px;
     }
 }
 
-@media(max-width:920px) {
+@media(max-width:1000px){
+    /* .skillset{
+        width:100%;
+    } */
+     .skillImages{
+        width:100%;
+     }
+    .skillPackage {
+        min-width:78px;
+    }
+    .skillPackage img{
+        width:54px;
+        height:54px;
+    }
+    .skillImageHolder {
+        column-gap: 45px;
+        min-width:366px;
+    }
+}
+
+@media(max-width:950px) {
     .skillset {
         width: 100%;
     }
@@ -22,7 +49,7 @@
     .skillImages {
         row-gap: 20px;
         column-gap: 32px;
-        max-height: 428px;
+        /* max-height: 428px; */
         width: 72%;
     }
 
@@ -39,8 +66,11 @@
     .skillImages {
         row-gap: 15px;
         column-gap: 20px;
-        max-height: 428px;
+        /* max-height: 428px; */
         width: 72%;
+    }
+    .skillTextHeadline{
+        font-size: 54px;
     }
 }
 
@@ -57,12 +87,25 @@
     .skillImages {
         margin: 40px auto;
         width: 88%;
+        height:fit-content;
+    }
+}
+@media(max-width:707px){
+    .skillImageHolder{
+        justify-content: space-between;
     }
 }
 
 @media(max-width:600px) {
     .skillText {
         height: fit-content;
+    }
+}
+
+@media(max-width:570px) {
+    .techSkillsSection {
+        margin: 12px 0px 120px 0px;
+        height: 1300px;
     }
 }
 
@@ -75,7 +118,7 @@
 
 @media(max-width:525px) {
     .techSkillsSection{
-        height:1150px;
+        height:1300px;
     }
 }
 
@@ -102,10 +145,32 @@
     }
 }
 
+@media(max-width:422px) {
+    .techSkillsSection {
+        margin: 12px 0px 120px 0px;
+        height: 1500px;
+    }
+    .skillImageHolder{
+        justify-content: space-between;
+        width:78%;
+    }
+}
+@media(max-width:420px){
+    .skillImageHolder{
+        min-width:unset;
+        column-gap:20px;
+        justify-content: space-between;
+        width:85%;
+    }
+    #scrum{
+    width:90px;
+}
+}
+
 @media(max-width:400px) {
     .techSkillsSection {
         margin: 12px 0px 120px 0px;
-        height: 1200px;
+        height: 1500px;
     }
 
     .skillTextParagraph {
@@ -122,12 +187,17 @@
     }
 }
 
-@media(max-width:405px) {
+@media(max-width:395px){
     .techSkillsSection {
-        margin: 12px 0px 120px 0px;
-        height: 1500px;
+        height: 1600px;
     }
 }
+@media(max-width:360px){
+    .techSkillsSection {
+        height: 1700px;
+    }
+}
+
 
 @media(max-width:340px) {
     .skillTextHeadline {

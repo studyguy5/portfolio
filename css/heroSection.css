@@ -36,6 +36,7 @@
     align-self: center;
     width: 363px;
     gap: 10px;
+    z-index: 2;
 }
 
 .buttonAria a {
@@ -180,12 +181,13 @@
 
 .sliderWrapper {
     display: flex;
+    /* justify-content: center; */
     position: absolute;
-    max-width: 1440px;
-    overflow-x: hidden;
-    width: 97%;
+    max-width: calc(100vw - 60px);
+    overflow-x:hidden;
+    width: 100vw;
     bottom: 45px;
-    left: 0px;
+    /* left: -200%; */
     z-index: 10;
     transform: rotateZ(-3deg);
     perspective: 1000px;
@@ -239,8 +241,10 @@
 .slider {
     display: flex;
     height: 62px;
+    flex-shrink: 0;
     position: relative;
-    max-width: 1920px !important;
+    max-width: calc(100vw - 0px);
+    min-width:max-content;
     gap: 25px;
     opacity: 1;
     z-index: 3;
@@ -257,19 +261,20 @@
     font-size: 32px;
     color: rgba(61, 207, 182, 1);
     gap: 25px;
-    width: 395px;
+    min-width: 370px;
     font-family: 'Karla', sans-serif;
 }
 
 .slider:first-child {
-    animation: slideToLeft 26s infinite linear 1s;
+    animation: slideToLeft 45s infinite linear 1s;
     will-change: transform;
 }
 
 .slider:last-child {
-    animation: slideFromRight 26s infinite linear 1s;
+    animation: slideFromRight 45s infinite linear 1s;
     will-change: transform;
 }
+
 
 
 @keyframes slideToLeft {
@@ -304,7 +309,7 @@
     bottom: 0px;
     padding: 0px 96px 0px 96px;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 1;
 
 }
 
@@ -376,6 +381,7 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;
 }
 
 .vright a:hover {
@@ -384,7 +390,7 @@
 
 .easterEggDiv {
     position: absolute;
-    top: -40px;
+    top: -55px;
     right: 42px;
     width: 215px;
     height: 105px;

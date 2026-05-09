@@ -1,4 +1,26 @@
 
+@media(max-width:8916px){
+    .colleaguesSectionFullsize{
+        max-width:1978px;
+    }
+    .colleaguesCards{
+        max-width:1978px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:1995px){
+
+    .colleaguesSectionFullsize{
+        max-width:98%;
+    }
+    .colleaguesCards{
+        max-width:98%;
+        margin: 0 auto;
+    }
+}
+
+
 @media(max-width:1440px){
     .singleColleaguesCardLeft, .singleColleaguesCardMiddle, .singleColleaguesCardRight{
         min-width: 480px;
@@ -38,7 +60,8 @@
         padding:48px 20px;
     }
     .singleColleaguesCardLeft, .singleColleaguesCardMiddle, .singleColleaguesCardRight {
-        min-width: 295px;
-        max-width: 295px;
+        min-width: 286px;
+        max-width: 286px;
     }
 }
+

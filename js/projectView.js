@@ -70,7 +70,6 @@ let projectArray = {
 }
 
 function renderProjects(index) {
-    console.log(currentLang);
     document.querySelector('.headfullsize').style.position= "unset";
     document.querySelector('.projectBackground').style.display = "flex";
     let language = currentLang;

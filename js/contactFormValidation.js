@@ -1,4 +1,5 @@
 
+let pending = true;
 /**
  * This function pulls values from input fields and 
  * checks if they are empty or not and if the value is valid
@@ -13,17 +14,17 @@ function validateContactForm(event) {
     let email = document.getElementById("emailInput");
     let message = document.getElementById("helpInput");
     let checkboxError = document.getElementById("errorDivCheckbox");
-    if (name.value == "" && email.value == "" && message.value == "") {
-        showErrorComplete();
-    }
+    document.getElementById("sendButton").classList.add('addon');
+    document.getElementById("sendButton").innerHTML = "please wait"
     if (name.value == "" || email.value == "" || message.value == "") {
         showSpecificError(name, email, message);
     }
-    if (validateNameField() && validateEmailField() && validateMessageField() && validateCheckBox()) {
+    if (checkAllFieldAfterValidation()) {
         submitInfo(event);
         document.getElementById("sendButton").disabled = true;
     }
 }
+
 
 /**
  * Here after the validation is complete and true, a object is created with the values from the input fields
@@ -33,7 +34,6 @@ function validateContactForm(event) {
  */
 function submitInfo(event) {
     event.preventDefault();
-    console.log("submit");
     let name = document.getElementById("nameInput");
     let email = document.getElementById("emailInput");
     let message = document.getElementById("helpInput");
@@ -43,7 +43,7 @@ function submitInfo(event) {
         email: email.value,
         message: message.value
     }
-    postAndShowSuccessMessage();
+    postAndShowSuccessMessage(data);
 }
 
 /**
@@ -52,20 +52,26 @@ function submitInfo(event) {
  * removes the message after 3 seconds and catches any errors
  * @returns void
  */
-function postAndShowSuccessMessage() {
-    fetch("https://formspree.io/f/mjglvngj", {
+async function postAndShowSuccessMessage(data) {
+    await fetch("https://formspree.io/f/mjglvngj", {
         method: "POST",
         body: JSON.stringify(data), //data,
         headers: {
             'Accept': 'application/json'
         }
     }).then(() => {
+        document.getElementById("sendButton").classList.remove('addon');
+        document.getElementById("sendButton").innerHTML = "Say Hello ;)"
         emptyFields();
         document.querySelector('.submittedFeedback').classList.add('success');
         setTimeout(() => {
             document.querySelector('.submittedFeedback').classList.remove('success');
         }, 3000);
     }).catch((error) => {
+        let c = document.querySelector('submittedFeedback')[0]
+        c.innerHTML = ""
+        c.innerHTML = "NOT sent"
+        c.style.border = "1px solid red";
         console.log(error);
     });
 }
@@ -146,17 +152,20 @@ function showErrorOnTwoFields(name, email, message) {
         nameError.style.color = "rgba(236, 123, 123, 0.8)";
         nameError.innerHTML = "Please enter your name";
         emailError.style.color = "rgba(236, 123, 123, 0.8)";
-        emailError.innerHTML = "Please enter your email";}
+        emailError.innerHTML = "Please enter your email";
+    }
     if (name.value == "" && message.value == "") {
         nameError.style.color = "rgba(236, 123, 123, 0.8)";
         nameError.innerHTML = "Please enter your name";
         messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter your message";}
+        messageError.innerHTML = "Please enter your message";
+    }
     if (email.value == "" && message.value == "") {
         emailError.style.color = "rgba(236, 123, 123, 0.8)";
         emailError.innerHTML = "Please enter your email";
         messageError.style.color = "rgba(236, 123, 123, 0.8)";
-        messageError.innerHTML = "Please enter your message";}
+        messageError.innerHTML = "Please enter your message";
+    }
 }
 
 
@@ -166,13 +175,16 @@ function showErrorOnTwoFields(name, email, message) {
  * if empty it will show the error message and if it is correct it clears the error message
  * @returns void
  */
+const input = document.querySelector(".nameInput");
+input.addEventListener("change", validateNameField);
+input.addEventListener("blur", validateNameField);
 function validateNameField() {
     let name = document.getElementById("nameInput");
     let nameError = document.getElementById("errorDivName");
     if (!validateName(name) && name.value != "") {
         nameError.style.color = "rgba(236, 123, 123, 0.8)";
         nameError.innerHTML = "Please enter a correct name";
-        return false
+
     } else if (name.value == "") {
         nameError.innerHTML = "Please enter your name";
     } else if (validateName(name) && name.value != "") {
@@ -203,6 +215,10 @@ function checkAllFieldAfterValidation() {
  * and enables the submit button
  * @returns void
  */
+
+const input1 = document.querySelector(".emailInput");
+input1.addEventListener("change", validateEmailField);
+input1.addEventListener("blur", validateEmailField);
 function validateEmailField() {
     let email = document.getElementById("emailInput");
     let emailError = document.getElementById("errorDivEmail");
@@ -225,6 +241,10 @@ function validateEmailField() {
  * and enables the submit button
  * @returns void
  */
+const input2 = document.querySelector(".helpInput");
+input2.addEventListener("change", validateMessageField);
+input2.addEventListener("blur", validateMessageField);
+
 function validateMessageField() {
     let message = document.getElementById("helpInput");
     let messageError = document.getElementById("errorDivMessage");
@@ -270,7 +290,7 @@ function showCheckboxError() {
     let checkboxError = document.getElementById("errorDivCheckbox");
     checkboxError.innerHTML = "Please agree to the privacy policy";
 }
- 
+
 /**
  * This function clears the error message for the checkbox
  * @returns void

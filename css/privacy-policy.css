@@ -1,20 +1,54 @@
+body{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../img/porfolio_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 100%;
+    min-height:100vh;
+}
+
 .mainContent{
-    padding: 10px 15px;
+    margin: 0 auto;
+    padding: 10px 65px;
     max-width:1248px;
     box-sizing: border-box;
-    width:stretch;
+    flex:1;
+    overflow-y: scroll;
+    max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 212px);
 }
-/* .mainContent h3{
-    width:70%;
-} */
+
+.mainContent::-webkit-scrollbar{
+    width: 4px;
+}
+.mainContent::-webkit-scrollbar-track{
+    background: transparent;
+}
+.mainContent::-webkit-scrollbar-thumb{
+    background-color: rgba(61, 207, 182, 1);
+    border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .mainContent {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(61, 207, 182, 1) transparent;
+    }
+}
 
 .backButton{
     display:flex;
     align-items: center;
+    text-decoration: none;
     justify-content: end;
-    width:90% !important;
+    
     position:relative;
-    top:-50px;
+    top:30px;
     height:20px;
     color:white !important;
 }
@@ -22,12 +56,10 @@
     width:40px;
     height:40px;
 }
-.backButton:hover img{
+.backButton img:hover {
     content: url(../img/arrow_leftTürkis.png);
 }
-.backButton:hover{
-    margin-left:4px;
-}
+
 
 .mainContent p{
     color:white;
@@ -49,7 +81,7 @@
     font-family: 'Karla', sans-serif;
 }
 
-.mainContent h1{
+ h1{
     color: rgba(61, 207, 182, 1);
     font-size: 32px;
     font-family: 'FiraCode', sans-serif;
@@ -62,7 +94,7 @@
     font-family: 'FiraCode', sans-serif;
 }
 
-.mainContent h5{
+ h5{
     color: rgba(61, 207, 182, 1);
     font-size: 20px;
     font-family: 'FiraCode', sans-serif;
@@ -82,7 +114,17 @@
     .footerTextMobile{
         display:block;
     }
-    .mainContent h1{
+     h1{
         font-size: 21px;
+    }
+    .headlineH5{
+        font-size: 17px;
+        padding: 0px 15px;
+    }
+}
+
+@media(max-width:425px){
+    .mainContent{
+        padding: 10px 20px;
     }
 }
