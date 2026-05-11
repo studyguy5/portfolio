@@ -13,6 +13,9 @@ const translations = {
     "steady improvement": "stetige Verbesserung",
     "Who I am": "Wer ich bin",
 
+    "You found the Easter Egg!My LinkedIn profile is empty, so just leave me an Emailhere:":
+    "Du hast das Osterei gefunden!<br>Mein LinkedIn Profil ist leer. Hinterlass mir doch eine Nachricht <a class='eastereggLink' href='#contactSection'>hier:</a>",
+
     "Hey there, I'm Leonhard! I'm a frontend developer with a passion for good looking user-friendly interfaces, which simplifies user's lives and cuts unnecessary chaos. I love Coding reladet stuff, because I can practice my creativity, understanding systems and do problem solving.": 
     "Hey, ich bin Leonhard! Ich bin ein Frontend-Entwickler mit einer Leidenschaft für gut aussehende benutzerfreundliche Oberflächen, die das Leben der Benutzer vereinfachen und unnötiges Chaos beseitigen. Ich liebe Coding-bezogene Dinge, weil ich meine Kreativität ausleben und Systeme verstehen kann, um Probleme zu lösen.",
 

@@ -20,7 +20,7 @@ body{
     box-sizing: border-box;
     flex:1;
     overflow-y: scroll;
-    max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 212px);
+    max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 114px);
 }
 
 .mainContent::-webkit-scrollbar{
@@ -125,6 +125,6 @@ body{
 
 @media(max-width:425px){
     .mainContent{
-        padding: 10px 20px;
+        padding: 10px 15px;
     }
 }

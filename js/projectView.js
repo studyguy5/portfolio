@@ -6,23 +6,27 @@
 let projectArray = {
     en : [{
         'projectName': 'Join',
+        'projectQuestion': 'What is this project about?',
         'projectDescription': 'Task manager inspired by the Kanban System.' + 
         'Create and organize tasks using drag and drop functions, assign users and categories. ',
         'projectImage': './img/join_BigFrame.png',
         'projectLink': './project_Join/login-signup/index.html',
         'projectGithub': 'https://github.com/studyguy5',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
-            {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
+            {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}],
+        'skip': 'Next Project <img src="./img/arrow_horizontal_türkis.png">'
     },
     {
         'projectName': 'El pollo Loco',
+        'projectQuestion': 'What is this project about?',
         'projectDescription': 'Jump, run and throw game based on object-oriented approach. Help Pepe ' + 
         'to find coins and tabasco salsa to fight against the crazy hen.',
         'projectImage': './img/Elpollo_bigFrame.png',
         'projectLink': './project_elpolloLoco/index.html',
         'projectGithub': 'https://github.com/studyguy5',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
-            {icon : "./img/miniJS.png", stack : 'JavaScript'}]
+            {icon : "./img/miniJS.png", stack : 'JavaScript'}],
+        'skip': 'Next Project <img src="./img/arrow_horizontal_türkis.png">'
     }, 
     // {
     //     'projectName': 'DABubble',
@@ -38,23 +42,27 @@ let projectArray = {
 
     de : [{
         'projectName': 'Join',
+        'projectQuestion': 'Um was geht es in diesem Projekt?',
         'projectDescription': 'Aufgabemanager inspiriert durch das Kanban-System.' + 
         'Erstelle und organisiere Aufgaben mit Drag and Drop-Funktionen, zugeordnete Benutzer und Kategorien.',
         'projectImage': './img/join_BigFrame.png',
         'projectLink': './project_Join/login-signup/index.html',
         'projectGithub': 'https://github.com/studyguy5',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
-            {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}]
+            {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}],
+        'skip': 'Nächstes Projekt <img src="./img/arrow_horizontal_türkis.png">'
     },
     {
         'projectName': 'El pollo Loco',
+        'projectQuestion': 'Um was geht es in diesem Projekt?',
         'projectDescription': 'Ein 2D-Spiel, indem du rennen, hüfpen und Flaschen werfen kannst. Hilf Pepe' + 
         "Münzen und Tabasco Flaschen zu finden, um es gegen kleine Hühner und den Enboss einzusetzen.",
         'projectImage': './img/Elpollo_bigFrame.png',
         'projectLink': './project_elpolloLoco/index.html',
         'projectGithub': 'https://github.com/studyguy5',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
-            {icon : "./img/miniJS.png", stack : 'JavaScript'}]
+            {icon : "./img/miniJS.png", stack : 'JavaScript'}],
+        'skip': 'Nächstes Projekt <img src="./img/arrow_horizontal_türkis.png">'
     }, 
     // {
     //     'projectName': 'DABubble',
@@ -88,7 +96,7 @@ function renderProjects(index) {
         <div class="projectInfo">
             <h3>${iPlusZero}</h3>
             <div class="projectName">${projectArray[language][index].projectName}</div>
-            <div class="projectQuestion">What is this project about?</div>
+            <div class="projectQuestion">${projectArray[language][index].projectQuestion}</div>
             <div class="projectDescription">${projectArray[language][index].projectDescription}</div>
             <div class="projectStack">${o.map(item => `<img src="${item.icon}"><p>${item.stack}</p>`).join(' ')}</div>
             <div class="projectLinks">
@@ -99,7 +107,7 @@ function renderProjects(index) {
         </div>
         <div class="projectImageDiv">
         <div class="projectImage"><img src="${projectArray[language][index].projectImage}"></div>
-        <button onclick="renderProjects(${index + 1 < projectArray[language].length ? index + 1 : 0})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
+        <button onclick="renderProjects(${index + 1 < projectArray[language].length ? index + 1 : 0})">${projectArray[language][index].skip}</button>
         </div>
     </div>
     `

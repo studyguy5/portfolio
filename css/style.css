@@ -42,6 +42,7 @@ body {
 .headLogo {
     display: flex;
     align-items: center;
+    /* font-family: 'FiraCode', sans-serif; */
     color: white;
     font-size: 27px;
     gap: 8px;
@@ -54,6 +55,7 @@ body {
 
 .headLogo:hover h3 {
     cursor: pointer;
+    /* font-family: 'FiraCode', sans-serif; */
     -webkit-text-stroke: 0.3px white;
     -webkit-text-fill-color: black;
 }

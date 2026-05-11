@@ -360,18 +360,24 @@ function switchLanguage(langcode) {
  * this function renders after the DOM is loaded the frame for the easter egg
  * @returns void
  */
-document.addEventListener("DOMContentLoaded", renderFrame());
+document.addEventListener("DOMContentLoaded", renderFrame);
 function renderFrame() {
-    let frame = document.querySelector(".githubATag");
+    // let div = document.createElement("div");
+    let frame = document.querySelector(".linkedIn");
     if (frame)
         frame.innerHTML +=/*html*/`
-    <div class="easterEggDiv">
-        You found the Easter Egg!<br>
-        I don't have LinkedIn, or in other words<br>
-        my LinkedIn profile is empty. So let's connect in a traditional way:
+    <div class="easterEggDiv" data-lang>
+        You found the Easter Egg!<br>My LinkedIn profile is empty, so just leave me an Email<a href="#contactMeSection" class="eastereggLink">here</a>
     </div>
     `
+    // document.querySelector(".easterEggDiv").style.display = "none";
+    // frame.appendChild(div);
 }
+
+
+
+
+
 
 /**
  * here i set the mouse events for the easter egg
@@ -379,28 +385,34 @@ function renderFrame() {
  * like a hovereffect
  * @param {event} event the mouse event
  * @returns void
- */
-let l1 = document.querySelector(".linkedIn")
-if (l1)
-    l1.addEventListener('mouseenter', showFrame);
-let l2 = document.querySelector(".linkedIn")
-if (l2)
-    l2.addEventListener('mouseleave', hideFrame);
+*/
+let d1 = document.querySelector(".linkedIn");
 
-function showFrame(event) {
-    if (event.type === 'mouseenter') {
-        document.querySelector(".easterEggDiv").style.display = "flex";
-    }
+let hideTimeout = null;
+
+    // d1.addEventListener('mouseenter', () => {
+    //     document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
+    // });    
+
+    // // d2.addEventListener('mouseenter', () => {
+    // //     document.querySelector(".easterEggDiv").style.display = "flex";
+    // // });
+
+    d1.addEventListener('mouseover', showFrame);
+    d1.addEventListener('mouseout', hideFrame);
+
+function showFrame() {
+    if(hideTimeout !== null)
+    clearTimeout(hideTimeout);
+        document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
+    // console.log(d2);
 }
 
-/**
- * This function hides the frame if the user leaves the div with his mouse
- * @param {event} event mouse event 
- */
-function hideFrame(event) {
-    if (event.type === 'mouseleave') {
-        document.querySelector(".easterEggDiv").style.display = "none";
-    }
+function hideFrame() {
+hideTimeout = setTimeout(() => {
+        document.querySelector(".easterEggDiv").classList.remove('easterEggVisible');
+        
+    }, 2000);
 }
 
 
