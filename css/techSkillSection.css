@@ -2,7 +2,7 @@
     display: flex;
     max-width: 1920px;
     margin: 12px 0px 60px 0px;
-    gap: 96px;
+    gap: 93px;
 }
 
 .headlineTechnologies {
@@ -106,13 +106,16 @@
 }
 
 .skillImageHolder{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 74px;
     row-gap: 40px;
     margin-top: 100px;
-    max-width: 610px;
-    
+    max-width: 610px;    
+}
+.skillTextParagraph mark{
+    background-color: transparent;
+    color: rgba(61, 207, 182, 1);
 }
 
 #scrum{
@@ -150,7 +153,7 @@
     display: block;
     position: absolute;
     top: -130px;
-    left: 75%;
+    left: 85%;
     transform: translateX(-50%);
 }
 
@@ -241,7 +244,7 @@
 }
 
 .skillTextParagraph::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
    
 }
 .skillTextParagraph::-webkit-scrollbar-thumb {

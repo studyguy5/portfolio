@@ -10,8 +10,8 @@ let projectArray = {
         'projectDescription': 'Task manager inspired by the Kanban System.' + 
         'Create and organize tasks using drag and drop functions, assign users and categories. ',
         'projectImage': './img/join_BigFrame.png',
-        'projectLink': './project_Join/login-signup/index.html',
-        'projectGithub': 'https://github.com/studyguy5',
+        'projectLink': 'https://leonhardsiegele.at/project_Join/login-signup/index.html',
+        'projectGithub': 'https://github.com/studyguy5/join-teamproject',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}],
         'skip': 'Next Project <img src="./img/arrow_horizontal_türkis.png">'
@@ -22,8 +22,8 @@ let projectArray = {
         'projectDescription': 'Jump, run and throw game based on object-oriented approach. Help Pepe ' + 
         'to find coins and tabasco salsa to fight against the crazy hen.',
         'projectImage': './img/Elpollo_bigFrame.png',
-        'projectLink': './project_elpolloLoco/index.html',
-        'projectGithub': 'https://github.com/studyguy5',
+        'projectLink': 'https://leonhardsiegele.at/project_elpolloLoco/index.html',
+        'projectGithub': 'https://github.com/studyguy5/elpollo-loco',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}],
         'skip': 'Next Project <img src="./img/arrow_horizontal_türkis.png">'
@@ -46,8 +46,8 @@ let projectArray = {
         'projectDescription': 'Aufgabemanager inspiriert durch das Kanban-System.' + 
         'Erstelle und organisiere Aufgaben mit Drag and Drop-Funktionen, zugeordnete Benutzer und Kategorien.',
         'projectImage': './img/join_BigFrame.png',
-        'projectLink': './project_Join/login-signup/index.html',
-        'projectGithub': 'https://github.com/studyguy5',
+        'projectLink': 'https://leonhardsiegele.at/project_Join/login-signup/index.html',
+        'projectGithub': 'https://github.com/studyguy5/join-teamproject',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}, {icon : "./img/miniFirebase.png", stack : 'Firebase'}],
         'skip': 'Nächstes Projekt <img src="./img/arrow_horizontal_türkis.png">'
@@ -58,8 +58,8 @@ let projectArray = {
         'projectDescription': 'Ein 2D-Spiel, indem du rennen, hüfpen und Flaschen werfen kannst. Hilf Pepe' + 
         "Münzen und Tabasco Flaschen zu finden, um es gegen kleine Hühner und den Enboss einzusetzen.",
         'projectImage': './img/Elpollo_bigFrame.png',
-        'projectLink': './project_elpolloLoco/index.html',
-        'projectGithub': 'https://github.com/studyguy5',
+        'projectLink': 'https://leonhardsiegele.at/project_elpolloLoco/index.html',
+        'projectGithub': 'https://github.com/studyguy5/elpollo-loco',
         'projectStack': [{icon : "./img/miniHTML2.png", stack : 'HTML'}, {icon : "./img/miniCSS.png", stack : 'CSS'}, 
             {icon : "./img/miniJS.png", stack : 'JavaScript'}],
         'skip': 'Nächstes Projekt <img src="./img/arrow_horizontal_türkis.png">'
@@ -80,6 +80,7 @@ let projectArray = {
 function renderProjects(index) {
     document.querySelector('.headfullsize').style.position= "unset";
     document.querySelector('.projectBackground').style.display = "flex";
+    document.querySelector('body').style.overflow = "hidden";
     let language = currentLang;
     let project = document.getElementById('projectMaxView')
     let o = projectArray[language][index ? index : 0].projectStack;
@@ -100,8 +101,8 @@ function renderProjects(index) {
             <div class="projectDescription">${projectArray[language][index].projectDescription}</div>
             <div class="projectStack">${o.map(item => `<img src="${item.icon}"><p>${item.stack}</p>`).join(' ')}</div>
             <div class="projectLinks">
-                <a href="${projectArray[language][index].projectGithub}">Github-Link<img src="./img/arrow_türkis.png"></a>
-                <a href="${projectArray[language][index].projectLink}">Live Test<img src="./img/arrow_türkis.png"></a>
+                <a target="_blank" noopener noreferrer href="${projectArray[language][index].projectGithub}">Github-Link<img src="./img/arrow_türkis.png"></a>
+                <a target="_blank" noopener noreferrer href="${projectArray[language][index].projectLink}">Live Test<img src="./img/arrow_türkis.png"></a>
                 </div>
                 <button class="nextProjectMobile" onclick="renderProjects(${index + 1 < projectArray[language].length ? index + 1 : 0})">Next Project <img src="./img/arrow_horizontal_türkis.png"></button>
         </div>
@@ -115,8 +116,13 @@ function renderProjects(index) {
 }
 
 function closeProject() {
+    document.querySelector('body').style.overflow = "unset";
     let project = document.getElementById('projectMaxView')
     document.querySelector('.projectBackground').style.display = "none";
     project.style.transition = "3s";
     project.style.left = '-800%';
+    document.querySelector('.headfullsize').style.transition = "0.5s";
+    document.querySelector('.headfullsize').style.position = "sticky";
+    document.querySelector('.headfullsize').style.top = "0px";
+    document.querySelector('.headfullsize').style.background = "rgba(0, 0, 0, 0.7)";
 }

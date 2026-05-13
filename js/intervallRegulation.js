@@ -129,7 +129,7 @@ function regulateConctactME(contactO, contactP, width) {
     if (contactP.innerHTML == "Contact me" && width >= 378) {
         contactO.style.minWidth = "165px";
         contactP.style.left = "30px";
-        contactP.style.width = "105px";
+        contactP.style.width = "110px";
     } else if (contactP.innerHTML == "Contact me" && width <= 377) {
         contactO.style.minWidth = "115px";
         contactP.style.left = "12px";

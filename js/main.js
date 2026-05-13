@@ -271,7 +271,7 @@ window.addEventListener('scroll', function () {
  * @returns void
  */
 function adjustHeader(p){
-    if (p == "up") {
+    if (p == "up" && document.querySelector('.projectBackground').style.display == "none") {
         makeHeaderSticky();
     } else {
         makeHeaderDissappear();
@@ -375,7 +375,9 @@ function renderFrame() {
 }
 
 
-
+function backToHome(){
+    window.location.href = "../index.html";
+}
 
 
 
@@ -389,30 +391,22 @@ function renderFrame() {
 let d1 = document.querySelector(".linkedIn");
 
 let hideTimeout = null;
-
-    // d1.addEventListener('mouseenter', () => {
-    //     document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
-    // });    
-
-    // // d2.addEventListener('mouseenter', () => {
-    // //     document.querySelector(".easterEggDiv").style.display = "flex";
-    // // });
-
-    d1.addEventListener('mouseover', showFrame);
-    d1.addEventListener('mouseout', hideFrame);
-
+    if(d1){
+    d1.addEventListener('mouseenter', showFrame);
+    d1.addEventListener('mouseleave', hideFrame);
+    }
 function showFrame() {
     if(hideTimeout !== null)
     clearTimeout(hideTimeout);
-        document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
-    // console.log(d2);
+    document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
+    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_white.png");
 }
 
 function hideFrame() {
 hideTimeout = setTimeout(() => {
-        document.querySelector(".easterEggDiv").classList.remove('easterEggVisible');
-        
-    }, 2000);
+    document.querySelector(".easterEggDiv").classList.remove('easterEggVisible');
+    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_türkis.png");
+    }, 1000);
 }
 
 

@@ -339,7 +339,7 @@ function validateName(name) {
  * @returns {boolean}
  */
 function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]{3,}\.[^\s@]{2,}$/;
+    const regex = /^[^\s@]+@[a-zA-Z0-9-]{2,}\.[a-zA-Z]{2,}$/;
     return regex.test(email.value.trim());
 }
 

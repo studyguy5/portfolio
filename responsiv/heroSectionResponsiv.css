@@ -1,4 +1,4 @@
-@media(max-width:1010px){
+@media(max-width:1020px){
     .vright a:nth-child(5) {
         display: none;
     }
@@ -20,6 +20,9 @@
     .slider {
         height: 53px;
         gap: 15px;
+    }
+    .sliderWrapper{
+        width:calc(100vw - 30px);
     }
 
     .slider p {

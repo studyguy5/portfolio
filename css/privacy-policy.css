@@ -41,24 +41,6 @@ body{
     }
 }
 
-.backButton{
-    display:flex;
-    align-items: center;
-    text-decoration: none;
-    justify-content: end;
-    
-    position:relative;
-    top:30px;
-    height:20px;
-    color:white !important;
-}
-.backButton img{
-    width:40px;
-    height:40px;
-}
-.backButton img:hover {
-    content: url(../img/arrow_leftTürkis.png);
-}
 
 
 .mainContent p{
@@ -120,6 +102,12 @@ body{
     .headlineH5{
         font-size: 17px;
         padding: 0px 15px;
+    }
+    .mainContent{
+        max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 140px);
+    }
+    .footerSection{
+        margin-bottom:32px;
     }
 }
 

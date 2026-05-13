@@ -182,7 +182,7 @@
 .sliderWrapper {
     display: flex;
     position: absolute;
-    max-width: calc(100vw - 20px);
+    max-width: calc(100vw - 60px);
     overflow-x:hidden;
     width: 100vw;
     bottom: 45px;
@@ -209,7 +209,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    pointer-events:all;
+    /* pointer-events:all; */
     padding: 0;
     display: flex;
     align-items: center;
@@ -223,9 +223,8 @@
     height: 27px;
 }
 
-.linkedIn:hover {
-    content: url(../img/linkedIn_white.png);
-}
+
+
 .linkedIn:active{
     transform:scale(0.95);
 }
@@ -394,19 +393,21 @@
 .easterEggDiv {
     position: absolute;
     padding: 15px 5px;
-    gap:15px;
-    top: -95px;
+    gap:0px;
+    top: -105px;
     right: 28px;
-    width: 215px;
-    height: 105px;
+    width: 225px;
+    height: 115px;
     padding: 7px;
-    background-color: azure;
+    color:white;
+    background-color: rgb(32, 49, 46);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 25px;
-    border-top-left-radius: 0px;
+    border-top-left-radius: 25px;
     border: 1px solid green;
     display: none;
+    font-family: 'Karla', sans-serif;
     font-size: 16px;
     justify-content: center;
     text-orientation: upright;
@@ -417,19 +418,27 @@
 }
 
 
+
 .easterEggVisible{
     display:grid;
+    align-items: center;
     }
 
 .eastereggLink{
     display:flex;
     color:black;
+    padding: 5px 25px;
+    background-color: rgba(61, 207, 182, 1);
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
     text-decoration: none;
     justify-self: center;
     cursor:pointer;
 }
 .eastereggLink:hover{
-    color:rgba(61, 207, 182, 1);
+    /* color: rgb(251, 232, 70); */
+    outline:3px solid rgb(250, 232, 75);
 }
 
 .mailMobile {

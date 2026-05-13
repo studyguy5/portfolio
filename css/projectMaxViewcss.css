@@ -114,6 +114,7 @@
     width: 24px;
     height: 24px;
     color: rgba(61, 207, 182, 1);
+    transition: 0.2s ease-in-out;
 }
 
 .projectImageDiv button:hover img {
@@ -145,6 +146,19 @@
     border-radius: 25px;
     gap: 4px;
     font-family: 'Karla', sans-serif;
+}
+.projectLinks a img{
+    transition: 0.2s ease-in-out;
+}
+
+.projectLinks a:hover {
+    color: rgba(61, 207, 182, 1);
+    border: 1px solid rgba(61, 207, 182, 1);
+}
+
+.projectLinks a:hover img {
+    margin: -5px -5px 0px 5px;
+    transition: 0.2s ease-in-out;
 }
 
 

@@ -3,11 +3,13 @@
     display:flex;
     justify-content: space-between;
     align-items: end;
-    max-width:1248px;
+    max-width:1440px;
     width:90%;
     box-sizing: border-box;
     height:126px;
     margin-bottom:64px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 .logoNameDiv img{

@@ -29,7 +29,9 @@ hr{
 
 .nameFieldWrapper{
     height:99px;
-    width:100%;
+    width:90%;
+    margin-left:32px;
+    
 }
 
 .nameField{
@@ -72,7 +74,9 @@ hr{
 
 .emailFieldWrapper{
     height:99px;
-    width:100%;
+    width:90%;
+    margin-left:32px;
+    margin-right:-32px;
 }
 
 .emailField{
@@ -129,10 +133,14 @@ input:-webkit-text-autofill {
     color:rgba(61, 207, 182, 1);
 }
 
-.helpWrapper{
+.helpContainer{
+    margin-left:32px;
+    width:90%;
+}
+/* .helpWrapper{
     height:99px;
     width:100%;
-}
+} */
 
 .helpInput{
     border:unset;
@@ -304,6 +312,7 @@ input[type="checkbox"]:checked:hover {
 
 .sendButton[disabled]{
     cursor: not-allowed;
+    color:black;
 }
 .sendButton:enabled{
     cursor: pointer;
