@@ -1,5 +1,8 @@
-body{
-    /* overflow-y: hidden; */
+
+
+.mainLegalNoticeText mark{
+    background-color: transparent;
+    color: rgba(61, 207, 182, 1);
 }
 
 .mainContent{
@@ -27,7 +30,8 @@ body{
     padding: 0px 10px;
     max-width:968px;
     margin: 0 auto;
-    height:calc(100vh - 98px - 134px - 190px - 26px);
+    gap:16px;
+    height:calc(100vh - 98px - 100px - 190px - 20px);
 }
 
 .mainLegalNoticeText::-webkit-scrollbar{
@@ -58,6 +62,9 @@ body{
     background: transparent;
 }
 
+.impressumPhone{
+    font-family: 'Karla', sans-serif;
+}
 
 .impressumPhone p{
     color:white;
@@ -79,8 +86,8 @@ body{
 
 .mainContent h1{
     font-size: 30px;
-    margin-top:36px;
-    margin-bottom: 64px;
+    margin-top:26px;
+    margin-bottom: 34px;
     color:rgba(61, 207, 182, 1);
     display:flex;
     justify-content: center;
@@ -135,9 +142,10 @@ li img{
 
 @media(max-width:820px){
     .mainLegalNoticeText{
-        height:calc(100vh - 98px - 134px - 190px - 51px);
+        height:calc(100vh - 123px - 100px - 190px - 20px);
     }
     .footerSection{
         margin-bottom:32px;
     }
 }
+/* height:calc(100vh - 98px - 100px - 190px - 20px); */

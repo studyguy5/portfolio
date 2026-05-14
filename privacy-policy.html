@@ -15,7 +15,7 @@
 <body onload="initBasic()">
     <header class="headfullsize">
         <div class="headcontent">
-            <div class="logoMobile"><img src="./img/final_filled.png">Leonhard Siegele</div>
+            <div onclick="backToHome()" class="logoMobile"><img src="./img/final_filled.png">Leonhard Siegele</div>
             <div id="nav-icon1">
                 <span></span>
                 <span></span>
@@ -30,13 +30,13 @@
                 <a onclick="toggleBurgerMenu()" class="link3M" href="index.html#portfolioSection" data-lang>Projects<img
                         src="./img/dot.png"></a>
                 <div onclick="toggleBurgerMenu()" class="imgWrapper">
-                    <img class="languageMobile" src="./img/english.png">
-                    <img class="languageMobile_Hover" src="./img/english_hover.png">
+                    <img class="languageMobile" src="./img/english.svg">
+                    <img class="languageMobile_Hover" src="./img/english_hover.svg">
                 </div>
             </div>
             <nav class="headNavbar">
-                <img class="language" src="./img/english.png">
-                <img class="language_Hover" src="./img/english_hover.png">
+                <img class="language" src="./img/english.svg">
+                <img class="language_Hover" src="./img/english_hover.svg">
                 <a href="index.html#aboutMeSection" class="About" data-lang>About me<img src="./img/dot.png"></a>
                 <a href="index.html#techSkillsSection" class="skills" data-lang>Skills<img src="./img/dot.png"></a>
                 <a href="index.html#portfolioSection" class="projects" data-lang>Projects<img src="./img/dot.png"></a>
@@ -105,9 +105,9 @@
     </section>
     <section class="footerSection" id="footerSection">
         <div class="logoNameDiv">
-            <div class="logo">
+            <div onclick="backToHome()" class="logo">
                 <img src="./img/final_filled.png">
-                Leonhard<br> Siegele
+                <h3>Leonhard<br> Siegele</h3>
             </div>
             <p class="logoName">Leonhard Siegele</p>
             <p class="location">Austria</p>

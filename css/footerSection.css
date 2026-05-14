@@ -1,99 +1,111 @@
-
-.footerSection{
-    display:flex;
+.footerSection {
+    display: flex;
     justify-content: space-between;
     align-items: end;
-    max-width:1440px;
-    width:90%;
+    max-width: 1440px;
+    width: 90%;
     box-sizing: border-box;
-    height:126px;
-    margin-bottom:64px;
-    padding-left:10px;
-    padding-right:10px;
+    height: 126px;
+    margin-bottom: 64px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.logoNameDiv img{
-    width:44px;
-    height:54px;
-    margin-right:8px;
+
+.logoNameDiv img {
+    width: 44px;
+    height: 54px;
+    margin-right: 8px;
 }
 
-.logo{
-    display:flex;
+.logo {
+    display: flex;
     align-items: center;
-    width:132px;
-    height:48px;
-    font-family: 'Karla', sans-serif;
+    width: 132px;
+    height: 48px;
+}
+.logo h3{
+    margin:0px;
 }
 
-.links{
-    height:88px;
-    width:100px;
+.logo:hover img {
+    cursor: pointer;
+    content: url(../img/final_unfilled.png);
+}
+
+.logo:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 0.3px white;
+    -webkit-text-fill-color: black;
+}
+
+
+.links {
+    height: 88px;
+    width: 100px;
     text-align: start;
 }
 
-.links a{
-    display:block;
-    color:white;
+.links a {
+    display: block;
+    color: white;
     text-decoration: none;
     margin-bottom: 8px;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
 }
 
-.links img{
-    display:none;
-    width:8px;
-    height:8px;
+.links img {
+    display: none;
+    width: 8px;
+    height: 8px;
 }
 
 .links a:hover {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:rgba(61, 207, 182, 1);
+    color: rgba(61, 207, 182, 1);
 }
 
-.link1:hover img{
-    display:flex;
-    margin-left:-66px;
-    margin-right:8px;
+.link1:hover img {
+    display: flex;
+    margin-left: -66px;
+    margin-right: 8px;
 }
 
-.link2:hover img{
-    display:flex;
-    margin-left:-74px;
-    margin-right:8px;
+.link2:hover img {
+    display: flex;
+    margin-left: -74px;
+    margin-right: 8px;
 }
 
-.link3Floor:hover img{
-    display:flex;
-    margin-left:-27px;
-    margin-right:8px;
+.link3Floor:hover img {
+    display: flex;
+    margin-left: -27px;
+    margin-right: 8px;
 }
 
-.logoNameDiv{
-    color:white;
+.logoNameDiv {
+    color: white;
 }
 
-.footerTextMobile{
-    display:none;
+.footerTextMobile {
+    display: none;
     margin: 0px 0px 36px 0px;
     font-size: 18px;
     color: rgba(61, 207, 182, 1);
 }
 
-.logoNameDiv p{
+.logoNameDiv p {
     margin: 8px 0px 0px 0px;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
 }
 
-.footerText{
+.footerText {
     margin: 0px 0px 36px 0px;
     font-size: 18px;
     font-family: 'FiraCode', sans-serif;
-    color:rgba(61, 207, 182, 1);
+    color: rgba(61, 207, 182, 1);
 }
-
-

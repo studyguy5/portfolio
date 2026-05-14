@@ -83,7 +83,7 @@ function checkLegalNotice() {
 let currentLang;
 function changeLanguage() {
     let basic = document.getElementsByClassName("language")[0]
-    if (basic.src.includes('english.png')) {
+    if (basic.src.includes('english.svg')) {
         switchToGerman(basic);
     } else {
         switchToEnglish(basic);
@@ -99,7 +99,7 @@ function changeLanguage() {
 function switchToGerman(basic) {
     basic.style.transition = "0.2s";
     basic.style.opacity = "0";
-    basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.src = "./img/german.svg";  // Bild wechseln (während es unsichtbar ist)
     basic.style.opacity = "1";       // Fade in (mit 2s Transition)
     let hover = document.getElementsByClassName("language_Hover")[0]
     hover.src = "";
@@ -107,7 +107,7 @@ function switchToGerman(basic) {
     currentLang = 'de';
     localStorage.setItem('lang', 'de');
     setTimeout(() => {
-        hover.src = "./img/german_hover.png";
+        hover.src = "./img/german_hover.svg";
     }, 80);
 }
 
@@ -119,7 +119,7 @@ function switchToGerman(basic) {
 function switchToEnglish(basic) {
     basic.style.transition = "0.2s";
     basic.style.opacity = "0";
-    basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.src = "./img/english.svg";  // Bild wechseln (während es unsichtbar ist)
     basic.style.opacity = "1";       // Fade in (mit 2s Transition)
     let hover = document.getElementsByClassName("language_Hover")[0]
     hover.src = "";
@@ -127,7 +127,7 @@ function switchToEnglish(basic) {
     currentLang = 'en';
     localStorage.setItem('lang', 'en');
     setTimeout(() => {
-        hover.src = "./img/english_hover.png";
+        hover.src = "./img/english_hover.svg";
     }, 80);
 }
 
@@ -158,7 +158,7 @@ function packageMobile() {
  */
 function changeLanguageMobile() {
     let basic = document.getElementsByClassName("languageMobile")[0]
-    if (basic.src.includes('english.png')) {
+    if (basic.src.includes('english.svg')) {
         switchMobileToGerman(basic);
     } else {
         switchMobileToEnglish(basic);
@@ -172,13 +172,13 @@ function changeLanguageMobile() {
 */
 function switchMobileToGerman(basic) {
     basic.style.transition = "0.2s";
-    basic.src = "./img/german.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.src = "./img/german.svg";  // Bild wechseln (während es unsichtbar ist)
     let hover = document.getElementsByClassName("languageMobile_Hover")[0]
     hover.src = "";
     switchLanguage('de');
     currentLang = 'de';
     setTimeout(() => {
-        hover.src = "./img/german_hover.png";
+        hover.src = "./img/german_hover.svg";
     }, 80);
 }
 
@@ -189,13 +189,13 @@ function switchMobileToGerman(basic) {
  */
 function switchMobileToEnglish(basic) {
     basic.style.transition = "0.2s";
-    basic.src = "./img/english.png";  // Bild wechseln (während es unsichtbar ist)
+    basic.src = "./img/english.svg";  // Bild wechseln (während es unsichtbar ist)
     let hover = document.getElementsByClassName("languageMobile_Hover")[0]
     hover.src = "";
     switchLanguage('en');
     currentLang = 'en';
     setTimeout(() => {
-        hover.src = "./img/english_hover.png";
+        hover.src = "./img/english_hover.svg";
     }, 80);
 }
 

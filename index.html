@@ -30,7 +30,7 @@
 
     <header class="headfullsize">
         <div class="headcontent">
-            <div class="logoMobile"><img src="./img/final_filled.png">Leonhard Siegele</div>
+            <div onclick="backToHome()" class="logoMobile"><img src="./img/final_filled.png">Leonhard Siegele</div>
             <div id="nav-icon1">
                 <span></span>
                 <span></span>
@@ -44,13 +44,13 @@
                 <a onclick="toggleBurgerMenu()" data-lang class="link3M" href="#portfolioSection">Projects<img
                         src="./img/dot.png"></a>
                 <div onclick="toggleBurgerMenu()" class="imgWrapper">
-                    <img class="languageMobile" src="./img/english.png">
-                    <img class="languageMobile_Hover" src="./img/english_hover.png">
+                    <img class="languageMobile" src="./img/english.svg">
+                    <img class="languageMobile_Hover" src="./img/english_hover.svg">
                 </div>
             </div>
             <nav class="headNavbar">
-                <img class="language" src="./img/english.png">
-                <img class="language_Hover" src="./img/english_hover.png">
+                <img class="language" src="./img/english.svg">
+                <img class="language_Hover" src="./img/english_hover.svg">
                 <a href="#aboutMeSection" data-lang class="About" href="">About me<img src="./img/dot.png"></a>
                 <a href="#techSkillsSection" data-lang class="skills" href="">Skills<img src="./img/dot.png"></a>
                 <a href="#portfolioSection" data-lang class="projects" href="">Projects<img src="./img/dot.png"></a>
@@ -336,11 +336,15 @@
             </div>
         </div>
         <div class="skipAria">
-            <img class="skipArrowR" onclick="skipColleagues('left')" src="./img/arrow_Left.png">
-            <img class="dot_türkis" src="./img/dot_türkis.png">
-            <img class="dot_white" src="./img/dot_white.png">
-            <img class="dot_white" src="./img/dot_white.png">
-            <img class="skipArrow" onclick="skipColleagues('right')" src="./img/arrow_Right.png">
+            <div class="skipBoxL">
+            <img class="skipArrowL" onclick="skipColleagues('left')" src="./img/arrow_left.svg">
+            </div>
+            <img class="dot_türkis" src="./img/türkis_dot.svg">
+            <img class="dot_white" src="./img/dot.svg">
+            <img class="dot_white" src="./img/dot.svg">
+            <div class="skipBoxR">
+            <img class="skipArrowR" onclick="skipColleagues('right')" src="./img/arrow_right.svg">
+            </div>
         </div>
     </div>
     </section>
@@ -400,9 +404,9 @@
     </section>
     <section class="footerSection" id="footerSection">
         <div class="logoNameDiv">
-            <div class="logo">
+            <div onclick="backToHome()" class="logo">
                 <img src="./img/final_filled.png">
-                Leonhard<br> Siegele
+                <h3>Leonhard<br> Siegele</h3>
             </div>
             <p class="logoName">Leonhard Siegele</p>
             <p class="location">Austria</p>

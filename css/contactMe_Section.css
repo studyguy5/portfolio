@@ -172,7 +172,7 @@ input:-webkit-text-autofill {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     color:rgba(61, 207, 182, 1);
-    background-color: rgb(117 114 114 / 20%);
+    background-color: rgb(32, 49, 46);
     font-weight:bold;
     transition: 0.5s ease-in-out
 }

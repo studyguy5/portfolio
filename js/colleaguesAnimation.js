@@ -26,7 +26,7 @@ function skipColleagues(direction) {
 function changeDotToRight() {
     let d = document.querySelector(".dot_türkis");
     if (!d) return;
-    d.src = "./img/dot_white.png";
+    d.src = "./img/dot.svg";
     d.classList.remove("dot_türkis");
     d.classList.add("dot_white");
     let next = d.nextElementSibling;
@@ -42,13 +42,13 @@ function changeDotToRight() {
  */
 function dotToRightAndStartLeftIfLast(next){
     if (next.className == "dot_white") {
-        next.src = "./img/dot_türkis.png";
+        next.src = "./img/türkis_dot.svg";
         next.classList.remove("dot_white");
         next.classList.add("dot_türkis");
     }
-    if (next.src.includes("/img/arrow_Right.png")) {
+    if (next.classList.contains("skipBoxR")) {
         let first = document.querySelector(".dot_white");
-        first.src = "./img/dot_türkis.png";
+        first.src = "./img/türkis_dot.svg";
         first.classList.remove("dot_white");
         first.classList.add("dot_türkis");
     };
@@ -62,7 +62,7 @@ function dotToRightAndStartLeftIfLast(next){
 function changeDotToLeft() {
     let d = document.querySelector(".dot_türkis");
     if (!d) return;
-    d.src = "./img/dot_white.png";
+    d.src = "./img/dot.svg";
     d.classList.remove("dot_türkis");
     d.classList.add("dot_white");
     let prev = d.previousElementSibling;
@@ -77,13 +77,13 @@ function changeDotToLeft() {
  */
 function dotToLeftAndStartRightIfFirst(prev) {
     if (prev.className == "dot_white") {
-        prev.src = "./img/dot_türkis.png";
+        prev.src = "./img/türkis_dot.svg";
         prev.classList.remove("dot_white");
         prev.classList.add("dot_türkis");
     }
-    if (prev.src.includes("/img/arrow_Left.png")) {
+    if (prev.classList.contains("skipBoxL")) {
         let first = document.querySelector(".dot_white");
-        let second = first.nextElementSibling.nextElementSibling.src = "./img/dot_türkis.png";
+        let second = first.nextElementSibling.nextElementSibling.src = "./img/türkis_dot.svg";
         first.nextElementSibling.nextElementSibling.classList.remove("dot_white");
         first.nextElementSibling.nextElementSibling.classList.add("dot_türkis");
     };
