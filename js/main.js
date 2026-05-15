@@ -399,13 +399,19 @@ function showFrame() {
     if(hideTimeout !== null)
     clearTimeout(hideTimeout);
     document.querySelector(".easterEggDiv").classList.add('easterEggVisible');
-    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_white.png");
+    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_white.svg");
+    document.querySelector('.linkedInDot').style.display = "block";
+    document.querySelector('.linkedInDot').style.position = "absolute";
+    document.querySelector('.linkedInDot').style.left = "31px";
 }
+
+
 
 function hideFrame() {
 hideTimeout = setTimeout(() => {
     document.querySelector(".easterEggDiv").classList.remove('easterEggVisible');
-    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_türkis.png");
+    document.querySelector(".linkedIn img").setAttribute("src", "./img/linkedIn_türkis.svg");
+    document.querySelector('.linkedInDot').style.display = "none";
     }, 1000);
 }
 

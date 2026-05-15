@@ -195,7 +195,13 @@
 }
 
 .githubLogo:hover {
-    content: url(../img/Github.png);
+    content: url(../img/github_white.svg);
+}
+
+.githubLogo:hover ~ .githubDot{
+    display:block;
+    position:absolute;
+    left:32.8px;
 }
 .githubATag{
     display: flex;
@@ -218,7 +224,7 @@
     height: 27px;
 }
 
-.linkedIn img {
+.linkedInIcon {
     width: 27px;
     height: 27px;
 }
@@ -417,6 +423,13 @@
     cursor:default;
 }
 
+.linkedInDot{
+    display:none;
+}
+
+.githubDot{
+    display:none;
+}
 
 
 .easterEggVisible{
