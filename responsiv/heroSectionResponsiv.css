@@ -22,7 +22,7 @@
         gap: 15px;
     }
     .sliderWrapper{
-        width:calc(100vw - 30px);
+        max-width:calc(100vw - 30px);
     }
 
     .slider p {

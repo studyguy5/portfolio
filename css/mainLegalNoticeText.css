@@ -68,6 +68,7 @@
 
 .impressumPhone p{
     color:white;
+    display:contents;
 }
 .impressumPhone li{
     color:white;

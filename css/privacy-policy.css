@@ -104,7 +104,7 @@ body{
         padding: 0px 15px;
     }
     .mainContent{
-        max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 140px);
+        max-height:calc(100vh - 98px - 84px - 20px - 59.4px - 108px);
     }
     .footerSection{
         margin-bottom:32px;
